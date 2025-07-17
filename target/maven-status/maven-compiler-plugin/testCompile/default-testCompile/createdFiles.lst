@@ -1,0 +1,3 @@
+com\automation\demo\tests\BaseTest.class
+com\automation\demo\TextBoxFormTest.class
+com\automation\demo\pageobjects\TextBoxPage.class
