@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.automation.demo.TextBoxFormTest
+Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.69 s -- in com.automation.demo.TextBoxFormTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.30 s -- in TestSuite

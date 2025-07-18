@@ -3,13 +3,15 @@ package com.automation.demo.tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+
 
 public class BaseTest {
     protected WebDriver driver;
 
-    @BeforeEach
+    @BeforeMethod
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
         // Uncomment if you want headless execution
@@ -18,7 +20,7 @@ public class BaseTest {
         driver.manage().window().maximize();
     }
 
-    @AfterEach
+    @AfterMethod
     public void tearDown() {
         if (driver != null) {
             driver.quit();
