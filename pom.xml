@@ -72,7 +72,12 @@
 
                     <!-- Specify TestNG XML suite files if you use them -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>${project.basedir}/testng.xml</suiteXmlFile>
+                       <!-- Point to your master suite file -->
+            <suiteXmlFile>src/test/resources/suite_master.xml</suiteXmlFile>
+            <!-- Alternatively, you could list individual suites here:
+            <suiteXmlFile>src/test/resources/smoke_suite.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/regression_suite.xml</suiteXmlFile>
+            -->
                     </suiteXmlFiles> 
 
                     <!-- Or, specify TestNG groups to run -->

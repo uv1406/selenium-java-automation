@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Master Automation Suite">
+
+    <listeners>
+        <!-- Optional: Add TestNG Listeners here for global reporting, logging, etc. -->
+        <!-- <listener class-name="com.automation.demo.listeners.CustomReportListener"/> -->
+        <!-- <listener class-name="com.automation.demo.listeners.ScreenshotListener"/> -->
+    </listeners>
+
+    <suite-files>
+        <suite-file path="smoke_suite.xml"/>
+        <suite-file path="regression_suite.xml"/>
+        <!-- Add more suite files as your framework grows -->
+        <suite-file path="feature_login_suite.xml"/>
+        <suite-file path="api_suite.xml"/>
+    </suite-files>
+
+</suite>
