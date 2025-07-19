@@ -18,6 +18,7 @@ public class BaseTest {
         // options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
+        System.out.println("Browser launched for the thread:" + Thread.currentThread().threadId());
     }
 
     @AfterMethod
@@ -25,6 +26,8 @@ public class BaseTest {
         if (driver != null) {
             driver.quit();
             System.out.println("Browser closed.");
+            System.out.println("Browser Closed for the thread:" + Thread.currentThread().threadId());
         }
+        System.out.println("Teardown finished in thread: " + Thread.currentThread().threadId());
     }
 }

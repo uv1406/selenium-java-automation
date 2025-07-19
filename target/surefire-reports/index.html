@@ -156,8 +156,8 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;UI Tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Text Box Tests&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;instances&quot; name=&quot;UI Tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;instances&quot; name=&quot;Text Box Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.automation.demo.tests.TextBoxFormTest&quot;/&gt;
     &lt;/classes&gt;
@@ -203,16 +203,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testTextBoxForm')
 data.setCell(0, 2, 'com.automation.demo.tests.TextBoxFormTest')
-data.setCell(0, 3, 11597);
+data.setCell(0, 3, 10426);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testTextBoxForm')
 data.setCell(1, 2, 'com.automation.demo.tests.TextBoxFormTest')
-data.setCell(1, 3, 9212);
+data.setCell(1, 3, 7595);
 window.suiteTableData['UI_Tests']= { tableData: data, tableDiv: 'times-div-UI_Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-UI_Tests">
               </div> <!-- times-div-UI_Tests -->
             </div> <!-- times-div -->
@@ -245,23 +245,23 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testTextBoxForm(Ujjawal Verma, ujjawal@example.com, 123 Test Lane, 456 Automation St)</span>
-                <span class="method-start">14231 ms</span>
+                <span class="method-start">5421 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">23449 ms</span>
+                <span class="method-start">15852 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">24588 ms</span>
+                <span class="method-start">19222 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testTextBoxForm(John Doe, john@example.com, 456 A St, 789 B Ave)</span>
-                <span class="method-start">29321 ms</span>
+                <span class="method-start">23831 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">40919 ms</span>
+                <span class="method-start">31428 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

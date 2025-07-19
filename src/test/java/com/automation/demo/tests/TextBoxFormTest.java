@@ -3,6 +3,7 @@ package com.automation.demo.tests;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.automation.demo.data.TestDataProviders;
 import com.automation.demo.pageobjects.TextBoxPage;
 
 
@@ -11,24 +12,18 @@ import com.automation.demo.pageobjects.TextBoxPage;
 import java.time.Duration;
 
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
+
 import org.testng.annotations.Test;
 
 
     public class TextBoxFormTest extends BaseTest { // Class name can remain AppTest
 
-        @DataProvider(name = "formData")
-        public Object[][] getData(){
-                   return new Object[][] {
-                    {"Ujjawal Verma", "ujjawal@example.com", "123 Test Lane", "456 Automation St"},
-            {"John Doe", "john@example.com", "456 A St", "789 B Ave"}
-        };}
+      
         
-        @Test(dataProvider = "formData")
+        @Test(dataProvider = "formData", dataProviderClass = TestDataProviders.class)
         public void testTextBoxForm(String fullName, String email, String currentAddress, String permanentAddress) { {
            
-            try {       
-                    
+            try {                   
 
                 // Open URL
                 driver.get("https://demoqa.com/text-box");
