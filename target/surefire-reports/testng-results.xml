@@ -2,16 +2,29 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-20T11:33:05 IST" name="UI Tests" finished-at="2025-07-20T11:33:52 IST" duration-ms="46881">
+  <suite started-at="2025-07-20T16:17:55 IST" name="UI Tests" finished-at="2025-07-20T16:18:41 IST" duration-ms="46299">
     <groups>
+      <group name="regression">
+        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@75f95314]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@75f95314]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-07-20T11:33:05 IST" name="Text Box Tests" finished-at="2025-07-20T11:33:52 IST" duration-ms="46881">
+    <test started-at="2025-07-20T16:17:55 IST" name="Text Box Tests" finished-at="2025-07-20T16:18:41 IST" duration-ms="46299">
       <class name="com.automation.demo.tests.TextBoxFormTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@63f8276e]" started-at="2025-07-20T11:33:05 IST" name="setUp" finished-at="2025-07-20T11:33:10 IST" duration-ms="5359" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@75f95314]" started-at="2025-07-20T16:17:55 IST" name="setUp" finished-at="2025-07-20T16:18:01 IST" duration-ms="6162" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@63f8276e]" started-at="2025-07-20T11:33:10 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-20T11:33:20 IST" duration-ms="9479" status="PASS">
+        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@75f95314]" started-at="2025-07-20T16:18:01 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-20T16:18:30 IST" duration-ms="28847" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,15 +50,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTextBoxForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@63f8276e]" started-at="2025-07-20T11:33:20 IST" name="tearDown" finished-at="2025-07-20T11:33:21 IST" duration-ms="1503" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@75f95314]" started-at="2025-07-20T16:18:30 IST" name="tearDown" finished-at="2025-07-20T16:18:31 IST" duration-ms="770" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@63f8276e]" started-at="2025-07-20T11:33:21 IST" name="setUp" finished-at="2025-07-20T11:33:26 IST" duration-ms="4509" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@75f95314]" started-at="2025-07-20T16:18:31 IST" name="setUp" finished-at="2025-07-20T16:18:35 IST" duration-ms="4062" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@63f8276e]" started-at="2025-07-20T11:33:26 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-20T11:33:51 IST" duration-ms="25232" status="PASS">
+        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@75f95314]" started-at="2025-07-20T16:18:35 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-20T16:18:40 IST" duration-ms="5152" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,7 +91,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTextBoxForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@63f8276e]" started-at="2025-07-20T11:33:51 IST" name="tearDown" finished-at="2025-07-20T11:33:52 IST" duration-ms="735" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@75f95314]" started-at="2025-07-20T16:18:40 IST" name="tearDown" finished-at="2025-07-20T16:18:41 IST" duration-ms="1241" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

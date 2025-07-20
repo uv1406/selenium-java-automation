@@ -1,18 +1,10 @@
 package com.automation.demo.tests;  
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.automation.demo.data.TestDataProviders;
 import com.automation.demo.pageobjects.TextBoxPage;
-
-
-
-
 import java.time.Duration;
-
 import org.testng.Assert;
-
 import org.testng.annotations.Test;
 
 
@@ -20,7 +12,7 @@ import org.testng.annotations.Test;
 
       
         
-        @Test(dataProvider = "formData", dataProviderClass = TestDataProviders.class)
+        @Test(dataProvider = "formData", dataProviderClass = TestDataProviders.class,groups = {"smoke","regression"})
         public void testTextBoxForm(String fullName, String email, String currentAddress, String permanentAddress) { {
            
             try {                   

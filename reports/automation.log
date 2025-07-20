@@ -6,3 +6,15 @@
 2025-07-20 11:33:50.643 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
 2025-07-20 11:33:51.230 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
 2025-07-20 11:33:51.529 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Quitting Webdriver...
+2025-07-20 16:17:55.574 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 16:18:01.698 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-20 16:18:29.951 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 16:18:30.402 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 16:18:30.552 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 16:18:31.321 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 16:18:31.321 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 16:18:35.381 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-20 16:18:39.494 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 16:18:40.255 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 16:18:40.538 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 16:18:41.775 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
