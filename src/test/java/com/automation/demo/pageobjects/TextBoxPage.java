@@ -4,7 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.automation.demo.utils.LoggerUtil; // Import your LoggerUtil
+import org.apache.logging.log4j.Logger; // Import Log4j2 Logger
+
 public class TextBoxPage { 
+    private static final Logger logger = LoggerUtil.getLogger(TextBoxPage.class);
     private WebDriver driver;
 
     // Constructor
@@ -26,6 +30,7 @@ public class TextBoxPage {
     }
 
     public void fillEmail(String email) {
+          logger.info("Entering email: " + email);
         driver.findElement(emailField).sendKeys(email);
     }
 
@@ -40,6 +45,7 @@ public class TextBoxPage {
     public void clickSubmit() {
         WebElement submit = driver.findElement(submitButton);
         ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submit);
+          logger.info("Clicking the submit button ");
         submit.click();
     }
 

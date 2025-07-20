@@ -32,14 +32,25 @@
             <scope>test</scope> <!-- TestNG is only needed for compiling and running tests -->
         </dependency>
 
-        <!-- Optional: If you need to run tests in parallel or use testng.xml -->
-        <!-- You might need this if you plan to use testng.xml for suite configuration -->
-        <!-- <dependency>
-            <groupId>org.apache.maven.surefire</groupId>
-            <artifactId>surefire-testng</artifactId>
-            <version>${maven.surefire.plugin.version}</version>
-            <scope>test</scope>
-        </dependency> -->
+        <!-- Log4j2 Core -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.20.0</version>
+</dependency>
+
+<!-- Log4j2 API -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.20.0</version>
+</dependency>
+
+
+
+       
+       
+       
 
     </dependencies>
 

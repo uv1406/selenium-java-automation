@@ -1,4 +1,5 @@
 com\automation\demo\data\TestDataProviders.class
+com\automation\demo\utils\LoggerUtil.class
 com\automation\demo\tests\BaseTest.class
 com\automation\demo\tests\TextBoxFormTest.class
 com\automation\demo\pageobjects\TextBoxPage.class
