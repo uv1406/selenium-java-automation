@@ -8,11 +8,9 @@ import com.automation.demo.utils.LoggerUtil;
 import java.time.Duration;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By; // Added for common wait conditions
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions; // Added for common wait conditions
 
-import com.automation.demo.utils.LoggerUtil; // Import your LoggerUtil
-import org.apache.logging.log4j.Logger; // Import Log4j2 Logger
 
 public abstract class BasePage { // Make it abstract as it's not meant to be instantiated directly
     protected WebDriver driver;
@@ -24,9 +22,13 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
     // Constructor
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        int implicitWaitSeconds = ConfigReader.getIntProperty("default.implicit.wait.seconds");
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(implicitWaitSeconds));
-        logger.debug("BasePage initialized with WebDriverWait for " + implicitWaitSeconds + " seconds.");
+        // It's good practice to set implicit wait to 0 in your DriverFactory
+        // for predictable explicit waits. If not, consider adding it here as a safety.
+        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+
+        int explicitWaitSeconds = ConfigReader.getIntProperty("default.explicit.wait.seconds");
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWaitSeconds));
+        logger.debug("BasePage initialized with WebDriverWait for " + explicitWaitSeconds + " seconds.");
     }
     //Common methods for all page objects can be added here
 
@@ -36,140 +38,140 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
      * @param locator The By locator of the element to wait for.
      * @return The WebElement once it is visible.
      */
-    protected WebElement waitForElementVisible(By locator) {
-        logger.info("Waiting for element to be visible: " + locator);
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }   
-    protected WebElement waitForElementClickable(By locator) {
-        logger.info("Waiting for element to be clickable: " + locator);
-        return wait.until(ExpectedConditions.elementToBeClickable(locator));
+    protected WebElement waitForElementVisible(WebElement element) {
+        logger.info("Waiting for WebElement to be visible.");
+        return wait.until(ExpectedConditions.visibilityOf(element));
     }
-    protected void clickElement(By locator) {
-        WebElement element = waitForElementClickable(locator);
-        logger.info("Clicking on element: " + locator);
-        element.click();
-    }   
-    protected void enterText(By locator, String text) {
-        WebElement element = waitForElementVisible(locator);
-        logger.info("Entering text '" + text + "' into element: " + locator);
-        element.clear();
-        element.sendKeys(text);
+
+    protected WebElement waitForElementVisible(WebElement element, int customTimeoutSeconds) {
+        logger.info("Waiting for WebElement to be visible for " + customTimeoutSeconds + " seconds.");
+        return new WebDriverWait(driver, Duration.ofSeconds(customTimeoutSeconds))
+               .until(ExpectedConditions.visibilityOf(element));
     }
-    protected String getElementText(By locator) {
-        WebElement element = waitForElementVisible(locator);
-        String text = element.getText();
-        logger.info("Getting text from element: " + locator + " - Text: " + text);
+
+    protected WebElement waitForElementClickable(WebElement element) {
+        logger.info("Waiting for WebElement to be clickable.");
+        return wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    protected WebElement waitForElementClickable(WebElement element, int customTimeoutSeconds) {
+        logger.info("Waiting for WebElement to be clickable for " + customTimeoutSeconds + " seconds.");
+        return new WebDriverWait(driver, Duration.ofSeconds(customTimeoutSeconds))
+               .until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    protected void clickElement(WebElement element) {
+        WebElement clickableElement = waitForElementClickable(element);
+        logger.info("Clicking on WebElement.");
+        clickableElement.click();
+    }
+
+    protected void clickElement(WebElement element, int customTimeoutSeconds) {
+        WebElement clickableElement = waitForElementClickable(element, customTimeoutSeconds);
+        logger.info("Clicking on WebElement with custom timeout.");
+        clickableElement.click();
+    }
+
+    protected void enterText(WebElement element, String text) {
+        WebElement visibleElement = waitForElementVisible(element);
+        logger.info("Entering text '" + text + "' into WebElement.");
+        visibleElement.clear();
+        visibleElement.sendKeys(text);
+    }
+
+    protected void enterText(WebElement element, String text, int customTimeoutSeconds) {
+        WebElement visibleElement = waitForElementVisible(element, customTimeoutSeconds);
+        logger.info("Entering text '" + text + "' into WebElement with custom timeout.");
+        visibleElement.clear();
+        visibleElement.sendKeys(text);
+    }
+
+    protected String getElementText(WebElement element) {
+        WebElement visibleElement = waitForElementVisible(element);
+        String text = visibleElement.getText();
+        logger.info("Getting text from WebElement - Text: " + text);
         return text;
     }
-    protected boolean isElementDisplayed(By locator) {
+
+    protected boolean isElementDisplayed(WebElement element) {
         try {
-            WebElement element = waitForElementVisible(locator);
-            boolean displayed = element.isDisplayed();
-            logger.info("Element " + locator + " is displayed: " + displayed);
+            WebElement visibleElement = waitForElementVisible(element);
+            boolean displayed = visibleElement.isDisplayed();
+            logger.info("WebElement is displayed: " + displayed);
             return displayed;
         } catch (Exception e) {
-            logger.warn("Element " + locator + " is not displayed: " + e.getMessage());
+            logger.warn("WebElement is not displayed: " + e.getMessage());
             return false;
         }
     }
 
-    // Waits for an element to be invisible
-    protected boolean waitForElementInvisible(By locator) {
-        logger.info("Waiting for element to be invisible: " + locator);
-        return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+    // New: Overload for scrolling into view directly with WebElement
+    protected void scrollIntoView(WebElement element) {
+        logger.info("Scrolling WebElement into view.");
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    // Gets an attribute value from an element
-    protected String getElementAttribute(By locator, String attribute) {
-        WebElement element = waitForElementVisible(locator);
-        String value = element.getAttribute(attribute);
-        logger.info("Getting attribute '" + attribute + "' from element: " + locator + " - Value: " + value);
+    // New: Overload for getting attribute directly with WebElement
+    protected String getElementAttribute(WebElement element, String attribute) {
+        WebElement visibleElement = waitForElementVisible(element);
+        String value = visibleElement.getAttribute(attribute);
+        logger.info("Getting attribute '" + attribute + "' from WebElement - Value: " + value);
         return value;
     }
 
-    // Checks if an element is enabled
-    protected boolean isElementEnabled(By locator) {
-        WebElement element = waitForElementVisible(locator);
-        boolean enabled = element.isEnabled();
-        logger.info("Element " + locator + " is enabled: " + enabled);
+    // New: Overload for isElementEnabled directly with WebElement
+    protected boolean isElementEnabled(WebElement element) {
+        WebElement visibleElement = waitForElementVisible(element);
+        boolean enabled = visibleElement.isEnabled();
+        logger.info("WebElement is enabled: " + enabled);
         return enabled;
     }
 
-    // Checks if an element is selected (for checkboxes/radio buttons)
-    protected boolean isElementSelected(By locator) {
-        WebElement element = waitForElementVisible(locator);
-        boolean selected = element.isSelected();
-        logger.info("Element " + locator + " is selected: " + selected);
+    // New: Overload for isElementSelected directly with WebElement
+    protected boolean isElementSelected(WebElement element) {
+        WebElement visibleElement = waitForElementVisible(element);
+        boolean selected = visibleElement.isSelected();
+        logger.info("WebElement is selected: " + selected);
         return selected;
     }
 
-    // Selects a checkbox if not already selected
-    protected void selectCheckbox(By locator) {
-        WebElement checkbox = waitForElementVisible(locator);
-        if (!checkbox.isSelected()) {
-            logger.info("Selecting checkbox: " + locator);
-            checkbox.click();
+    // New: Overload for selectCheckbox directly with WebElement
+    protected void selectCheckbox(WebElement checkbox) {
+        WebElement visibleCheckbox = waitForElementVisible(checkbox);
+        if (!visibleCheckbox.isSelected()) {
+            logger.info("Selecting checkbox WebElement.");
+            visibleCheckbox.click();
         } else {
-            logger.info("Checkbox already selected: " + locator);
+            logger.info("Checkbox WebElement already selected.");
         }
     }
 
-    // Deselects a checkbox if selected
-    protected void deselectCheckbox(By locator) {
-        WebElement checkbox = waitForElementVisible(locator);
-        if (checkbox.isSelected()) {
-            logger.info("Deselecting checkbox: " + locator);
-            checkbox.click();
+    // New: Overload for deselectCheckbox directly with WebElement
+    protected void deselectCheckbox(WebElement checkbox) {
+        WebElement visibleCheckbox = waitForElementVisible(checkbox);
+        if (visibleCheckbox.isSelected()) {
+            logger.info("Deselecting checkbox WebElement.");
+            visibleCheckbox.click();
         } else {
-            logger.info("Checkbox already deselected: " + locator);
+            logger.info("Checkbox WebElement already deselected.");
         }
     }
 
-    // Selects a radio button
-    protected void selectRadioButton(By locator) {
-        WebElement radio = waitForElementVisible(locator);
-        if (!radio.isSelected()) {
-            logger.info("Selecting radio button: " + locator);
-            radio.click();
+    // New: Overload for selectRadioButton directly with WebElement
+    protected void selectRadioButton(WebElement radio) {
+        WebElement visibleRadio = waitForElementVisible(radio);
+        if (!visibleRadio.isSelected()) {
+            logger.info("Selecting radio button WebElement.");
+            visibleRadio.click();
         } else {
-            logger.info("Radio button already selected: " + locator);
+            logger.info("Radio button WebElement already selected.");
         }
     }
 
-    // Gets a list of elements
-    protected java.util.List<WebElement> getElements(By locator) {
-        logger.info("Getting list of elements for locator: " + locator);
-        return driver.findElements(locator);
-    }
-
-    // Waits for a specific text to be present in an element
-    protected boolean waitForTextInElement(By locator, String text) {
-        logger.info("Waiting for text '" + text + "' to be present in element: " + locator);
-        return wait.until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
-    }
-
-    // Waits for an element to be present in the DOM
-    protected WebElement waitForElementPresent(By locator) {
-        logger.info("Waiting for element to be present in DOM: " + locator);
-        return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-    }
-
-    // Scrolls to an element (if needed)
-    protected void scrollToElement(By locator) {
-        WebElement element = waitForElementVisible(locator);
-        logger.info("Scrolling to element: " + locator);
-        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-    }
-
-    // Submits a form element
-    protected void submitForm(By locator) {
-        WebElement element = waitForElementVisible(locator);
-        logger.info("Submitting form for element: " + locator);
-        element.submit();
-    }
-    protected void scrollIntoView(By locator) {
-        WebElement element = waitForElementVisible(locator);
-        logger.info("Scrolling into view for element: " + locator);
-        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+    // New: Overload for submitForm directly with WebElement
+    protected void submitForm(WebElement element) {
+        WebElement visibleElement = waitForElementVisible(element);
+        logger.info("Submitting form for WebElement.");
+        visibleElement.submit();
     }
 }
