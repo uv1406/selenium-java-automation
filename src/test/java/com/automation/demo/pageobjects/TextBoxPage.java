@@ -2,18 +2,19 @@ package com.automation.demo.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 
 import com.automation.demo.utils.LoggerUtil; // Import your LoggerUtil
 import org.apache.logging.log4j.Logger; // Import Log4j2 Logger
 
-public class TextBoxPage { 
+public class TextBoxPage extends BasePage { 
     private static final Logger logger = LoggerUtil.getLogger(TextBoxPage.class);
-    private WebDriver driver;
+    
 
     // Constructor
     public TextBoxPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver); // Call the constructor of BasePage
+        logger.debug("TextBoxPage initialized with WebDriver.");
     }
 
     // Locators
@@ -26,30 +27,28 @@ public class TextBoxPage {
 
     // Actions
     public void fillFullName(String name) {
-        driver.findElement(fullNameField).sendKeys(name);
+        enterText(fullNameField, name);
     }
 
     public void fillEmail(String email) {
-          logger.info("Entering email: " + email);
-        driver.findElement(emailField).sendKeys(email);
+        logger.info("Entering email: " + email);
+        enterText(emailField, email);
     }
 
     public void fillCurrentAddress(String address) {
-        driver.findElement(currentAddressField).sendKeys(address);
+        enterText(currentAddressField, address);
     }
 
     public void fillPermanentAddress(String address) {
-        driver.findElement(permanentAddressField).sendKeys(address);
+        enterText(permanentAddressField, address);
     }
 
     public void clickSubmit() {
-        WebElement submit = driver.findElement(submitButton);
-        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", submit);
-          logger.info("Clicking the submit button ");
-        submit.click();
+        scrollIntoView(submitButton);
+        clickElement(submitButton);
     }
 
     public String getOutputText() {
-        return driver.findElement(outputBox).getText();
+        return getElementText(outputBox);
     }
 }

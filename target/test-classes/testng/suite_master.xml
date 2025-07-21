@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Master Automation Suite">
+<suite name="Master Automation Suite"> <parameter name="browserName" value=""/>
 
     <listeners>
         <!-- Optional: Add TestNG Listeners here for global reporting, logging, etc. -->

@@ -18,3 +18,337 @@
 2025-07-20 16:18:40.255 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
 2025-07-20 16:18:40.538 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
 2025-07-20 16:18:41.775 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 17:08:09.330 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 17:08:15.149 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-20 17:08:26.767 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 17:08:27.147 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 17:08:27.324 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 17:08:28.025 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 17:08:28.025 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 17:08:32.438 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-20 17:08:45.476 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 17:08:45.793 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 17:08:45.959 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 17:08:46.750 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 21:54:34.908 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-20 21:54:34.912 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 21:54:34.942 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 21:54:34.942 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 21:54:35.002 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 21:54:35.002 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 21:54:35.003 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 21:54:35.012 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 21:54:35.013 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 21:54:35.013 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 21:54:35.027 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 21:54:35.027 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 21:54:35.027 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:06:23.422 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-20 22:06:23.430 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:06:23.436 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:06:23.437 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:06:23.563 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:06:23.565 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:06:23.565 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:06:23.594 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:06:23.595 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:06:23.595 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:06:23.619 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:06:23.619 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:06:23.619 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:09:53.448 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-20 22:11:47.976 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:11:48.018 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:11:48.018 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:11:56.508 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:11:56.509 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:11:56.510 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:11:59.787 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:11:59.787 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:11:59.787 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:12:10.369 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:12:10.370 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:12:10.370 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:16:20.222 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-20 22:19:21.096 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:19:21.099 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:19:21.101 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:19:21.223 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:19:21.225 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:19:21.225 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:19:21.252 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:19:21.252 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:19:21.252 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:19:21.279 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome # <-- Add this line for the default browser
+2025-07-20 22:19:21.279 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome # <-- Add this line for the default browser browser is selected for execution
+2025-07-20 22:19:21.280 [TestNG-test-Text Box Tests-1] ERROR com.automation.demo.utils.DriverFactory - Unsupported browser: chrome # <-- Add this line for the default browser
+2025-07-20 22:20:01.653 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-20 22:20:04.951 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:20:04.961 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:20:15.758 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:20:27.043 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:20:33.194 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:20:35.776 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:20:36.655 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:20:47.487 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:20:49.484 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:21:05.435 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:21:15.369 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:21:20.365 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:21:31.406 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:21:32.469 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:24:37.783 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:24:37.784 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:24:42.240 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:24:53.281 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:24:53.882 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:24:54.240 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:24:55.095 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:24:55.098 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:24:55.098 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:24:59.719 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:25:04.788 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:25:06.261 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:25:06.784 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:25:08.030 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:25:08.039 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:25:08.039 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:25:12.063 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:25:17.840 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:25:18.906 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:25:19.186 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:25:20.629 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:25:20.631 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:25:20.631 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:25:24.534 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:25:29.331 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:25:30.776 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:25:31.345 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:25:32.950 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:25:32.959 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:25:32.959 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:25:36.977 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:25:42.019 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:25:43.032 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:25:43.699 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:25:47.504 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:25:47.508 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:25:47.508 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:25:51.532 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:25:57.040 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:25:57.772 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:25:58.337 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:25:59.830 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:34:51.124 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-20 22:34:53.467 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:34:53.503 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:35:46.910 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:35:51.185 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:36:00.086 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:36:03.332 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:36:04.246 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:36:17.287 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:36:17.287 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:36:28.588 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:36:33.706 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:36:36.478 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:36:38.663 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:36:39.656 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:36:52.759 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-20 22:36:52.759 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:37:03.638 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-20 22:37:10.129 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:37:11.931 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:37:12.291 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:37:13.711 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:37:13.713 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-20 22:37:13.713 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:37:17.252 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-20 22:37:24.631 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:37:25.646 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:37:26.027 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:37:28.641 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:37:28.660 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:37:28.662 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:37:32.601 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:37:37.606 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:37:38.767 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:37:39.151 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:37:42.265 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:37:42.265 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:37:42.265 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:37:45.947 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:37:50.570 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:37:52.079 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:37:52.622 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:37:53.752 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:37:53.764 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:37:53.765 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:37:58.090 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:38:03.170 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:38:04.277 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:38:04.677 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:38:06.117 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:38:06.117 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:38:06.117 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:38:10.884 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:38:15.247 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:38:16.592 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:38:17.309 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:38:19.136 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:44:11.973 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-20 22:44:11.973 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:44:11.988 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:44:16.478 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:44:23.586 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:44:24.125 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:44:24.860 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:44:26.229 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:44:26.229 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:44:26.229 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:44:29.988 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:44:34.667 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:44:35.919 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:44:36.326 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:44:38.098 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:44:38.132 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-20 22:44:38.134 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:44:41.898 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-20 22:44:47.161 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:44:48.027 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:44:48.334 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:44:49.506 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:44:49.506 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-20 22:44:49.506 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:44:53.345 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-20 22:44:57.616 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:44:58.500 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:44:58.898 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:45:00.007 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:45:00.025 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:45:00.025 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:45:03.898 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:45:08.484 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:45:09.502 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:45:09.791 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:45:10.906 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:45:10.908 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:45:10.908 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:45:14.549 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:45:18.586 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:45:19.682 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:45:20.066 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:45:21.096 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:45:21.117 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:45:21.119 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:45:24.793 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:45:29.745 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:45:30.839 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:45:31.171 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:45:34.010 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:45:34.010 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-20 22:45:34.010 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:45:37.440 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+2025-07-20 22:45:41.526 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:45:42.828 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:45:43.181 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:45:46.233 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:53:41.894 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-20 22:53:41.927 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:53:47.278 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-20 22:53:51.578 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-20 22:53:52.901 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:53:53.294 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:53:56.234 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-20 22:53:56.235 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-20 22:53:56.235 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-20 22:53:59.908 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-20 22:54:12.646 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-20 22:54:13.054 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-20 22:54:13.249 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-20 22:54:13.940 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-21 17:19:29.254 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-21 17:19:29.283 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-21 17:19:34.982 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-21 17:19:46.328 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-21 17:19:46.329 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-21 17:19:46.332 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver.
+2025-07-21 17:19:46.358 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-21 17:19:47.224 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-21 17:19:47.224 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-21 17:19:47.230 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-21 17:19:49.206 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-21 17:19:53.172 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-21 17:19:53.173 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver.
+2025-07-21 17:19:53.180 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-21 17:19:54.835 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-21 17:22:52.039 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-21 17:22:52.039 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-21 17:22:53.988 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-21 17:22:56.993 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-21 17:22:56.994 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-21 17:22:56.994 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver.
+2025-07-21 17:22:57.196 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-21 17:22:57.880 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-21 17:22:58.061 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-21 17:22:58.974 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-21 17:22:58.974 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-21 17:22:58.974 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-21 17:23:01.122 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-21 17:23:24.941 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-21 17:23:24.941 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver.
+2025-07-21 17:23:25.062 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-21 17:23:25.423 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Clicking the submit button 
+2025-07-21 17:23:25.580 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-21 17:23:26.258 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-21 17:38:47.285 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-21 17:38:47.313 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-21 17:38:50.810 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-21 17:38:58.256 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-21 17:38:58.257 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-21 17:38:58.260 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver.
+2025-07-21 17:38:58.262 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: userName
+2025-07-21 17:38:58.372 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'Ujjawal Verma' into element: By.id: userName
+2025-07-21 17:38:58.734 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-21 17:38:58.734 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: userEmail
+2025-07-21 17:38:58.812 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'ujjawal@example.com' into element: By.id: userEmail
+2025-07-21 17:38:59.110 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: currentAddress
+2025-07-21 17:38:59.290 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '123 Test Lane' into element: By.id: currentAddress
+2025-07-21 17:39:00.268 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: permanentAddress
+2025-07-21 17:39:00.333 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '456 Automation St' into element: By.id: permanentAddress
+2025-07-21 17:39:00.692 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: submit
+2025-07-21 17:39:00.903 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling into view for element: By.id: submit
+2025-07-21 17:39:00.945 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be clickable: By.id: submit
+2025-07-21 17:39:01.052 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Clicking on element: By.id: submit
+2025-07-21 17:39:01.365 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: output
+2025-07-21 17:39:01.477 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from element: By.id: output - Text: Name:Ujjawal Verma
+Email:ujjawal@example.com
+Current Address :123 Test Lane
+Permananet Address :456 Automation St
+2025-07-21 17:39:01.494 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-21 17:39:03.048 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+2025-07-21 17:39:03.053 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-21 17:39:03.053 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-21 17:39:05.414 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-21 17:39:10.414 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-21 17:39:10.415 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver.
+2025-07-21 17:39:10.417 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: userName
+2025-07-21 17:39:10.503 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'John Doe' into element: By.id: userName
+2025-07-21 17:39:11.009 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-21 17:39:11.009 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: userEmail
+2025-07-21 17:39:11.090 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'john@example.com' into element: By.id: userEmail
+2025-07-21 17:39:11.802 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: currentAddress
+2025-07-21 17:39:11.873 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '456 A St' into element: By.id: currentAddress
+2025-07-21 17:39:12.291 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: permanentAddress
+2025-07-21 17:39:12.378 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '789 B Ave' into element: By.id: permanentAddress
+2025-07-21 17:39:12.763 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: submit
+2025-07-21 17:39:12.874 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling into view for element: By.id: submit
+2025-07-21 17:39:12.912 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be clickable: By.id: submit
+2025-07-21 17:39:13.010 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Clicking on element: By.id: submit
+2025-07-21 17:39:13.390 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for element to be visible: By.id: output
+2025-07-21 17:39:13.525 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from element: By.id: output - Text: Name:John Doe
+Email:john@example.com
+Current Address :456 A St
+Permananet Address :789 B Ave
+2025-07-21 17:39:13.528 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-21 17:39:15.414 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded

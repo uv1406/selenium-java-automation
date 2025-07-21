@@ -3,7 +3,8 @@ package com.automation.demo.utils;
 import org.openqa.selenium.WebDriver;
 
 public class DriverManager {
-    private static final ThreadLocal<WebDriver> driver= new ThreadLocal<>();
+
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
         return driver.get();
@@ -16,4 +17,5 @@ public class DriverManager {
     public static void unload() {
         driver.remove();
     }
+
 }

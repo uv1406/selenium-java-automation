@@ -3,5 +3,7 @@ com\automation\demo\utils\LoggerUtil.class
 com\automation\demo\tests\BaseTest.class
 com\automation\demo\utils\DriverManager.class
 com\automation\demo\utils\DriverFactory.class
+com\automation\demo\pageobjects\BasePage.class
 com\automation\demo\tests\TextBoxFormTest.class
+com\automation\demo\utils\ConfigReader.class
 com\automation\demo\pageobjects\TextBoxPage.class
