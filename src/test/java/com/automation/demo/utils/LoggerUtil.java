@@ -1,5 +1,3 @@
-
-
 package com.automation.demo.utils;
 
 import org.apache.logging.log4j.LogManager;

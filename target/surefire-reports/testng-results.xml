@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results retried="2" ignored="2" total="6" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-21T23:30:51 IST" name="UI Tests" finished-at="2025-07-21T23:31:32 IST" duration-ms="41583">
+  <suite started-at="2025-07-22T20:56:41 IST" name="UI Tests" finished-at="2025-07-22T20:57:28 IST" duration-ms="47426">
     <groups>
       <group name="regression">
-        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@495fac5f]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
+        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@495fac5f]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
+        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-07-21T23:30:51 IST" name="Text Box Tests" finished-at="2025-07-21T23:31:32 IST" duration-ms="41583">
+    <test started-at="2025-07-22T20:56:41 IST" name="Text Box Tests" finished-at="2025-07-22T20:57:28 IST" duration-ms="47426">
       <class name="com.automation.demo.tests.TextBoxFormTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@495fac5f]" started-at="2025-07-21T23:30:51 IST" name="setUp" finished-at="2025-07-21T23:30:53 IST" duration-ms="2022" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:56:41 IST" name="setUp" finished-at="2025-07-22T20:56:43 IST" duration-ms="2142" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,7 +24,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@495fac5f]" started-at="2025-07-21T23:30:53 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-21T23:31:18 IST" duration-ms="25093" status="PASS">
+        <test-method retried="true" signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:56:43 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-22T20:56:59 IST" duration-ms="16165" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -47,14 +47,50 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Email not found in output expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Email not found in output expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.automation.demo.tests.TextBoxFormTest.testTextBoxForm(TextBoxFormTest.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTextBoxForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@495fac5f]" started-at="2025-07-21T23:31:18 IST" name="tearDown" finished-at="2025-07-21T23:31:20 IST" duration-ms="2451" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:56:59 IST" name="tearDown" finished-at="2025-07-22T20:57:00 IST" duration-ms="1022" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTextBoxForm status=SKIP method=TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@495fac5f]" started-at="2025-07-21T23:31:20 IST" name="setUp" finished-at="2025-07-21T23:31:22 IST" duration-ms="1588" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:57:00 IST" name="setUp" finished-at="2025-07-22T20:57:02 IST" duration-ms="1775" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -65,7 +101,84 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@495fac5f]" started-at="2025-07-21T23:31:22 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-21T23:31:32 IST" duration-ms="9550" status="PASS">
+        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:57:02 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-22T20:57:08 IST" duration-ms="5387" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ujjawal Verma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ujjawal@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123 Test Lane]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[456 Automation St]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Email not found in output expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Email not found in output expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.automation.demo.tests.TextBoxFormTest.testTextBoxForm(TextBoxFormTest.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTextBoxForm -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:57:08 IST" name="tearDown" finished-at="2025-07-22T20:57:09 IST" duration-ms="1642" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTextBoxForm status=FAILURE method=TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:57:09 IST" name="setUp" finished-at="2025-07-22T20:57:12 IST" duration-ms="2328" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method retried="true" signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:57:12 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-22T20:57:18 IST" duration-ms="6129" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -88,10 +201,123 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Email not found in output expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Email not found in output expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.automation.demo.tests.TextBoxFormTest.testTextBoxForm(TextBoxFormTest.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTextBoxForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@495fac5f]" started-at="2025-07-21T23:31:32 IST" name="tearDown" finished-at="2025-07-21T23:31:32 IST" duration-ms="847" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:57:18 IST" name="tearDown" finished-at="2025-07-22T20:57:19 IST" duration-ms="993" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTextBoxForm status=SKIP method=TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:57:19 IST" name="setUp" finished-at="2025-07-22T20:57:21 IST" duration-ms="1960" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:57:21 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-22T20:57:27 IST" duration-ms="6484" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[John Doe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[john@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[456 A St]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[789 B Ave]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Email not found in output expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Email not found in output expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.automation.demo.tests.TextBoxFormTest.testTextBoxForm(TextBoxFormTest.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTextBoxForm -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747]" started-at="2025-07-22T20:57:27 IST" name="tearDown" finished-at="2025-07-22T20:57:28 IST" duration-ms="1317" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTextBoxForm status=FAILURE method=TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@5cde6747] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

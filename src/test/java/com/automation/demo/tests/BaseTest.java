@@ -2,6 +2,7 @@
 package com.automation.demo.tests;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -11,6 +12,7 @@ import com.automation.demo.utils.DriverFactory;
 import com.automation.demo.utils.DriverManager;
 import com.automation.demo.utils.LoggerUtil; // Import your LoggerUtil
 import org.apache.logging.log4j.Logger; // Import Log4j2 Logger
+import com.automation.demo.utils.ScreenshotUtil;
 
 public class BaseTest {
 
@@ -46,10 +48,18 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void tearDown() {
-        if (DriverManager.getDriver() != null) {
+    public void tearDown(ITestResult result) { // Added ITestResult parameter
+        WebDriver driver = DriverManager.getDriver();
+        if (driver != null) {
+            //Take screenshot on failure
+            if (result.getStatus() == ITestResult.FAILURE) {
+                logger.error("Test failed: " + result.getName() + ".FAILED! Taking screenshot.");
+                ScreenshotUtil.takeScreenshot(driver, result.getName());
+            } else {
+                logger.info("Test passed: " + result.getName());
+            }
             logger.info("Closing the browser");
-            DriverManager.getDriver().quit();
+            driver.quit();
             DriverManager.unload();
             logger.info("Browser closed and driver unloaded");
         }

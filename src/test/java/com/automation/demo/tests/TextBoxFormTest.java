@@ -34,7 +34,7 @@ public class TextBoxFormTest extends BaseTest {
             String output = page.getOutputText();
 
             Assert.assertTrue(output.contains(fullName), "Full name not found in output");
-            Assert.assertTrue(output.contains(email), "Email not found in output");
+            Assert.assertTrue(output.contains("email not found"), "Email not found in output");
 
         } catch (Exception e) {
             System.err.println("Test failed: " + e.getMessage());
