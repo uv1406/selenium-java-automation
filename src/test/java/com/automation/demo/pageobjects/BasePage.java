@@ -9,8 +9,13 @@ import java.time.Duration;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.ExpectedConditions; // Added for common wait conditions
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+ // Added for common wait conditions
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException; // Make sure this is imported
+import org.openqa.selenium.ElementNotInteractableException; // Good to catch this too for native clicks
+import org.openqa.selenium.StaleElementReferenceException;
 
 public abstract class BasePage { // Make it abstract as it's not meant to be instantiated directly
     protected WebDriver driver;
@@ -61,18 +66,29 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
     }
 
     protected void clickElement(WebElement element) {
+        
         WebElement clickableElement = waitForElementClickable(element);
-        logger.info("Clicking on WebElement.");
-        clickableElement.click();
+        try {
+            logger.info("Clicking on WebElement using native click.");
+            clickableElement.click();
+        } catch (ElementClickInterceptedException e) {
+            logger.warn("Native click intercepted: Attempting javascript click " + e.getMessage());
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickableElement);
+        } catch (Exception e) {
+            logger.error("Failed to click on WebElement: " + e.getMessage(), e);
+            throw e;
+        }
     }
 
     protected void clickElement(WebElement element, int customTimeoutSeconds) {
+        
         WebElement clickableElement = waitForElementClickable(element, customTimeoutSeconds);
         logger.info("Clicking on WebElement with custom timeout.");
         clickableElement.click();
     }
 
     protected void enterText(WebElement element, String text) {
+        
         WebElement visibleElement = waitForElementVisible(element);
         logger.info("Entering text '" + text + "' into WebElement.");
         visibleElement.clear();
@@ -80,6 +96,7 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
     }
 
     protected void enterText(WebElement element, String text, int customTimeoutSeconds) {
+        
         WebElement visibleElement = waitForElementVisible(element, customTimeoutSeconds);
         logger.info("Entering text '" + text + "' into WebElement with custom timeout.");
         visibleElement.clear();
@@ -87,6 +104,7 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
     }
 
     protected String getElementText(WebElement element) {
+        
         WebElement visibleElement = waitForElementVisible(element);
         String text = visibleElement.getText();
         logger.info("Getting text from WebElement - Text: " + text);
@@ -107,12 +125,16 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
 
     // New: Overload for scrolling into view directly with WebElement
     protected void scrollIntoView(WebElement element) {
-        logger.info("Scrolling WebElement into view.");
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+         logger.info("Scrolling WebElement into view.");
+         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Or your default wait time
+        WebElement actualElement = wait.until(ExpectedConditions.visibilityOf(element)); // Wait for visibility
+       logger.info("Scrolling WebElement into view: " + actualElement);
+       ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", actualElement);
     }
 
     // New: Overload for getting attribute directly with WebElement
     protected String getElementAttribute(WebElement element, String attribute) {
+        
         WebElement visibleElement = waitForElementVisible(element);
         String value = visibleElement.getAttribute(attribute);
         logger.info("Getting attribute '" + attribute + "' from WebElement - Value: " + value);
@@ -121,6 +143,7 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
 
     // New: Overload for isElementEnabled directly with WebElement
     protected boolean isElementEnabled(WebElement element) {
+        
         WebElement visibleElement = waitForElementVisible(element);
         boolean enabled = visibleElement.isEnabled();
         logger.info("WebElement is enabled: " + enabled);
@@ -129,6 +152,7 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
 
     // New: Overload for isElementSelected directly with WebElement
     protected boolean isElementSelected(WebElement element) {
+        
         WebElement visibleElement = waitForElementVisible(element);
         boolean selected = visibleElement.isSelected();
         logger.info("WebElement is selected: " + selected);
@@ -137,6 +161,7 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
 
     // New: Overload for selectCheckbox directly with WebElement
     protected void selectCheckbox(WebElement checkbox) {
+        
         WebElement visibleCheckbox = waitForElementVisible(checkbox);
         if (!visibleCheckbox.isSelected()) {
             logger.info("Selecting checkbox WebElement.");
@@ -148,6 +173,7 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
 
     // New: Overload for deselectCheckbox directly with WebElement
     protected void deselectCheckbox(WebElement checkbox) {
+        
         WebElement visibleCheckbox = waitForElementVisible(checkbox);
         if (visibleCheckbox.isSelected()) {
             logger.info("Deselecting checkbox WebElement.");
@@ -159,6 +185,7 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
 
     // New: Overload for selectRadioButton directly with WebElement
     protected void selectRadioButton(WebElement radio) {
+        
         WebElement visibleRadio = waitForElementVisible(radio);
         if (!visibleRadio.isSelected()) {
             logger.info("Selecting radio button WebElement.");
@@ -167,11 +194,74 @@ public abstract class BasePage { // Make it abstract as it's not meant to be ins
             logger.info("Radio button WebElement already selected.");
         }
     }
-
-    // New: Overload for submitForm directly with WebElement
-    protected void submitForm(WebElement element) {
-        WebElement visibleElement = waitForElementVisible(element);
-        logger.info("Submitting form for WebElement.");
-        visibleElement.submit();
+/**
+     * Robust click method that first attempts a native Selenium click.
+     * If the native click fails due to common interaction issues (like interception,
+     * not interactable, or element being off-screen/not immediately clickable),
+     * it falls back to scrolling the element into view and then performing a JavaScript click.
+     *
+     * @param element The WebElement to click (can be a PageFactory proxy).
+     */
+    protected void clickElementRobustly(By locator) {
+        logger.info("Attempting to click WebElement robustly: " + locator);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            logger.info("Attempting native click on WebElement directly: " + locator);
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));              
+            element.click();
+            logger.info("Native Click of WebElement is successful: " + locator);
+            return; // Exit if native click is successful
+        } catch (TimeoutException | ElementNotInteractableException | StaleElementReferenceException se) {
+            logger.warn("Native click failed, attempting JavaScript click for WebElement: " + locator + ". Attempting JavaScript click.");
+            try {
+                 // Ensure the element is in view and resolved for JavaScript operations
+                WebElement resolvedElement = findElementRobustly(locator);
+                jsScrollIntoView(resolvedElement);
+                // Perform JavaScript click
+                logger.info("Performing JavaScript click on WebElement after fallback logic: " + resolvedElement);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", resolvedElement);
+            } catch (Exception jsFallbackException) {
+                logger.error("JavaScript click failed on WebElement: " + locator, jsFallbackException);
+            }
+            logger.info("JavaScript click successful on WebElement via fallback on: " + locator);
+        }
+        catch (Exception exception){
+                // Catch any other unexpected exceptions that might occur during the initial native click attempt
+            logger.error("Unexpected error during click on WebElement: " + locator, exception.getMessage());
+            throw new RuntimeException("Failed to click on WebElement with both native and JavaScript methods: " + locator, exception);
+        }
     }
+    protected void jsScrollIntoView(WebElement element) {
+        logger.info("Scrolling WebElement into view using JavaScript: " + element);
+
+        try {
+            
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            logger.info("WebElement scrolled into view.");
+
+        } catch (Exception e) {
+            logger.error("Failed to scroll WebElement into view or resolve: " + element + " - " + e.getMessage(), e);
+            throw e; 
+        }
+
+} /**
+     * Robustly finds an element using a By locator and waits for its presence.
+     * This handles PageFactory proxy resolution implicitly if the By locator is used
+     * directly for finding.
+     *
+     * @param locator The By locator for the element.
+     * @return The resolved WebElement.
+     */
+    protected WebElement findElementRobustly(By locator) {
+        logger.info("Finding WebElement robustly: " + locator);
+        try {
+            // First, try to find the element normally
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            return wait.until(ExpectedConditions.presenceOfElementLocated(locator));        
+        } catch (Exception e) {
+            logger.error("Failed to find WebElement: " + locator + " - " + e.getMessage(), e);
+            throw new RuntimeException("Failed to find WebElement: " + locator, e);
+        }
+    }
+
 }

@@ -1,7 +1,9 @@
 C:\Users\ujjawalverma\SeleniumDemo\src\test\java\com\automation\demo\data\TestDataProviders.java
 C:\Users\ujjawalverma\SeleniumDemo\src\test\java\com\automation\demo\pageobjects\BasePage.java
+C:\Users\ujjawalverma\SeleniumDemo\src\test\java\com\automation\demo\pageobjects\CheckBoxPage.java
 C:\Users\ujjawalverma\SeleniumDemo\src\test\java\com\automation\demo\pageobjects\TextBoxPage.java
 C:\Users\ujjawalverma\SeleniumDemo\src\test\java\com\automation\demo\tests\BaseTest.java
+C:\Users\ujjawalverma\SeleniumDemo\src\test\java\com\automation\demo\tests\CheckBoxTest.java
 C:\Users\ujjawalverma\SeleniumDemo\src\test\java\com\automation\demo\tests\TextBoxFormTest.java
 C:\Users\ujjawalverma\SeleniumDemo\src\test\java\com\automation\demo\utils\AnnotationTransformer.java
 C:\Users\ujjawalverma\SeleniumDemo\src\test\java\com\automation\demo\utils\ConfigReader.java
