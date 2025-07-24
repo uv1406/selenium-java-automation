@@ -2,6 +2,7 @@
 <suite name="UI Tests" parallel="methods" thread-count="5" >
     <listeners>
         <listener class-name="com.automation.demo.utils.AnnotationTransformer"/>
+         <listener class-name="com.automation.demo.utils.TestListeners"/>
         </listeners>
     <parameter name="browserName" value="chrome"/>
     <test name="Text Box Tests">

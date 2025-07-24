@@ -1,19 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-24T21:17:16 IST" name="UI Tests" finished-at="2025-07-24T21:21:40 IST" duration-ms="263872">
+  <suite started-at="2025-07-24T22:43:05 IST" name="UI Tests" finished-at="2025-07-24T22:43:40 IST" duration-ms="35639">
     <groups>
       <group name="regression">
-        <method signature="CheckBoxTest.testCheckBox()[pri:0, instance:com.automation.demo.tests.CheckBoxTest@162be91c]" name="testCheckBox" class="com.automation.demo.tests.CheckBoxTest"/>
+        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@7792d851]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="CheckBoxTest.testCheckBox()[pri:0, instance:com.automation.demo.tests.CheckBoxTest@162be91c]" name="testCheckBox" class="com.automation.demo.tests.CheckBoxTest"/>
+        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@7792d851]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-07-24T21:17:16 IST" name="Text Box Tests" finished-at="2025-07-24T21:21:40 IST" duration-ms="263872">
+    <test started-at="2025-07-24T22:43:05 IST" name="Text Box Tests" finished-at="2025-07-24T22:43:40 IST" duration-ms="35639">
+      <class name="com.automation.demo.tests.TextBoxFormTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@7792d851]" started-at="2025-07-24T22:43:05 IST" name="setUp" finished-at="2025-07-24T22:43:08 IST" duration-ms="3485" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@7792d851]" started-at="2025-07-24T22:43:08 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-24T22:43:28 IST" duration-ms="20162" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ujjawal Verma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ujjawal@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123 Test Lane]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[456 Automation St]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTextBoxForm -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@7792d851]" started-at="2025-07-24T22:43:28 IST" name="tearDown" finished-at="2025-07-24T22:43:29 IST" duration-ms="1005" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTextBoxForm status=SUCCESS method=TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@7792d851] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@7792d851]" started-at="2025-07-24T22:43:29 IST" name="setUp" finished-at="2025-07-24T22:43:31 IST" duration-ms="1707" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@7792d851]" started-at="2025-07-24T22:43:31 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-24T22:43:39 IST" duration-ms="7704" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[John Doe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[john@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[456 A St]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[789 B Ave]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTextBoxForm -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@7792d851]" started-at="2025-07-24T22:43:39 IST" name="tearDown" finished-at="2025-07-24T22:43:40 IST" duration-ms="1307" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTextBoxForm status=SUCCESS method=TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@7792d851] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.demo.tests.TextBoxFormTest -->
+    </test> <!-- Text Box Tests -->
+  </suite> <!-- UI Tests -->
+  <suite started-at="2025-07-24T22:43:40 IST" name="UI Tests (0)" finished-at="2025-07-24T22:44:18 IST" duration-ms="37415">
+    <groups>
+      <group name="regression">
+        <method signature="CheckBoxTest.testCheckBox()[pri:0, instance:com.automation.demo.tests.CheckBoxTest@51e754e1]" name="testCheckBox" class="com.automation.demo.tests.CheckBoxTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="CheckBoxTest.testCheckBox()[pri:0, instance:com.automation.demo.tests.CheckBoxTest@51e754e1]" name="testCheckBox" class="com.automation.demo.tests.CheckBoxTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2025-07-24T22:43:40 IST" name="Text Box Tests" finished-at="2025-07-24T22:44:18 IST" duration-ms="37415">
       <class name="com.automation.demo.tests.CheckBoxTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.CheckBoxTest@162be91c]" started-at="2025-07-24T21:17:16 IST" name="setUp" finished-at="2025-07-24T21:17:20 IST" duration-ms="4264" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.CheckBoxTest@51e754e1]" started-at="2025-07-24T22:43:40 IST" name="setUp" finished-at="2025-07-24T22:43:43 IST" duration-ms="2339" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,15 +134,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testCheckBox()[pri:0, instance:com.automation.demo.tests.CheckBoxTest@162be91c]" started-at="2025-07-24T21:17:20 IST" name="testCheckBox" finished-at="2025-07-24T21:21:39 IST" duration-ms="258571" status="PASS">
+        <test-method signature="testCheckBox()[pri:0, instance:com.automation.demo.tests.CheckBoxTest@51e754e1]" started-at="2025-07-24T22:43:43 IST" name="testCheckBox" finished-at="2025-07-24T22:44:17 IST" duration-ms="34071" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCheckBox -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.CheckBoxTest@162be91c]" started-at="2025-07-24T21:21:39 IST" name="tearDown" finished-at="2025-07-24T21:21:40 IST" duration-ms="995" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.CheckBoxTest@51e754e1]" started-at="2025-07-24T22:44:17 IST" name="tearDown" finished-at="2025-07-24T22:44:18 IST" duration-ms="982" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testCheckBox status=SUCCESS method=CheckBoxTest.testCheckBox()[pri:0, instance:com.automation.demo.tests.CheckBoxTest@162be91c] output={null}]]]>
+                <![CDATA[[TestResult name=testCheckBox status=SUCCESS method=CheckBoxTest.testCheckBox()[pri:0, instance:com.automation.demo.tests.CheckBoxTest@51e754e1] output={null}]]]>
               </value>
             </param>
           </params>
@@ -41,5 +151,229 @@
         </test-method> <!-- tearDown -->
       </class> <!-- com.automation.demo.tests.CheckBoxTest -->
     </test> <!-- Text Box Tests -->
-  </suite> <!-- UI Tests -->
+  </suite> <!-- UI Tests (0) -->
+  <suite started-at="2025-07-24T22:45:16 IST" name="Master Automation Suite" finished-at="2025-07-24T22:45:16 IST" duration-ms="0">
+    <groups>
+    </groups>
+  </suite> <!-- Master Automation Suite -->
+  <suite started-at="2025-07-24T22:44:43 IST" name="UI Tests (2)" finished-at="2025-07-24T22:45:15 IST" duration-ms="32185">
+    <groups>
+      <group name="regression">
+        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@738d37fc]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@738d37fc]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2025-07-24T22:44:43 IST" name="Text Box Tests" finished-at="2025-07-24T22:45:15 IST" duration-ms="32185">
+      <class name="com.automation.demo.tests.TextBoxFormTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@738d37fc]" started-at="2025-07-24T22:44:43 IST" name="setUp" finished-at="2025-07-24T22:44:45 IST" duration-ms="1920" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@738d37fc]" started-at="2025-07-24T22:44:45 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-24T22:44:57 IST" duration-ms="11992" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ujjawal Verma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ujjawal@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123 Test Lane]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[456 Automation St]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTextBoxForm -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@738d37fc]" started-at="2025-07-24T22:44:57 IST" name="tearDown" finished-at="2025-07-24T22:44:59 IST" duration-ms="1991" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTextBoxForm status=SUCCESS method=TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@738d37fc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@738d37fc]" started-at="2025-07-24T22:44:59 IST" name="setUp" finished-at="2025-07-24T22:45:02 IST" duration-ms="2640" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@738d37fc]" started-at="2025-07-24T22:45:02 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-24T22:45:12 IST" duration-ms="10611" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[John Doe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[john@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[456 A St]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[789 B Ave]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTextBoxForm -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@738d37fc]" started-at="2025-07-24T22:45:12 IST" name="tearDown" finished-at="2025-07-24T22:45:15 IST" duration-ms="3004" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTextBoxForm status=SUCCESS method=TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@738d37fc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.demo.tests.TextBoxFormTest -->
+    </test> <!-- Text Box Tests -->
+  </suite> <!-- UI Tests (2) -->
+  <suite started-at="2025-07-24T22:44:18 IST" name="UI Tests (1)" finished-at="2025-07-24T22:44:43 IST" duration-ms="25422">
+    <groups>
+      <group name="regression">
+        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@34451ed8]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@34451ed8]" name="testTextBoxForm" class="com.automation.demo.tests.TextBoxFormTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2025-07-24T22:44:18 IST" name="Text Box Tests" finished-at="2025-07-24T22:44:43 IST" duration-ms="25422">
+      <class name="com.automation.demo.tests.TextBoxFormTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@34451ed8]" started-at="2025-07-24T22:44:18 IST" name="setUp" finished-at="2025-07-24T22:44:19 IST" duration-ms="1747" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@34451ed8]" started-at="2025-07-24T22:44:19 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-24T22:44:26 IST" duration-ms="6660" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ujjawal Verma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ujjawal@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123 Test Lane]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[456 Automation St]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTextBoxForm -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@34451ed8]" started-at="2025-07-24T22:44:26 IST" name="tearDown" finished-at="2025-07-24T22:44:28 IST" duration-ms="1772" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTextBoxForm status=SUCCESS method=TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@34451ed8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@34451ed8]" started-at="2025-07-24T22:44:28 IST" name="setUp" finished-at="2025-07-24T22:44:30 IST" duration-ms="2153" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@34451ed8]" started-at="2025-07-24T22:44:30 IST" name="testTextBoxForm" data-provider="formData" finished-at="2025-07-24T22:44:40 IST" duration-ms="10193" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[John Doe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[john@example.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[456 A St]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[789 B Ave]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTextBoxForm -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@34451ed8]" started-at="2025-07-24T22:44:40 IST" name="tearDown" finished-at="2025-07-24T22:44:43 IST" duration-ms="2868" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTextBoxForm status=SUCCESS method=TextBoxFormTest.testTextBoxForm(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.automation.demo.tests.TextBoxFormTest@34451ed8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.demo.tests.TextBoxFormTest -->
+    </test> <!-- Text Box Tests -->
+  </suite> <!-- UI Tests (1) -->
 </testng-results>

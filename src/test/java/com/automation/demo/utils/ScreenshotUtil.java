@@ -37,4 +37,24 @@ public class ScreenshotUtil {
             logger.error("Failed to take screenshot for test '" + testName + "': " + e.getMessage(), e);
         }
     }
+        /**
+     * Takes a screenshot of the current WebDriver view and returns it as a byte array.
+     * This method is specifically for attaching screenshots to reporting tools like Allure.
+     *
+     * @param driver The WebDriver instance.
+     * @return A byte array representing the PNG screenshot, or an empty array if an error occurs.
+     */
+    public static byte[] takeScreenshotAsBytes(WebDriver driver) {
+        if (driver instanceof TakesScreenshot) {
+            try {
+                logger.debug("Attempting to take screenshot as bytes.");
+                return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            } catch (Exception e) {
+                logger.error("Failed to take screenshot as bytes: " + e.getMessage());
+                return new byte[0]; // Return empty byte array on failure
+            }
+        }
+        logger.warn("WebDriver does not support taking screenshots or driver is null.");
+        return new byte[0];
+    }
 }

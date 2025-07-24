@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="265.288" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="133.674" tests="7" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="surefire.suiteXmlFiles" value="src/test/resources/testng/regression_suite.xml"/>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\ujjawalverma\SeleniumDemo\target\test-classes;C:\Users\ujjawalverma\SeleniumDemo\target\classes;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-java\4.22.0\selenium-java-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-api\4.22.0\selenium-api-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.22.0\selenium-chrome-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.22.0\selenium-chromium-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-json\4.22.0\selenium-json-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.22.0\selenium-manager-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.22.0\selenium-devtools-v124-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.22.0\selenium-devtools-v125-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v126\4.22.0\selenium-devtools-v126-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.22.0\selenium-devtools-v85-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.22.0\selenium-edge-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.22.0\selenium-firefox-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-http\4.22.0\selenium-http-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.22.0\selenium-ie-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.22.0\selenium-remote-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\guava\33.2.1-jre\guava-33.2.1-jre.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ujjawalverma\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ujjawalverma\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\ujjawalverma\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-api\1.39.0\opentelemetry-api-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-context\1.39.0\opentelemetry-context-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.39.0\opentelemetry-exporter-logging-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.39.0\opentelemetry-sdk-common-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.39.0\opentelemetry-sdk-extension-autoconfigure-spi-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.39.0\opentelemetry-sdk-extension-autoconfigure-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.39.0-alpha\opentelemetry-api-incubator-1.39.0-alpha.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.39.0\opentelemetry-sdk-trace-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.39.0\opentelemetry-sdk-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.39.0\opentelemetry-sdk-metrics-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.39.0\opentelemetry-sdk-logs-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\net\bytebuddy\byte-buddy\1.14.17\byte-buddy-1.14.17.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-os\4.22.0\selenium-os-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.22.0\selenium-safari-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-support\4.22.0\selenium-support-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\testng\testng\7.10.1\testng-7.10.1.jar;C:\Users\ujjawalverma\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\ujjawalverma\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\ujjawalverma\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\logging\log4j\log4j-core\2.20.0\log4j-core-2.20.0.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\ujjawalverma\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;"/>
+    <property name="java.class.path" value="C:\Users\ujjawalverma\SeleniumDemo\target\test-classes;C:\Users\ujjawalverma\SeleniumDemo\target\classes;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-java\4.22.0\selenium-java-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-api\4.22.0\selenium-api-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.22.0\selenium-chrome-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.22.0\selenium-chromium-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-json\4.22.0\selenium-json-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.22.0\selenium-manager-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.22.0\selenium-devtools-v124-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.22.0\selenium-devtools-v125-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v126\4.22.0\selenium-devtools-v126-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.22.0\selenium-devtools-v85-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.22.0\selenium-edge-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.22.0\selenium-firefox-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-http\4.22.0\selenium-http-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.22.0\selenium-ie-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.22.0\selenium-remote-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\guava\33.2.1-jre\guava-33.2.1-jre.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ujjawalverma\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ujjawalverma\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\ujjawalverma\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-api\1.39.0\opentelemetry-api-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-context\1.39.0\opentelemetry-context-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.39.0\opentelemetry-exporter-logging-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.39.0\opentelemetry-sdk-common-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.39.0\opentelemetry-sdk-extension-autoconfigure-spi-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.39.0\opentelemetry-sdk-extension-autoconfigure-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.39.0-alpha\opentelemetry-api-incubator-1.39.0-alpha.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.39.0\opentelemetry-sdk-trace-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.39.0\opentelemetry-sdk-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.39.0\opentelemetry-sdk-metrics-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.39.0\opentelemetry-sdk-logs-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\net\bytebuddy\byte-buddy\1.14.17\byte-buddy-1.14.17.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-os\4.22.0\selenium-os-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.22.0\selenium-safari-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-support\4.22.0\selenium-support-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\testng\testng\7.10.1\testng-7.10.1.jar;C:\Users\ujjawalverma\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\ujjawalverma\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\ujjawalverma\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\logging\log4j\log4j-core\2.23.1\log4j-core-2.23.1.jar;C:\Users\ujjawalverma\.m2\repository\commons-io\commons-io\2.16.1\commons-io-2.16.1.jar;C:\Users\ujjawalverma\.m2\repository\io\qameta\allure\allure-testng\2.29.0\allure-testng-2.29.0.jar;C:\Users\ujjawalverma\.m2\repository\io\qameta\allure\allure-java-commons\2.29.0\allure-java-commons-2.29.0.jar;C:\Users\ujjawalverma\.m2\repository\io\qameta\allure\allure-model\2.29.0\allure-model-2.29.0.jar;C:\Users\ujjawalverma\.m2\repository\io\qameta\allure\allure-test-filter\2.29.0\allure-test-filter-2.29.0.jar;C:\Users\ujjawalverma\.m2\repository\org\aspectj\aspectjweaver\1.9.22\aspectjweaver-1.9.22.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -16,10 +15,11 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Users\ujjawalverma\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\ujjawalverma\AppData\Local\Temp\surefire504056576139863894\surefirebooter-20250724211636906_3.jar C:\Users\ujjawalverma\AppData\Local\Temp\surefire504056576139863894 2025-07-24T21-16-36_300-jvmRun1 surefire-20250724211636906_1tmp surefire_0-20250724211636906_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\ujjawalverma\AppData\Local\Temp\surefire10450831477511242055\surefirebooter-20250724224259321_3.jar C:\Users\ujjawalverma\AppData\Local\Temp\surefire10450831477511242055 2025-07-24T22-42-57_140-jvmRun1 surefire-20250724224259321_1tmp surefire_0-20250724224259321_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\ujjawalverma\SeleniumDemo\target\test-classes;C:\Users\ujjawalverma\SeleniumDemo\target\classes;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-java\4.22.0\selenium-java-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-api\4.22.0\selenium-api-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.22.0\selenium-chrome-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.22.0\selenium-chromium-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-json\4.22.0\selenium-json-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.22.0\selenium-manager-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.22.0\selenium-devtools-v124-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.22.0\selenium-devtools-v125-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v126\4.22.0\selenium-devtools-v126-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.22.0\selenium-devtools-v85-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.22.0\selenium-edge-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.22.0\selenium-firefox-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-http\4.22.0\selenium-http-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.22.0\selenium-ie-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.22.0\selenium-remote-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\guava\33.2.1-jre\guava-33.2.1-jre.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ujjawalverma\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ujjawalverma\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\ujjawalverma\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-api\1.39.0\opentelemetry-api-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-context\1.39.0\opentelemetry-context-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.39.0\opentelemetry-exporter-logging-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.39.0\opentelemetry-sdk-common-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.39.0\opentelemetry-sdk-extension-autoconfigure-spi-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.39.0\opentelemetry-sdk-extension-autoconfigure-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.39.0-alpha\opentelemetry-api-incubator-1.39.0-alpha.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.39.0\opentelemetry-sdk-trace-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.39.0\opentelemetry-sdk-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.39.0\opentelemetry-sdk-metrics-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.39.0\opentelemetry-sdk-logs-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\net\bytebuddy\byte-buddy\1.14.17\byte-buddy-1.14.17.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-os\4.22.0\selenium-os-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.22.0\selenium-safari-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-support\4.22.0\selenium-support-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\testng\testng\7.10.1\testng-7.10.1.jar;C:\Users\ujjawalverma\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\ujjawalverma\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\ujjawalverma\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\logging\log4j\log4j-core\2.20.0\log4j-core-2.20.0.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\ujjawalverma\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\ujjawalverma\SeleniumDemo\target\test-classes;C:\Users\ujjawalverma\SeleniumDemo\target\classes;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-java\4.22.0\selenium-java-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-api\4.22.0\selenium-api-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.22.0\selenium-chrome-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.22.0\selenium-chromium-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-json\4.22.0\selenium-json-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.22.0\selenium-manager-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v124\4.22.0\selenium-devtools-v124-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v125\4.22.0\selenium-devtools-v125-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v126\4.22.0\selenium-devtools-v126-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.22.0\selenium-devtools-v85-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.22.0\selenium-edge-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.22.0\selenium-firefox-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-http\4.22.0\selenium-http-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.22.0\selenium-ie-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.22.0\selenium-remote-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\guava\33.2.1-jre\guava-33.2.1-jre.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\ujjawalverma\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ujjawalverma\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ujjawalverma\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\ujjawalverma\.m2\repository\com\google\errorprone\error_prone_annotations\2.26.1\error_prone_annotations-2.26.1.jar;C:\Users\ujjawalverma\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-api\1.39.0\opentelemetry-api-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-context\1.39.0\opentelemetry-context-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.39.0\opentelemetry-exporter-logging-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.39.0\opentelemetry-sdk-common-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.39.0\opentelemetry-sdk-extension-autoconfigure-spi-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.39.0\opentelemetry-sdk-extension-autoconfigure-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.39.0-alpha\opentelemetry-api-incubator-1.39.0-alpha.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.39.0\opentelemetry-sdk-trace-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.39.0\opentelemetry-sdk-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.39.0\opentelemetry-sdk-metrics-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.39.0\opentelemetry-sdk-logs-1.39.0.jar;C:\Users\ujjawalverma\.m2\repository\net\bytebuddy\byte-buddy\1.14.17\byte-buddy-1.14.17.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-os\4.22.0\selenium-os-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.22.0\selenium-safari-driver-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\seleniumhq\selenium\selenium-support\4.22.0\selenium-support-4.22.0.jar;C:\Users\ujjawalverma\.m2\repository\org\testng\testng\7.10.1\testng-7.10.1.jar;C:\Users\ujjawalverma\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\ujjawalverma\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\ujjawalverma\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\ujjawalverma\.m2\repository\org\apache\logging\log4j\log4j-core\2.23.1\log4j-core-2.23.1.jar;C:\Users\ujjawalverma\.m2\repository\commons-io\commons-io\2.16.1\commons-io-2.16.1.jar;C:\Users\ujjawalverma\.m2\repository\io\qameta\allure\allure-testng\2.29.0\allure-testng-2.29.0.jar;C:\Users\ujjawalverma\.m2\repository\io\qameta\allure\allure-java-commons\2.29.0\allure-java-commons-2.29.0.jar;C:\Users\ujjawalverma\.m2\repository\io\qameta\allure\allure-model\2.29.0\allure-model-2.29.0.jar;C:\Users\ujjawalverma\.m2\repository\io\qameta\allure\allure-test-filter\2.29.0\allure-test-filter-2.29.0.jar;C:\Users\ujjawalverma\.m2\repository\org\aspectj\aspectjweaver\1.9.22\aspectjweaver-1.9.22.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
+    <property name="allure.results.directory" value="C:\Users\ujjawalverma\SeleniumDemo\target/allure-results"/>
     <property name="user.home" value="C:\Users\ujjawalverma"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ujjawalverma\AppData\Local\Temp\surefire504056576139863894\surefirebooter-20250724211636906_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ujjawalverma\AppData\Local\Temp\surefire10450831477511242055\surefirebooter-20250724224259321_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+6-LTS"/>
@@ -59,75 +59,319 @@
     <property name="java.vm.version" value="21.0.7+6-LTS"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
-    <property name="maven.surefire.debug" value="true"/>
   </properties>
-  <testcase name="testCheckBox" classname="com.automation.demo.tests.CheckBoxTest" time="258.571">
-    <system-out><![CDATA[2025-07-24 21:17:16.041 [main] INFO  com.automation.demo.utils.AnnotationTransformer - AnnotationTransformer: Processing method: testCheckBox in class: UnknownClass
-2025-07-24 21:17:16.076 [main] INFO  com.automation.demo.utils.AnnotationTransformer - AnnotationTransformer: Successfully applied TestRetryAnalyzer to: testCheckBox
-2025-07-24 21:17:16.207 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
-2025-07-24 21:17:16.234 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
-2025-07-24 21:17:20.458 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
-Browser opened in thread: 39
-Navigated to: https://demoqa.com/checkbox
-2025-07-24 21:18:25.556 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
-2025-07-24 21:18:25.558 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
-2025-07-24 21:18:25.577 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.CheckBoxPage - CheckBoxPage initialized with WebDriver using PageFactory.
-2025-07-24 21:18:25.578 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Attempting to click WebElement robustly: By.id: tree-node-home
-2025-07-24 21:18:25.578 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Attempting native click on WebElement directly: By.id: tree-node-home
-2025-07-24 21:18:35.876 [TestNG-test-Text Box Tests-1] WARN  com.automation.demo.pageobjects.BasePage - Native click failed, attempting JavaScript click for WebElement: By.id: tree-node-home. Attempting JavaScript click.
-2025-07-24 21:19:09.263 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Finding WebElement robustly: By.id: tree-node-home
-2025-07-24 21:19:46.827 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view using JavaScript: [[ChromeDriver: chrome on windows (777b09b63204fd560af5051111b36ff1)] -> id: tree-node-home]
-2025-07-24 21:20:13.173 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - WebElement scrolled into view.
-2025-07-24 21:20:23.366 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Performing JavaScript click on WebElement after fallback logic: [[ChromeDriver: chrome on windows (777b09b63204fd560af5051111b36ff1)] -> id: tree-node-home]
-2025-07-24 21:20:29.210 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - JavaScript click successful on WebElement via fallback on: By.id: tree-node-home
-2025-07-24 21:20:45.593 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.CheckBoxPage - Getting text from Home CheckBox.
-2025-07-24 21:21:05.240 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
-2025-07-24 21:21:27.228 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from WebElement - Text: You have selected :
-home
-desktop
-notes
-commands
-documents
-workspace
-react
-angular
-veu
-office
-public
-private
-classified
-general
-downloads
-wordFile
-excelFile
-2025-07-24 21:21:31.683 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.CheckBoxPage - Getting text from Home CheckBox.
-2025-07-24 21:21:35.363 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
-2025-07-24 21:21:37.313 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from WebElement - Text: You have selected :
-home
-desktop
-notes
-commands
-documents
-workspace
-react
-angular
-veu
-office
-public
-private
-classified
-general
-downloads
-wordFile
-excelFile
-2025-07-24 21:21:39.034 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestRetryAnalyzer - TestRetryAnalyzer initialized. Max retry count: 0
+  <testcase name="testTextBoxForm[Ujjawal Verma, ujjawal@example.com, 123 Test Lane, 456 Automation St](1)" classname="com.automation.demo.tests.TextBoxFormTest" time="20.186">
+    <system-out><![CDATA[2025-07-24 22:43:04.886 [main] INFO  com.automation.demo.utils.AnnotationTransformer - AnnotationTransformer: Processing method: testTextBoxForm in class: UnknownClass
+2025-07-24 22:43:04.902 [main] INFO  com.automation.demo.utils.AnnotationTransformer - AnnotationTransformer: Successfully applied TestRetryAnalyzer to: testTextBoxForm
+2025-07-24 22:43:05.044 [main] INFO  com.automation.demo.utils.AnnotationTransformer - AnnotationTransformer: Processing method: testCheckBox in class: UnknownClass
+2025-07-24 22:43:05.044 [main] INFO  com.automation.demo.utils.AnnotationTransformer - AnnotationTransformer: Successfully applied TestRetryAnalyzer to: testCheckBox
+2025-07-24 22:43:05.076 [main] INFO  com.automation.demo.utils.TestListeners - ---------- Test Suite 'UI Tests' Started ----------
+2025-07-24 22:43:05.250 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-24 22:43:05.250 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-24 22:43:05.282 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-24 22:43:08.672 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+Browser opened in thread: 37
+2025-07-24 22:43:08.798 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Started: testTextBoxForm
+Navigated to: https://demoqa.com/text-box
+2025-07-24 22:43:27.411 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-24 22:43:27.486 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver using PageFactory.
+2025-07-24 22:43:27.486 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:43:27.542 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'Ujjawal Verma' into WebElement.
+2025-07-24 22:43:27.785 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-24 22:43:27.785 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:43:27.811 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'ujjawal@example.com' into WebElement.
+2025-07-24 22:43:28.032 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:43:28.074 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '123 Test Lane' into WebElement.
+2025-07-24 22:43:28.275 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:43:28.423 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '456 Automation St' into WebElement.
+2025-07-24 22:43:28.596 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view.
+2025-07-24 22:43:28.639 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view: [[ChromeDriver: chrome on windows (d025d6b44f3fa4d248b6688ae44a4fa1)] -> id: submit]
+2025-07-24 22:43:28.659 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be clickable.
+2025-07-24 22:43:28.743 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Clicking on WebElement using native click.
+2025-07-24 22:43:28.874 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:43:28.933 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from WebElement - Text: Name:Ujjawal Verma
+Email:ujjawal@example.com
+Current Address :123 Test Lane
+Permananet Address :456 Automation St
+2025-07-24 22:43:28.944 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestRetryAnalyzer - TestRetryAnalyzer initialized. Max retry count: 0
+2025-07-24 22:43:28.945 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Passed: testTextBoxForm
 ]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Jul 24, 2025 9:17:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jul 24, 2025 10:43:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-Jul 24, 2025 9:17:20 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jul 24, 2025 10:43:08 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.22.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testTextBoxForm[Ujjawal Verma, ujjawal@example.com, 123 Test Lane, 456 Automation St](1)" classname="com.automation.demo.tests.TextBoxFormTest" time="6.662">
+    <system-out><![CDATA[2025-07-24 22:44:17.171 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Test passed: testCheckBox
+2025-07-24 22:44:17.171 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-24 22:44:18.152 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+Teardown finished in thread: 73
+2025-07-24 22:44:18.156 [main] INFO  com.automation.demo.utils.TestListeners - ---------- Test Suite 'UI Tests (0)' Finished ----------
+2025-07-24 22:44:18.169 [main] INFO  com.automation.demo.utils.TestListeners - ---------- Test Suite 'UI Tests (1)' Started ----------
+2025-07-24 22:44:18.169 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-24 22:44:18.169 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-24 22:44:19.914 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+Browser opened in thread: 89
+2025-07-24 22:44:19.924 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Started: testTextBoxForm
+Navigated to: https://demoqa.com/text-box
+2025-07-24 22:44:23.809 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-24 22:44:23.811 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver using PageFactory.
+2025-07-24 22:44:23.811 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:23.864 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'Ujjawal Verma' into WebElement.
+2025-07-24 22:44:24.164 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-24 22:44:24.164 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:24.210 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'ujjawal@example.com' into WebElement.
+2025-07-24 22:44:24.733 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:24.788 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '123 Test Lane' into WebElement.
+2025-07-24 22:44:25.079 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:25.161 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '456 Automation St' into WebElement.
+2025-07-24 22:44:25.639 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view.
+2025-07-24 22:44:25.762 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view: [[ChromeDriver: chrome on windows (23e786b9ae2b2f1bac461e7cc98da8e8)] -> id: submit]
+2025-07-24 22:44:25.843 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be clickable.
+2025-07-24 22:44:26.021 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Clicking on WebElement using native click.
+2025-07-24 22:44:26.437 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:26.577 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from WebElement - Text: Name:Ujjawal Verma
+Email:ujjawal@example.com
+Current Address :123 Test Lane
+Permananet Address :456 Automation St
+2025-07-24 22:44:26.579 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Passed: testTextBoxForm
+]]></system-out>
+    <system-err><![CDATA[Jul 24, 2025 10:44:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 24, 2025 10:44:19 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.22.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testTextBoxForm[Ujjawal Verma, ujjawal@example.com, 123 Test Lane, 456 Automation St](1)" classname="com.automation.demo.tests.TextBoxFormTest" time="11.994">
+    <system-out><![CDATA[2025-07-24 22:44:40.720 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Test passed: testTextBoxForm
+2025-07-24 22:44:40.721 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-24 22:44:43.586 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+Teardown finished in thread: 89
+2025-07-24 22:44:43.591 [main] INFO  com.automation.demo.utils.TestListeners - ---------- Test Suite 'UI Tests (1)' Finished ----------
+2025-07-24 22:44:43.620 [main] INFO  com.automation.demo.utils.TestListeners - ---------- Test Suite 'UI Tests (2)' Started ----------
+2025-07-24 22:44:43.624 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-24 22:44:43.627 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-24 22:44:45.544 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+Browser opened in thread: 119
+2025-07-24 22:44:45.550 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Started: testTextBoxForm
+Navigated to: https://demoqa.com/text-box
+2025-07-24 22:44:54.650 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-24 22:44:54.651 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver using PageFactory.
+2025-07-24 22:44:54.651 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:54.752 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'Ujjawal Verma' into WebElement.
+2025-07-24 22:44:55.440 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-24 22:44:55.440 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:55.521 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'ujjawal@example.com' into WebElement.
+2025-07-24 22:44:55.927 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:56.026 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '123 Test Lane' into WebElement.
+2025-07-24 22:44:56.379 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:56.449 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '456 Automation St' into WebElement.
+2025-07-24 22:44:56.807 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view.
+2025-07-24 22:44:56.905 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view: [[ChromeDriver: chrome on windows (7d7b4d4f5e04d329982bfd9bbc0abd38)] -> id: submit]
+2025-07-24 22:44:56.964 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be clickable.
+2025-07-24 22:44:57.076 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Clicking on WebElement using native click.
+2025-07-24 22:44:57.389 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:57.540 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from WebElement - Text: Name:Ujjawal Verma
+Email:ujjawal@example.com
+Current Address :123 Test Lane
+Permananet Address :456 Automation St
+2025-07-24 22:44:57.541 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Passed: testTextBoxForm
+]]></system-out>
+    <system-err><![CDATA[Jul 24, 2025 10:44:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 24, 2025 10:44:45 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.22.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testTextBoxForm[John Doe, john@example.com, 456 A St, 789 B Ave](2)" classname="com.automation.demo.tests.TextBoxFormTest" time="7.683">
+    <system-out><![CDATA[2025-07-24 22:43:28.967 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Test passed: testTextBoxForm
+2025-07-24 22:43:28.967 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-24 22:43:29.965 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+Teardown finished in thread: 37
+2025-07-24 22:43:29.965 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-24 22:43:29.965 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-24 22:43:31.670 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+Browser opened in thread: 37
+2025-07-24 22:43:31.680 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Started: testTextBoxForm
+Navigated to: https://demoqa.com/text-box
+2025-07-24 22:43:36.393 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-24 22:43:36.394 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver using PageFactory.
+2025-07-24 22:43:36.395 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:43:36.464 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'John Doe' into WebElement.
+2025-07-24 22:43:36.945 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-24 22:43:36.946 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:43:37.075 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'john@example.com' into WebElement.
+2025-07-24 22:43:37.691 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:43:37.775 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '456 A St' into WebElement.
+2025-07-24 22:43:38.377 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:43:38.460 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '789 B Ave' into WebElement.
+2025-07-24 22:43:38.776 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view.
+2025-07-24 22:43:38.891 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view: [[ChromeDriver: chrome on windows (16a5f9bbe96df8c33f1ce52862d39d01)] -> id: submit]
+2025-07-24 22:43:38.943 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be clickable.
+2025-07-24 22:43:39.049 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Clicking on WebElement using native click.
+2025-07-24 22:43:39.284 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:43:39.378 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from WebElement - Text: Name:John Doe
+Email:john@example.com
+Current Address :456 A St
+Permananet Address :789 B Ave
+2025-07-24 22:43:39.379 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Passed: testTextBoxForm
+]]></system-out>
+    <system-err><![CDATA[Jul 24, 2025 10:43:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 24, 2025 10:43:31 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.22.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testTextBoxForm[John Doe, john@example.com, 456 A St, 789 B Ave](2)" classname="com.automation.demo.tests.TextBoxFormTest" time="10.199">
+    <system-out><![CDATA[2025-07-24 22:44:26.586 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Test passed: testTextBoxForm
+2025-07-24 22:44:26.587 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-24 22:44:28.357 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+Teardown finished in thread: 89
+2025-07-24 22:44:28.361 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-24 22:44:28.361 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-24 22:44:30.514 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+Browser opened in thread: 89
+2025-07-24 22:44:30.524 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Started: testTextBoxForm
+Navigated to: https://demoqa.com/text-box
+2025-07-24 22:44:39.186 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-24 22:44:39.187 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver using PageFactory.
+2025-07-24 22:44:39.187 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:39.219 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'John Doe' into WebElement.
+2025-07-24 22:44:39.369 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-24 22:44:39.370 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:39.395 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'john@example.com' into WebElement.
+2025-07-24 22:44:39.634 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:39.657 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '456 A St' into WebElement.
+2025-07-24 22:44:39.802 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:39.831 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '789 B Ave' into WebElement.
+2025-07-24 22:44:40.036 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view.
+2025-07-24 22:44:40.136 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view: [[ChromeDriver: chrome on windows (8d540ee2892a763b99c9d4bce9d9074a)] -> id: submit]
+2025-07-24 22:44:40.180 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be clickable.
+2025-07-24 22:44:40.268 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Clicking on WebElement using native click.
+2025-07-24 22:44:40.562 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:40.711 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from WebElement - Text: Name:John Doe
+Email:john@example.com
+Current Address :456 A St
+Permananet Address :789 B Ave
+2025-07-24 22:44:40.712 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Passed: testTextBoxForm
+]]></system-out>
+    <system-err><![CDATA[Jul 24, 2025 10:44:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 24, 2025 10:44:30 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.22.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testTextBoxForm[John Doe, john@example.com, 456 A St, 789 B Ave](2)" classname="com.automation.demo.tests.TextBoxFormTest" time="10.609">
+    <system-out><![CDATA[2025-07-24 22:44:57.547 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Test passed: testTextBoxForm
+2025-07-24 22:44:57.547 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-24 22:44:59.536 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+Teardown finished in thread: 119
+2025-07-24 22:44:59.540 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from config.properties: chrome
+2025-07-24 22:44:59.541 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-24 22:45:02.179 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: 
+Browser opened in thread: 119
+2025-07-24 22:45:02.187 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Started: testTextBoxForm
+Navigated to: https://demoqa.com/text-box
+2025-07-24 22:45:10.178 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-24 22:45:10.180 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver using PageFactory.
+2025-07-24 22:45:10.180 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:45:10.246 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'John Doe' into WebElement.
+2025-07-24 22:45:10.744 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-24 22:45:10.744 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:45:10.855 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text 'john@example.com' into WebElement.
+2025-07-24 22:45:11.269 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:45:11.394 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '456 A St' into WebElement.
+2025-07-24 22:45:11.759 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:45:11.838 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Entering text '789 B Ave' into WebElement.
+2025-07-24 22:45:12.123 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view.
+2025-07-24 22:45:12.212 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view: [[ChromeDriver: chrome on windows (38433ae99a57126a2a910a3d38d1d973)] -> id: submit]
+2025-07-24 22:45:12.263 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be clickable.
+2025-07-24 22:45:12.389 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Clicking on WebElement using native click.
+2025-07-24 22:45:12.670 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:45:12.792 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from WebElement - Text: Name:John Doe
+Email:john@example.com
+Current Address :456 A St
+Permananet Address :789 B Ave
+2025-07-24 22:45:12.794 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Passed: testTextBoxForm
+]]></system-out>
+    <system-err><![CDATA[Jul 24, 2025 10:45:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 24, 2025 10:45:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.22.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="testCheckBox" classname="com.automation.demo.tests.CheckBoxTest" time="34.073">
+    <system-out><![CDATA[2025-07-24 22:43:39.387 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Test passed: testTextBoxForm
+2025-07-24 22:43:39.388 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
+2025-07-24 22:43:40.693 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
+Teardown finished in thread: 37
+2025-07-24 22:43:40.699 [main] INFO  com.automation.demo.utils.TestListeners - ---------- Test Suite 'UI Tests' Finished ----------
+2025-07-24 22:43:40.741 [main] INFO  com.automation.demo.utils.TestListeners - ---------- Test Suite 'UI Tests (0)' Started ----------
+2025-07-24 22:43:40.754 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-24 22:43:40.756 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.DriverFactory - chrome browser is selected for execution
+2025-07-24 22:43:43.091 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Webdriver initialized for browser: chrome
+Browser opened in thread: 73
+2025-07-24 22:43:43.099 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Started: testCheckBox
+Navigated to: https://demoqa.com/checkbox
+2025-07-24 22:44:06.555 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-24 22:44:06.555 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.pageobjects.CheckBoxPage - CheckBoxPage initialized with WebDriver using PageFactory.
+2025-07-24 22:44:06.555 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Attempting to click WebElement robustly: By.id: tree-node-home
+2025-07-24 22:44:06.555 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Attempting native click on WebElement directly: By.id: tree-node-home
+2025-07-24 22:44:16.917 [TestNG-test-Text Box Tests-1] WARN  com.automation.demo.pageobjects.BasePage - Native click failed, attempting JavaScript click for WebElement: By.id: tree-node-home. Attempting JavaScript click.
+2025-07-24 22:44:16.917 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Finding WebElement robustly: By.id: tree-node-home
+2025-07-24 22:44:16.934 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Scrolling WebElement into view using JavaScript: [[ChromeDriver: chrome on windows (cf9cbe88cf3327bba909bc9e7ccd1be2)] -> id: tree-node-home]
+2025-07-24 22:44:16.962 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - WebElement scrolled into view.
+2025-07-24 22:44:16.962 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Performing JavaScript click on WebElement after fallback logic: [[ChromeDriver: chrome on windows (cf9cbe88cf3327bba909bc9e7ccd1be2)] -> id: tree-node-home]
+2025-07-24 22:44:16.987 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - JavaScript click successful on WebElement via fallback on: By.id: tree-node-home
+2025-07-24 22:44:16.987 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.CheckBoxPage - Getting text from Home CheckBox.
+2025-07-24 22:44:16.987 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:17.081 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from WebElement - Text: You have selected :
+home
+desktop
+notes
+commands
+documents
+workspace
+react
+angular
+veu
+office
+public
+private
+classified
+general
+downloads
+wordFile
+excelFile
+2025-07-24 22:44:17.082 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.CheckBoxPage - Getting text from Home CheckBox.
+2025-07-24 22:44:17.082 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-24 22:44:17.165 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.pageobjects.BasePage - Getting text from WebElement - Text: You have selected :
+home
+desktop
+notes
+commands
+documents
+workspace
+react
+angular
+veu
+office
+public
+private
+classified
+general
+downloads
+wordFile
+excelFile
+2025-07-24 22:44:17.167 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.utils.TestListeners - Test Passed: testCheckBox
+]]></system-out>
+    <system-err><![CDATA[Jul 24, 2025 10:43:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 24, 2025 10:43:43 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.22.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>

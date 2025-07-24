@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -9,11 +10,25 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <!-- Java Version -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <selenium.version>4.22.0</selenium.version> <!-- Keep this updated to the latest stable -->
-        <testng.version>7.10.1</testng.version> <!-- Specified TestNG version -->
-        <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version> <!-- Latest stable Surefire plugin -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- Dependency Versions (Centralized and Updated) -->
+        <selenium.version>4.22.0</selenium.version>
+        <testng.version>7.10.1</testng.version>
+        <webdrivermanager.version>5.9.1</webdrivermanager.version> <!-- Added WebDriverManager version -->
+        <log4j.version>2.23.1</log4j.version> <!-- Updated Log4j2 to latest stable -->
+        <commons-io.version>2.16.1</commons-io.version> <!-- Updated Commons IO to latest stable -->
+        <allure.testng.version>2.29.0</allure.testng.version> <!-- Centralized Allure TestNG version -->
+        <aspectj.version>1.9.22</aspectj.version>             <!-- Centralized AspectJ version (often compatible with Allure) -->
+        <allure.maven.version>2.12.0</allure.maven.version>   <!-- Centralized Allure Maven Plugin version -->
+
+        <!-- Plugin Versions -->
+        <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.3.1</maven.surefire.plugin.version> <!-- Updated Surefire plugin to latest stable -->
     </properties>
 
     <dependencies>
@@ -24,79 +39,127 @@
             <version>${selenium.version}</version>
         </dependency>
 
+
         <!-- TestNG Dependency -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-            <scope>test</scope> <!-- TestNG is only needed for compiling and running tests -->
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Log4j2 API -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+            <scope>test</scope> <!-- Changed scope -->
         </dependency>
 
         <!-- Log4j2 Core -->
-<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-core</artifactId>
-    <version>2.20.0</version>
-</dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+            <scope>test</scope> <!-- Changed scope -->
+        </dependency>
 
-<!-- Log4j2 API -->
-<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-api</artifactId>
-    <version>2.20.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-<dependency>
-    <groupId>commons-io</groupId>
-    <artifactId>commons-io</artifactId>
-    <version>2.18.0</version>
-</dependency>
+        <!-- Apache Commons IO (for FileUtils in ScreenshotUtil) -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Allure TestNG Adapter -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- AspectJ Weaver (Required by Allure for @Step and other annotations) -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Optional: SLF4J API and Log4j2 binding for SLF4J (Recommended for logging facade) -->
+        <!-- If you want to use SLF4J API in your code (e.g., org.slf4j.Logger) -->
+        <!-- <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.13</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>${log4j.version}</version>
+            <scope>test</scope>
+        </dependency> -->
+
     </dependencies>
 
-
     <build>
-    <testSourceDirectory>src/test/java</testSourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
         <plugins>
-            <!-- Plugin to compile Java code -->
+            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version> <!-- Use a recent version -->
+                <version>${maven.compiler.plugin.version}</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
+                    <encoding>UTF-8</encoding> <!-- Good practice to define encoding -->
                 </configuration>
             </plugin>
 
-            <!-- Plugin to run tests (Surefire Plugin) -->
+            <!-- Allure Maven Plugin for report generation -->
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure.maven.version}</version>
+                <configuration>
+                    <!-- This directory is where Allure will look for the raw results -->
+                    <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
+                    <!-- This directory is where the final HTML report will be generated -->
+                    <reportDirectory>${project.build.directory}/site/allure-report</reportDirectory>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Surefire Plugin to run tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
-                    <!-- Remove JUnit-specific argLine if not needed for TestNG -->
-                    <!-- TestNG typically doesn't need these specific you encounter issues with reflection on newer JDKs. -->
-                    <!-- <argLine>                        enable-preview
-                        add-opens java.base/java.lang=ALL-UNNAMED
-                        add-opens java.base/java.util=ALL-UNNAMED
-                    </argLine> -->
-
-                    <!-- Specify TestNG XML suite files if you use them -->
                     <suiteXmlFiles>
-                       <!-- Point to your master suite file -->
-            <suiteXmlFile>src/test/resources/testng/suite_master.xml</suiteXmlFile>
-            <!-- Alternatively, you could list individual suites here:
-            <suiteXmlFile>src/test/resources/smoke_suite.xml</suiteXmlFile>
-            <suiteXmlFile>src/test/resources/regression_suite.xml</suiteXmlFile>
-            -->
-                    </suiteXmlFiles> 
-
-                    <!-- Or, specify TestNG groups to run -->
-                    <!-- <groups>smoke,regression</groups> -->
-
-                    <!-- Or, if you want Surefire to auto-detect TestNG tests by default (which it usually does) -->
-                    <!-- No specific configuration needed here for basic TestNG detection -->
+                        <suiteXmlFile>src/test/resources/testng/suite_master.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <!-- IMPORTANT: argLine for AspectJ Weaver and Allure results directory -->
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        -Dfile.encoding=UTF-8
+                        -Dallure.results.directory=${project.build.directory}/allure-results
+                    </argLine>
+                    <!-- Ensure Surefire is compatible with TestNG 7+ -->
+                    <testFailureIgnore>false</testFailureIgnore> <!-- Set to true if you want to continue build on test failures -->
+                    <clean.reports.directory>false</clean.reports.directory> <!-- Important for Allure to pick up results -->
                 </configuration>
+                <dependencies>
+                    <!-- AspectJ Weaver needs to be a dependency of Surefire plugin itself -->
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>

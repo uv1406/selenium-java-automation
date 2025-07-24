@@ -3,6 +3,7 @@ com\automation\demo\utils\LoggerUtil.class
 com\automation\demo\tests\BaseTest.class
 com\automation\demo\utils\TestRetryAnalyzer.class
 com\automation\demo\utils\DriverManager.class
+com\automation\demo\utils\TestListeners.class
 com\automation\demo\utils\DriverFactory.class
 com\automation\demo\pageobjects\CheckBoxPage.class
 com\automation\demo\utils\ScreenshotUtil.class
