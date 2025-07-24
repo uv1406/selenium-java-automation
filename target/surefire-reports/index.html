@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-UI_Tests" class="navigator-link ">
-                    <span>C:\Users\ujjawalverma\SeleniumDemo\src\test\resources\regression_suite.xml</span>
+                    <span>C:\Users\ujjawalverma\SeleniumDemo\src\test\resources\testng\regression_suite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +103,7 @@
                     <div class="method-list-content passed suite-UI_Tests">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-UI_Tests" title="com.automation.demo.tests.TextBoxFormTest" class="method navigator-link" hash-for-method="testTextBoxForm(Ujjawal Verma, ujjawal@example.com, 123 Test Lane, 456 Automation St)">testTextBoxForm(Ujjawal Verma, ujjawal@example.com, 123 Test Lane, 456 Automation St)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-UI_Tests" title="com.automation.demo.tests.TextBoxFormTest" class="method navigator-link" hash-for-method="testTextBoxForm(John Doe, john@example.com, 456 A St, 789 B Ave)">testTextBoxForm(John Doe, john@example.com, 456 A St, 789 B Ave)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-UI_Tests" title="com.automation.demo.tests.CheckBoxTest" class="method navigator-link" hash-for-method="testCheckBox">testCheckBox</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-UI_Tests -->
@@ -126,23 +121,14 @@
           <div class="suite-UI_Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.automation.demo.tests.TextBoxFormTest</span>
+              <span class="class-name">com.automation.demo.tests.CheckBoxTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testTextBoxForm(Ujjawal Verma, ujjawal@example.com, 123 Test Lane, 456 Automation St)">
-                  </a> <!-- testTextBoxForm(Ujjawal Verma, ujjawal@example.com, 123 Test Lane, 456 Automation St) -->
-                  <span class="method-name">testTextBoxForm</span>
-                  <span class="parameters">(Ujjawal Verma,ujjawal@example.com,123 Test Lane,456 Automation St)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testTextBoxForm(John Doe, john@example.com, 456 A St, 789 B Ave)">
-                  </a> <!-- testTextBoxForm(John Doe, john@example.com, 456 A St, 789 B Ave) -->
-                  <span class="method-name">testTextBoxForm</span>
-                  <span class="parameters">(John Doe,john@example.com,456 A St,789 B Ave)</span>
+                  <a name="testCheckBox">
+                  </a> <!-- testCheckBox -->
+                  <span class="method-name">testCheckBox</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -150,16 +136,20 @@
         </div> <!-- panel UI_Tests -->
         <div panel-name="test-xml-UI_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ujjawalverma\SeleniumDemo\src\test\resources\regression_suite.xml</span>
+            <span class="header-content">C:\Users\ujjawalverma\SeleniumDemo\src\test\resources\testng\regression_suite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; parallel=&quot;instances&quot; name=&quot;UI Tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;instances&quot; name=&quot;Text Box Tests&quot; verbose=&quot;0&quot;&gt;
+&lt;suite parallel=&quot;methods&quot; name=&quot;UI Tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.automation.demo.utils.AnnotationTransformer&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Text Box Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.automation.demo.tests.TextBoxFormTest&quot;/&gt;
+      &lt;class name=&quot;com.automation.demo.tests.CheckBoxTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Text Box Tests --&gt;
 &lt;/suite&gt; &lt;!-- UI Tests --&gt;
@@ -187,7 +177,7 @@
               <span class="test-group-name">regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">testTextBoxForm</span>
+                <span class="method-in-group-name">testCheckBox</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -195,7 +185,7 @@
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">testTextBoxForm</span>
+                <span class="method-in-group-name">testCheckBox</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -215,20 +205,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testTextBoxForm')
-data.setCell(0, 2, 'com.automation.demo.tests.TextBoxFormTest')
-data.setCell(0, 3, 28847);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testTextBoxForm')
-data.setCell(1, 2, 'com.automation.demo.tests.TextBoxFormTest')
-data.setCell(1, 3, 5152);
+data.setCell(0, 1, 'testCheckBox')
+data.setCell(0, 2, 'com.automation.demo.tests.CheckBoxTest')
+data.setCell(0, 3, 258571);
 window.suiteTableData['UI_Tests']= { tableData: data, tableDiv: 'times-div-UI_Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 33 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-UI_Tests">
               </div> <!-- times-div-UI_Tests -->
             </div> <!-- times-div -->
@@ -254,30 +240,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.automation.demo.tests.TextBoxFormTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.automation.demo.tests.CheckBoxTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testTextBoxForm(Ujjawal Verma, ujjawal@example.com, 123 Test Lane, 456 Automation St)</span>
-                <span class="method-start">6163 ms</span>
+                <span class="method-name">testCheckBox</span>
+                <span class="method-start">4264 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">35014 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">35784 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testTextBoxForm(John Doe, john@example.com, 456 A St, 789 B Ave)</span>
-                <span class="method-start">39846 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">44999 ms</span>
+                <span class="method-name">tearDown([TestResult name=testCheckBox status=SUCCESS method=CheckBoxTest.testCheckBox()[pri:0, instance:com....)</span>
+                <span class="method-start">262841 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
