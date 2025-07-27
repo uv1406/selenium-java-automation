@@ -3022,3 +3022,128 @@ Permananet Address :789 B Ave
 2025-07-27 15:23:42.701 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Closing the browser
 2025-07-27 15:23:43.664 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.tests.BaseTest - Browser closed and driver unloaded
 2025-07-27 15:23:43.667 [main] INFO  com.automation.demo.utils.TestListeners - ---------- Test Suite 'UI Tests' Finished ----------
+2025-07-27 17:15:57.100 [main] INFO  com.automation.demo.ui.utils.AnnotationTransformer - AnnotationTransformer: Processing method: testTextBoxForm in class: UnknownClass
+2025-07-27 17:15:57.137 [main] INFO  com.automation.demo.ui.utils.AnnotationTransformer - AnnotationTransformer: Successfully applied TestRetryAnalyzer to: testTextBoxForm
+2025-07-27 17:15:57.155 [main] INFO  com.automation.demo.ui.utils.AnnotationTransformer - AnnotationTransformer: Processing method: testCheckBox in class: UnknownClass
+2025-07-27 17:15:57.155 [main] INFO  com.automation.demo.ui.utils.AnnotationTransformer - AnnotationTransformer: Successfully applied TestRetryAnalyzer to: testCheckBox
+2025-07-27 17:15:57.383 [main] INFO  com.automation.demo.ui.utils.TestListeners - ---------- Test Suite 'UI Tests' Started ----------
+2025-07-27 17:15:57.608 [TestNG-test-Text Box Tests-2] DEBUG com.automation.demo.ui.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-27 17:15:57.608 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.ui.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-27 17:15:57.642 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.utils.DriverFactory - chrome browser is selected for execution
+2025-07-27 17:15:57.642 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.utils.DriverFactory - chrome browser is selected for execution
+2025-07-27 17:15:57.704 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-07-27 17:15:57.706 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.utils.DriverFactory - Running in headless mode: false
+2025-07-27 17:15:57.706 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.utils.DriverFactory - Running in headless mode: false
+2025-07-27 17:16:05.698 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-27 17:16:05.698 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-27 17:16:06.122 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.utils.TestListeners - Test Started: testCheckBox
+2025-07-27 17:16:06.122 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.utils.TestListeners - Test Started: testTextBoxForm
+2025-07-27 17:16:23.212 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.ui.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-27 17:16:23.276 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.ui.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver using PageFactory.
+2025-07-27 17:16:23.276 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:23.358 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Entering text 'Ujjawal Verma' into WebElement.
+2025-07-27 17:16:23.742 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.TextBoxPage - Entering email: ujjawal@example.com
+2025-07-27 17:16:23.742 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:23.798 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Entering text 'ujjawal@example.com' into WebElement.
+2025-07-27 17:16:24.381 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:24.477 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Entering text '123 Test Lane' into WebElement.
+2025-07-27 17:16:24.508 [TestNG-test-Text Box Tests-2] DEBUG com.automation.demo.ui.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-27 17:16:24.510 [TestNG-test-Text Box Tests-2] DEBUG com.automation.demo.ui.pageobjects.CheckBoxPage - CheckBoxPage initialized with WebDriver using PageFactory.
+2025-07-27 17:16:24.511 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - Attempting to click WebElement robustly: By.id: tree-node-home
+2025-07-27 17:16:24.511 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - Attempting native click on WebElement directly: By.id: tree-node-home
+2025-07-27 17:16:24.749 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:24.834 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Entering text '456 Automation St' into WebElement.
+2025-07-27 17:16:25.180 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Scrolling WebElement into view.
+2025-07-27 17:16:25.283 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Scrolling WebElement into view: [[ChromeDriver: chrome on windows (f609cbacc51372a2ed818e021ea7e26a)] -> id: submit]
+2025-07-27 17:16:25.343 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be clickable.
+2025-07-27 17:16:25.478 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Clicking on WebElement using native click.
+2025-07-27 17:16:25.809 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:25.948 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Getting text from WebElement - Text: Name:Ujjawal Verma
+Email:ujjawal@example.com
+Current Address :123 Test Lane
+Permananet Address :456 Automation St
+2025-07-27 17:16:25.973 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.utils.TestRetryAnalyzer - TestRetryAnalyzer initialized. Max retry count: 0
+2025-07-27 17:16:25.974 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.utils.TestListeners - Test Passed: testTextBoxForm
+2025-07-27 17:16:25.997 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.tests.BaseTest - Test passed: testTextBoxForm
+2025-07-27 17:16:25.998 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.tests.BaseTest - Closing the browser
+2025-07-27 17:16:33.556 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.tests.BaseTest - Browser closed and driver unloaded
+2025-07-27 17:16:33.562 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.ui.tests.BaseTest - Browser selected from TestNG XML/Maven parameter: chrome
+2025-07-27 17:16:33.562 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.utils.DriverFactory - chrome browser is selected for execution
+2025-07-27 17:16:33.562 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.utils.DriverFactory - Running in headless mode: false
+2025-07-27 17:16:34.872 [TestNG-test-Text Box Tests-2] WARN  com.automation.demo.ui.pageobjects.BasePage - Native click failed, attempting JavaScript click for WebElement: By.id: tree-node-home. Attempting JavaScript click.
+2025-07-27 17:16:34.872 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - Finding WebElement robustly: By.id: tree-node-home
+2025-07-27 17:16:34.898 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - Scrolling WebElement into view using JavaScript: [[ChromeDriver: chrome on windows (8923b61fa146c7abc648ff1bdc1921da)] -> id: tree-node-home]
+2025-07-27 17:16:34.924 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - WebElement scrolled into view.
+2025-07-27 17:16:34.924 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - Performing JavaScript click on WebElement after fallback logic: [[ChromeDriver: chrome on windows (8923b61fa146c7abc648ff1bdc1921da)] -> id: tree-node-home]
+2025-07-27 17:16:34.968 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - JavaScript click successful on WebElement via fallback on: By.id: tree-node-home
+2025-07-27 17:16:34.969 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.CheckBoxPage - Getting text from Home CheckBox.
+2025-07-27 17:16:34.969 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:35.091 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - Getting text from WebElement - Text: You have selected :
+home
+desktop
+notes
+commands
+documents
+workspace
+react
+angular
+veu
+office
+public
+private
+classified
+general
+downloads
+wordFile
+excelFile
+2025-07-27 17:16:35.091 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.CheckBoxPage - Getting text from Home CheckBox.
+2025-07-27 17:16:35.091 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:35.202 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.pageobjects.BasePage - Getting text from WebElement - Text: You have selected :
+home
+desktop
+notes
+commands
+documents
+workspace
+react
+angular
+veu
+office
+public
+private
+classified
+general
+downloads
+wordFile
+excelFile
+2025-07-27 17:16:35.203 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.utils.TestListeners - Test Passed: testCheckBox
+2025-07-27 17:16:35.210 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.tests.BaseTest - Test passed: testCheckBox
+2025-07-27 17:16:35.211 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.tests.BaseTest - Closing the browser
+2025-07-27 17:16:37.087 [TestNG-test-Text Box Tests-2] INFO  com.automation.demo.ui.tests.BaseTest - Browser closed and driver unloaded
+2025-07-27 17:16:38.599 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.tests.BaseTest - Webdriver initialized for browser: chrome
+2025-07-27 17:16:38.611 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.utils.TestListeners - Test Started: testTextBoxForm
+2025-07-27 17:16:44.314 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.ui.pageobjects.BasePage - BasePage initialized with WebDriverWait for 10 seconds.
+2025-07-27 17:16:44.316 [TestNG-test-Text Box Tests-1] DEBUG com.automation.demo.ui.pageobjects.TextBoxPage - TextBoxPage initialized with WebDriver using PageFactory.
+2025-07-27 17:16:44.317 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:44.410 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Entering text 'John Doe' into WebElement.
+2025-07-27 17:16:44.928 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.TextBoxPage - Entering email: john@example.com
+2025-07-27 17:16:44.929 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:45.018 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Entering text 'john@example.com' into WebElement.
+2025-07-27 17:16:45.523 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:45.580 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Entering text '456 A St' into WebElement.
+2025-07-27 17:16:45.913 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:45.973 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Entering text '789 B Ave' into WebElement.
+2025-07-27 17:16:46.311 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Scrolling WebElement into view.
+2025-07-27 17:16:46.423 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Scrolling WebElement into view: [[ChromeDriver: chrome on windows (7a06c2f53127b5e0b01bf9a72c4ad52d)] -> id: submit]
+2025-07-27 17:16:46.466 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be clickable.
+2025-07-27 17:16:46.555 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Clicking on WebElement using native click.
+2025-07-27 17:16:46.805 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Waiting for WebElement to be visible.
+2025-07-27 17:16:46.980 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.pageobjects.BasePage - Getting text from WebElement - Text: Name:John Doe
+Email:john@example.com
+Current Address :456 A St
+Permananet Address :789 B Ave
+2025-07-27 17:16:46.991 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.utils.TestListeners - Test Passed: testTextBoxForm
+2025-07-27 17:16:47.005 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.tests.BaseTest - Test passed: testTextBoxForm
+2025-07-27 17:16:47.006 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.tests.BaseTest - Closing the browser
+2025-07-27 17:16:48.388 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.tests.BaseTest - Browser closed and driver unloaded
+2025-07-27 17:16:48.394 [main] INFO  com.automation.demo.ui.utils.TestListeners - ---------- Test Suite 'UI Tests' Finished ----------
