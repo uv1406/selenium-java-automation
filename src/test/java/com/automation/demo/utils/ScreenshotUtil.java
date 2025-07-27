@@ -11,6 +11,14 @@ public class ScreenshotUtil {
 
     private static final Logger logger = LoggerUtil.getLogger(ScreenshotUtil.class);
 
+    /**
+     * Takes a screenshot of the current WebDriver view and saves it to a file.
+     * The screenshot is stored in the directory specified by the 'screenshot.directory' property,
+     * or in 'target/screenshots' if the property is not set.
+     *
+     * @param driver   The WebDriver instance used to take the screenshot.
+     * @param testName The name of the test, used to name the screenshot file.
+     */
     public static void takeScreenshot(WebDriver driver, String testName) {
         try {
             if (driver instanceof TakesScreenshot) {

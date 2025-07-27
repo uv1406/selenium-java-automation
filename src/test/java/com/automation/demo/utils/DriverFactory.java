@@ -20,21 +20,46 @@ public class DriverFactory {
     public static WebDriver createDriver(String browserName) {
         WebDriver driver = null;
         logger.info(browserName + " browser is selected for execution");
+         // Read headless preference from config.properties
+         boolean isHeadless = Boolean.parseBoolean(ConfigReader.getProperty("run.headless"));
+         logger.info("Running in headless mode: " + isHeadless);
         switch (browserName.toLowerCase()) {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--start-maximized"); // Example option to start maximized
+                if (isHeadless) {
+                    chromeOptions.addArguments("--headless=new"); // Use --headless=new for newer Chrome versions
+                    chromeOptions.addArguments("--disable-gpu"); // Recommended for headless
+                    chromeOptions.addArguments("--window-size=1920,1080"); // Set a default window size for headless
+                    logger.info("Chrome will run in headless mode.");
+                }
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
+            FirefoxOptions firefoxOptions = new FirefoxOptions();
+            if (isHeadless) {
+                logger.info("Firefox will run in headless mode.");
+                
+                firefoxOptions.addArguments("--headless"); // Enable headless mode for Firefox
                 firefoxOptions.addArguments("--start-maximized"); // Example option to start maximized
+                } else {
+                logger.info("Firefox will run in normal mode.");
+                }
                 driver = new FirefoxDriver(firefoxOptions);
                 break;
             case "edge":
+                
                 EdgeOptions edgeOptions = new EdgeOptions();
-                edgeOptions.addArguments("--start-maximized"); // Example option to start maximized
+                if (isHeadless) {
+                    edgeOptions.addArguments("--headless=new"); // Edge headless argument
+                    edgeOptions.addArguments("--disable-gpu");
+                    edgeOptions.addArguments("--window-size=1920,1080");
+                    logger.info("Edge will run in headless mode.");
+                }
+                edgeOptions.addArguments("--no-sandbox"); // Recommended for CI environments
+                edgeOptions.addArguments("--disable-dev-shm-usage"); // Recommended for CI environments
                 driver = new EdgeDriver(edgeOptions);
+                logger.debug("EdgeDriver instance created.");
                 break;
             default:
                 logger.error("Unsupported browser: " + browserName);

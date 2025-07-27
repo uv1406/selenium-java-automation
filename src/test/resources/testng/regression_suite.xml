@@ -7,7 +7,7 @@
     <parameter name="browserName" value="chrome"/>
     <test name="Text Box Tests">
         <classes>
-          <!--<class name="com.automation.demo.tests.TextBoxFormTest"/>-->
+          <class name="com.automation.demo.tests.TextBoxFormTest"/>
             <class name="com.automation.demo.tests.CheckBoxTest"/>
         </classes>
     </test>
