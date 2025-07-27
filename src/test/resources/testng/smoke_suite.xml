@@ -2,7 +2,7 @@
 <suite name="UI Tests" parallel="instances" thread-count="2"> <!-- Or a higher count like 3, 4 etc. -->
     <test name="Text Box Tests">
         <classes>
-            <class name="com.automation.demo.tests.TextBoxFormTest"/>
+            <class name="com.automation.demo.ui.tests.TextBoxFormTest"/>
         </classes>
     </test>
 </suite>
