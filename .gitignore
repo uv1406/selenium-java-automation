@@ -1,0 +1,88 @@
+# ===================================================================
+# General Java & Maven
+# ===================================================================
+# Compiled Java class files and build outputs
+/target/
+
+# Maven dependency-sources
+/dependency-reduced-pom.xml
+
+# Maven release files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# ===================================================================
+# Logs and Reports
+# ===================================================================
+# Log files
+*.log
+logs/
+reports/
+
+# Test result directories
+/allure-results/
+/surefire-reports/
+/failsafe-reports/
+/test-output/
+
+# ===================================================================
+# IDE Configuration
+# ===================================================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+/out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+/bin/
+
+# Visual Studio Code
+.vscode/
+
+# NetBeans
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+.nb-gradle/
+
+# ===================================================================
+# Local & Sensitive Configuration
+# ===================================================================
+# Local configuration files that may contain sensitive data or personal settings
+*.local
+.env
+config.local.properties
+
+# ===================================================================
+# Miscellaneous
+# ===================================================================
+# WebDriver binaries
+/drivers/
+*.exe
+*.dmg
+
+# Compressed files
+*.zip
+*.tar
+*.gz
+*.rar
+
+# OS-generated files
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini

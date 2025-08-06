@@ -2,14 +2,17 @@ package com.automation.demo.ui.tests;
 
 
 
+import com.automation.demo.ui.base.BaseTest;
 import com.automation.demo.ui.pageobjects.CheckBoxPage;
 import com.automation.demo.ui.utils.DriverManager;
+
+import io.qameta.allure.Story;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CheckBoxTest extends BaseTest {
-
+    @Story("CheckBox Selection Test")
     @Test(groups = {"smoke", "regression"})
     public void testCheckBox() {
         try {
