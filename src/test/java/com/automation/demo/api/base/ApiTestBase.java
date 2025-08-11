@@ -298,11 +298,11 @@ public void tearDownApiBaseSuite() {
         userUpdateIdThreadLocal.set(userId);
     }
 
-    public static String getUserUpdateId() {
+    public static String getUserId() {
         return userUpdateIdThreadLocal.get();
     }
 
-    public static void clearUserUpdateId() {
+    public static void clearUserId() {
         userUpdateIdThreadLocal.remove();
     }
 }

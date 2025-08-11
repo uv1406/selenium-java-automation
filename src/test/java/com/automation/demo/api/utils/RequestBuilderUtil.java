@@ -29,7 +29,7 @@ public class RequestBuilderUtil {
     @Step("Sending GET request to {endpoint}")
     public static Response sendGetRequest(RequestSender sender, String endpoint) {
         logger.info("Sending GET request to endpoint: {}", endpoint);
-        return sender.send(endpoint, sender, endpoint);
+        return sender.send(endpoint, null, "GET");
     }
     /**
      * Sends a POST request with a JSON body to the specified endpoint.

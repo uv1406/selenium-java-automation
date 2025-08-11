@@ -15,6 +15,7 @@ public class ApiEndpoints {
     // --- User Management Endpoints ---
     // Note: These keys match the structure in your api.properties file
     public static final String GET_USER_PROFILE = "api.users.profile";
+    public static final String GET_USER_BY_ID = "api.users.get";
     public static final String DELETE_USER = "api.users.delete";
     public static final String UPDATE_USER_PUT = "api.users.update.put";
     public static final String UPDATE_USER_PATCH = "api.users.update.patch";

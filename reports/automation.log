@@ -7240,3 +7240,372 @@ java.net.URISyntaxException: Illegal character in path at index 21: https://reqr
 2025-08-06 23:08:06.038 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
 2025-08-06 23:08:06.053 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base suite...
 2025-08-06 23:08:06.053 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base suite tear down complete.
+2025-08-08 22:12:51.970 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base configurations...
+2025-08-08 22:12:51.970 [main] WARN  com.automation.demo.api.base.ApiTestBase - No environment specified. Using default: qa default
+2025-08-08 22:12:51.970 [main] INFO  com.automation.demo.api.base.ApiTestBase - Current environment set to: qa
+2025-08-08 22:12:52.003 [main] INFO  com.automation.demo.api.base.ApiTestBase - Successfully loaded API properties from: api/api.properties
+2025-08-08 22:12:52.422 [main] INFO  com.automation.demo.api.base.ApiTestBase - RestAssured config object set.
+2025-08-08 22:12:52.553 [main] INFO  com.automation.demo.api.base.ApiTestBase - API key for environment 'qa' is set.
+2025-08-08 22:12:52.553 [main] INFO  com.automation.demo.api.base.ApiTestBase - Global RequestSpecification initialized and set. Object hash: 504634946
+2025-08-08 22:12:52.553 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base setup complete.
+2025-08-08 22:12:52.590 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-08 22:12:52.590 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-08 22:12:52.712 [main] INFO  com.automation.demo.api.tests.APITests - Starting user registration test
+2025-08-08 22:12:52.722 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user registration request payload
+2025-08-08 22:12:52.763 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending POST request to endpoint: /users
+2025-08-08 22:12:54.740 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 201). No retry needed.
+2025-08-08 22:12:54.740 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754671372712","job":"Automation Tester1754671372720","id":"154","createdAt":"2025-08-08T16:42:54.740Z"}
+2025-08-08 22:12:55.270 [main] INFO  com.automation.demo.api.tests.APITests - User registered successfully with ID: 154
+2025-08-08 22:12:55.270 [main] INFO  com.automation.demo.api.tests.APITests - User registration test completed successfully for name: Test User1754671372712, job: Automation Tester1754671372720
+2025-08-08 22:12:55.286 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-08 22:12:55.286 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-08 22:12:55.286 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-08 22:12:55.286 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-08 22:12:55.286 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user update test in APITests
+2025-08-08 22:12:55.286 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user update request payload
+2025-08-08 22:12:55.323 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending PUT request to endpoint: users/154
+2025-08-08 22:12:55.925 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 200). No retry needed.
+2025-08-08 22:12:56.003 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754671375286","job":"Automation Tester1754671375286","updatedAt":"2025-08-08T16:42:55.970Z"}
+2025-08-08 22:12:56.005 [main] INFO  com.automation.demo.api.tests.APITests - User update test completed successfully for user ID: 154
+2025-08-08 22:12:56.005 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-08 22:12:56.005 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-08 22:12:56.016 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-08 22:12:56.016 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-08 22:12:56.023 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user fetch by ID test in APITests
+2025-08-08 22:12:56.024 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending GET request to endpoint: users/154
+2025-08-08 22:12:56.026 [main] ERROR com.automation.demo.api.base.ApiTestBase - Error during API request attempt 1: Unsupported HTTP method for retry: users/154
+java.lang.IllegalArgumentException: Unsupported HTTP method for retry: users/154
+	at com.automation.demo.api.base.ApiTestBase.sendRequestWithRetry(ApiTestBase.java:266) ~[test-classes/:?]
+	at com.automation.demo.api.utils.RequestBuilderUtil.sendGetRequest(RequestBuilderUtil.java:32) ~[test-classes/:?]
+	at com.automation.demo.api.tests.APITests.fetchUserById(APITests.java:121) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.1.jar:7.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.1.jar:7.10.1]
+	at com.microsoft.java.test.runner.testng.TestNGRunner.run(TestNGRunner.java:45) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+	at com.microsoft.java.test.runner.testng.TestNGLauncher.execute(TestNGLauncher.java:32) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+	at com.microsoft.java.test.runner.Launcher.main(Launcher.java:57) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+2025-08-08 22:12:56.036 [main] ERROR com.automation.demo.api.base.ApiTestBase - Error during API request attempt 2: Unsupported HTTP method for retry: users/154
+java.lang.IllegalArgumentException: Unsupported HTTP method for retry: users/154
+	at com.automation.demo.api.base.ApiTestBase.sendRequestWithRetry(ApiTestBase.java:266) ~[test-classes/:?]
+	at com.automation.demo.api.utils.RequestBuilderUtil.sendGetRequest(RequestBuilderUtil.java:32) ~[test-classes/:?]
+	at com.automation.demo.api.tests.APITests.fetchUserById(APITests.java:121) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.1.jar:7.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.1.jar:7.10.1]
+	at com.microsoft.java.test.runner.testng.TestNGRunner.run(TestNGRunner.java:45) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+	at com.microsoft.java.test.runner.testng.TestNGLauncher.execute(TestNGLauncher.java:32) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+	at com.microsoft.java.test.runner.Launcher.main(Launcher.java:57) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+2025-08-08 22:12:56.039 [main] ERROR com.automation.demo.api.base.ApiTestBase - Error during API request attempt 3: Unsupported HTTP method for retry: users/154
+java.lang.IllegalArgumentException: Unsupported HTTP method for retry: users/154
+	at com.automation.demo.api.base.ApiTestBase.sendRequestWithRetry(ApiTestBase.java:266) ~[test-classes/:?]
+	at com.automation.demo.api.utils.RequestBuilderUtil.sendGetRequest(RequestBuilderUtil.java:32) ~[test-classes/:?]
+	at com.automation.demo.api.tests.APITests.fetchUserById(APITests.java:121) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.1.jar:7.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.1.jar:7.10.1]
+	at com.microsoft.java.test.runner.testng.TestNGRunner.run(TestNGRunner.java:45) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+	at com.microsoft.java.test.runner.testng.TestNGLauncher.execute(TestNGLauncher.java:32) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+	at com.microsoft.java.test.runner.Launcher.main(Launcher.java:57) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+2025-08-08 22:12:56.045 [main] ERROR com.automation.demo.api.base.ApiTestBase - Error during API request attempt 4: Unsupported HTTP method for retry: users/154
+java.lang.IllegalArgumentException: Unsupported HTTP method for retry: users/154
+	at com.automation.demo.api.base.ApiTestBase.sendRequestWithRetry(ApiTestBase.java:266) ~[test-classes/:?]
+	at com.automation.demo.api.utils.RequestBuilderUtil.sendGetRequest(RequestBuilderUtil.java:32) ~[test-classes/:?]
+	at com.automation.demo.api.tests.APITests.fetchUserById(APITests.java:121) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.1.jar:7.10.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.1.jar:7.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.1.jar:7.10.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.1.jar:7.10.1]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.1.jar:7.10.1]
+	at com.microsoft.java.test.runner.testng.TestNGRunner.run(TestNGRunner.java:45) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+	at com.microsoft.java.test.runner.testng.TestNGLauncher.execute(TestNGLauncher.java:32) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+	at com.microsoft.java.test.runner.Launcher.main(Launcher.java:57) [com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+2025-08-08 22:12:56.057 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-08 22:12:56.057 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-08 22:12:56.086 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base suite...
+2025-08-08 22:12:56.087 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base suite tear down complete.
+2025-08-08 22:39:35.486 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base configurations...
+2025-08-08 22:39:35.489 [main] WARN  com.automation.demo.api.base.ApiTestBase - No environment specified. Using default: qa default
+2025-08-08 22:39:35.489 [main] INFO  com.automation.demo.api.base.ApiTestBase - Current environment set to: qa
+2025-08-08 22:39:35.492 [main] INFO  com.automation.demo.api.base.ApiTestBase - Successfully loaded API properties from: api/api.properties
+2025-08-08 22:39:35.964 [main] INFO  com.automation.demo.api.base.ApiTestBase - RestAssured config object set.
+2025-08-08 22:39:36.120 [main] INFO  com.automation.demo.api.base.ApiTestBase - API key for environment 'qa' is set.
+2025-08-08 22:39:36.120 [main] INFO  com.automation.demo.api.base.ApiTestBase - Global RequestSpecification initialized and set. Object hash: 504634946
+2025-08-08 22:39:36.120 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base setup complete.
+2025-08-08 22:39:36.176 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-08 22:39:36.176 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-08 22:39:36.308 [main] INFO  com.automation.demo.api.tests.APITests - Starting user registration test
+2025-08-08 22:39:36.308 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user registration request payload
+2025-08-08 22:39:36.308 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending POST request to endpoint: /users
+2025-08-08 22:39:38.170 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 201). No retry needed.
+2025-08-08 22:39:38.173 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754672976308","job":"Automation Tester1754672976308","id":"277","createdAt":"2025-08-08T17:09:38.178Z"}
+2025-08-08 22:39:38.888 [main] INFO  com.automation.demo.api.tests.APITests - User registered successfully with ID: 277
+2025-08-08 22:39:38.888 [main] INFO  com.automation.demo.api.tests.APITests - User registration test completed successfully for name: Test User1754672976308, job: Automation Tester1754672976308
+2025-08-08 22:39:38.904 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-08 22:39:38.904 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-08 22:39:38.904 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-08 22:39:38.904 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-08 22:39:38.926 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user update test in APITests
+2025-08-08 22:39:38.926 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user update request payload
+2025-08-08 22:39:38.931 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending PUT request to endpoint: users/277
+2025-08-08 22:39:39.450 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 200). No retry needed.
+2025-08-08 22:39:39.515 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754672978926","job":"Automation Tester1754672978926","updatedAt":"2025-08-08T17:09:39.495Z"}
+2025-08-08 22:39:39.515 [main] INFO  com.automation.demo.api.tests.APITests - User update test completed successfully for user ID: 277
+2025-08-08 22:39:39.519 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-08 22:39:39.520 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-08 22:39:39.529 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-08 22:39:39.529 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-08 22:39:39.535 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user fetch by ID test in APITests
+2025-08-08 22:39:39.535 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending GET request to endpoint: users/277
+2025-08-08 22:39:39.792 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 404). No retry needed.
+2025-08-08 22:39:39.830 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-08 22:39:39.832 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-08 22:39:39.854 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base suite...
+2025-08-08 22:39:39.856 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base suite tear down complete.
+2025-08-11 20:50:11.641 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base configurations...
+2025-08-11 20:50:11.650 [main] WARN  com.automation.demo.api.base.ApiTestBase - No environment specified. Using default: qa default
+2025-08-11 20:50:11.650 [main] INFO  com.automation.demo.api.base.ApiTestBase - Current environment set to: qa
+2025-08-11 20:50:11.666 [main] INFO  com.automation.demo.api.base.ApiTestBase - Successfully loaded API properties from: api/api.properties
+2025-08-11 20:50:12.097 [main] INFO  com.automation.demo.api.base.ApiTestBase - RestAssured config object set.
+2025-08-11 20:50:12.249 [main] INFO  com.automation.demo.api.base.ApiTestBase - API key for environment 'qa' is set.
+2025-08-11 20:50:12.257 [main] INFO  com.automation.demo.api.base.ApiTestBase - Global RequestSpecification initialized and set. Object hash: 504634946
+2025-08-11 20:50:12.257 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base setup complete.
+2025-08-11 20:50:12.288 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 20:50:12.288 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 20:50:12.411 [main] INFO  com.automation.demo.api.tests.APITests - Starting user registration test
+2025-08-11 20:50:12.417 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user registration request payload
+2025-08-11 20:50:12.441 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending POST request to endpoint: /users
+2025-08-11 20:50:14.680 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 201). No retry needed.
+2025-08-11 20:50:14.684 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754925612411","job":"Automation Tester1754925612415","id":"370","createdAt":"2025-08-11T15:20:14.892Z"}
+2025-08-11 20:50:15.465 [main] INFO  com.automation.demo.api.tests.APITests - User registered successfully with ID: 370
+2025-08-11 20:50:15.465 [main] INFO  com.automation.demo.api.tests.APITests - User registration test completed successfully for name: Test User1754925612411, job: Automation Tester1754925612415
+2025-08-11 20:50:15.481 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 20:50:15.481 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 20:50:15.500 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 20:50:15.501 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 20:50:15.507 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user update test in APITests
+2025-08-11 20:50:15.507 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user update request payload
+2025-08-11 20:50:15.546 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending PUT request to endpoint: users/370
+2025-08-11 20:50:16.101 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 200). No retry needed.
+2025-08-11 20:50:16.169 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754925615507","job":"Automation Tester1754925615507","updatedAt":"2025-08-11T15:20:16.374Z"}
+2025-08-11 20:50:16.169 [main] INFO  com.automation.demo.api.tests.APITests - User update test completed successfully for user ID: 370
+2025-08-11 20:50:16.174 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 20:50:16.174 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 20:50:16.183 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 20:50:16.183 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 20:50:16.188 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user fetch by ID test in APITests
+2025-08-11 20:50:16.189 [main] INFO  com.automation.demo.api.tests.APITests - Fetching user by ID: 2
+2025-08-11 20:50:16.190 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending GET request to endpoint: users/2
+2025-08-11 20:50:16.623 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 200). No retry needed.
+2025-08-11 20:50:16.746 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 20:50:16.747 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 20:50:16.773 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base suite...
+2025-08-11 20:50:16.774 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base suite tear down complete.
+2025-08-11 20:53:43.357 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base configurations...
+2025-08-11 20:53:43.372 [main] WARN  com.automation.demo.api.base.ApiTestBase - No environment specified. Using default: qa default
+2025-08-11 20:53:43.372 [main] INFO  com.automation.demo.api.base.ApiTestBase - Current environment set to: qa
+2025-08-11 20:53:43.374 [main] INFO  com.automation.demo.api.base.ApiTestBase - Successfully loaded API properties from: api/api.properties
+2025-08-11 20:53:43.919 [main] INFO  com.automation.demo.api.base.ApiTestBase - RestAssured config object set.
+2025-08-11 20:53:44.145 [main] INFO  com.automation.demo.api.base.ApiTestBase - API key for environment 'qa' is set.
+2025-08-11 20:53:44.145 [main] INFO  com.automation.demo.api.base.ApiTestBase - Global RequestSpecification initialized and set. Object hash: 504634946
+2025-08-11 20:53:44.145 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base setup complete.
+2025-08-11 20:53:44.184 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 20:53:44.187 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 20:53:44.483 [main] INFO  com.automation.demo.api.tests.APITests - Starting user registration test
+2025-08-11 20:53:44.488 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user registration request payload
+2025-08-11 20:53:44.503 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending POST request to endpoint: /users
+2025-08-11 20:53:47.139 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 201). No retry needed.
+2025-08-11 20:53:47.141 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754925824484","job":"Automation Tester1754925824487","id":"81","createdAt":"2025-08-11T15:23:47.333Z"}
+2025-08-11 20:53:47.869 [main] INFO  com.automation.demo.api.tests.APITests - User registered successfully with ID: 81
+2025-08-11 20:53:47.869 [main] INFO  com.automation.demo.api.tests.APITests - User registration test completed successfully for name: Test User1754925824484, job: Automation Tester1754925824487
+2025-08-11 20:53:47.884 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 20:53:47.886 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 20:53:47.896 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 20:53:47.896 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 20:53:47.899 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user update test in APITests
+2025-08-11 20:53:47.901 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user update request payload
+2025-08-11 20:53:47.903 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending PUT request to endpoint: users/81
+2025-08-11 20:53:48.351 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 200). No retry needed.
+2025-08-11 20:53:48.417 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754925827900","job":"Automation Tester1754925827900","updatedAt":"2025-08-11T15:23:48.635Z"}
+2025-08-11 20:53:48.417 [main] INFO  com.automation.demo.api.tests.APITests - User update test completed successfully for user ID: 81
+2025-08-11 20:53:48.422 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 20:53:48.423 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 20:53:48.431 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 20:53:48.431 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 20:53:48.435 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user fetch by ID test in APITests
+2025-08-11 20:53:48.436 [main] INFO  com.automation.demo.api.tests.APITests - Fetching user by ID: 2
+2025-08-11 20:53:48.436 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending GET request to endpoint: users/2
+2025-08-11 20:53:48.517 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 200). No retry needed.
+2025-08-11 20:53:48.563 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 20:53:48.577 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 20:53:48.594 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base suite...
+2025-08-11 20:53:48.595 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base suite tear down complete.
+2025-08-11 20:59:18.859 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base configurations...
+2025-08-11 20:59:18.859 [main] WARN  com.automation.demo.api.base.ApiTestBase - No environment specified. Using default: qa default
+2025-08-11 20:59:18.859 [main] INFO  com.automation.demo.api.base.ApiTestBase - Current environment set to: qa
+2025-08-11 20:59:18.859 [main] INFO  com.automation.demo.api.base.ApiTestBase - Successfully loaded API properties from: api/api.properties
+2025-08-11 20:59:19.197 [main] INFO  com.automation.demo.api.base.ApiTestBase - RestAssured config object set.
+2025-08-11 20:59:19.335 [main] INFO  com.automation.demo.api.base.ApiTestBase - API key for environment 'qa' is set.
+2025-08-11 20:59:19.335 [main] INFO  com.automation.demo.api.base.ApiTestBase - Global RequestSpecification initialized and set. Object hash: 504634946
+2025-08-11 20:59:19.335 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base setup complete.
+2025-08-11 20:59:19.365 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 20:59:19.365 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 20:59:19.475 [main] INFO  com.automation.demo.api.tests.APITests - Starting user registration test
+2025-08-11 20:59:19.479 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user registration request payload
+2025-08-11 20:59:19.486 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending POST request to endpoint: /users
+2025-08-11 20:59:21.310 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 201). No retry needed.
+2025-08-11 20:59:21.310 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754926159475","job":"Automation Tester1754926159478","id":"300","createdAt":"2025-08-11T15:29:21.565Z"}
+2025-08-11 20:59:21.858 [main] INFO  com.automation.demo.api.tests.APITests - User registered successfully with ID: 300
+2025-08-11 20:59:21.858 [main] INFO  com.automation.demo.api.tests.APITests - User registration test completed successfully for name: Test User1754926159475, job: Automation Tester1754926159478
+2025-08-11 20:59:21.873 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 20:59:21.874 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 20:59:21.880 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 20:59:21.880 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 20:59:21.884 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user update test in APITests
+2025-08-11 20:59:21.884 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user update request payload
+2025-08-11 20:59:21.885 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending PUT request to endpoint: users/300
+2025-08-11 20:59:22.429 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 200). No retry needed.
+2025-08-11 20:59:22.458 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754926161884","job":"Automation Tester1754926161884","updatedAt":"2025-08-11T15:29:22.750Z"}
+2025-08-11 20:59:22.458 [main] INFO  com.automation.demo.api.tests.APITests - User update test completed successfully for user ID: 300
+2025-08-11 20:59:22.458 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 20:59:22.473 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 20:59:22.477 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 20:59:22.477 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 20:59:22.480 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user fetch by ID test in APITests
+2025-08-11 20:59:22.480 [main] INFO  com.automation.demo.api.tests.APITests - Fetching user by ID: 2
+2025-08-11 20:59:22.481 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending GET request to endpoint: users/2
+2025-08-11 20:59:22.543 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 200). No retry needed.
+2025-08-11 20:59:22.575 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 20:59:22.575 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 20:59:22.575 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base suite...
+2025-08-11 20:59:22.575 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base suite tear down complete.
+2025-08-11 21:52:33.346 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base configurations...
+2025-08-11 21:52:33.352 [main] WARN  com.automation.demo.api.base.ApiTestBase - No environment specified. Using default: qa default
+2025-08-11 21:52:33.352 [main] INFO  com.automation.demo.api.base.ApiTestBase - Current environment set to: qa
+2025-08-11 21:52:33.385 [main] INFO  com.automation.demo.api.base.ApiTestBase - Successfully loaded API properties from: api/api.properties
+2025-08-11 21:52:33.847 [main] INFO  com.automation.demo.api.base.ApiTestBase - RestAssured config object set.
+2025-08-11 21:52:34.094 [main] INFO  com.automation.demo.api.base.ApiTestBase - API key for environment 'qa' is set.
+2025-08-11 21:52:34.094 [main] INFO  com.automation.demo.api.base.ApiTestBase - Global RequestSpecification initialized and set. Object hash: 999699153
+2025-08-11 21:52:34.094 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base setup complete.
+2025-08-11 21:52:34.219 [main] INFO  com.automation.demo.ui.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-08-11 21:52:34.219 [main] DEBUG com.automation.demo.ui.base.BaseTest - Browser selected from config.properties: chrome
+2025-08-11 21:52:34.247 [main] INFO  com.automation.demo.ui.utils.DriverFactory - chrome browser is selected for execution
+2025-08-11 21:52:34.258 [main] INFO  com.automation.demo.ui.utils.DriverFactory - Running in headless mode: false
+2025-08-11 21:52:42.194 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base configurations...
+2025-08-11 21:52:42.200 [main] WARN  com.automation.demo.api.base.ApiTestBase - No environment specified. Using default: qa default
+2025-08-11 21:52:42.200 [main] INFO  com.automation.demo.api.base.ApiTestBase - Current environment set to: qa
+2025-08-11 21:52:42.200 [main] INFO  com.automation.demo.api.base.ApiTestBase - Successfully loaded API properties from: api/api.properties
+2025-08-11 21:52:42.636 [main] INFO  com.automation.demo.api.base.ApiTestBase - RestAssured config object set.
+2025-08-11 21:52:42.806 [main] INFO  com.automation.demo.api.base.ApiTestBase - API key for environment 'qa' is set.
+2025-08-11 21:52:42.806 [main] INFO  com.automation.demo.api.base.ApiTestBase - Global RequestSpecification initialized and set. Object hash: 504634946
+2025-08-11 21:52:42.806 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base setup complete.
+2025-08-11 21:52:42.841 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 21:52:42.841 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 21:52:42.976 [main] INFO  com.automation.demo.api.tests.APITests - Starting user registration test
+2025-08-11 21:52:42.976 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user registration request payload
+2025-08-11 21:52:43.019 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending POST request to endpoint: /users
+2025-08-11 21:52:45.599 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 201). No retry needed.
+2025-08-11 21:52:45.599 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754929362976","job":"Automation Tester1754929362976","id":"754","createdAt":"2025-08-11T16:22:45.841Z"}
+2025-08-11 21:52:46.250 [main] INFO  com.automation.demo.api.tests.APITests - User registered successfully with ID: 754
+2025-08-11 21:52:46.250 [main] INFO  com.automation.demo.api.tests.APITests - User registration test completed successfully for name: Test User1754929362976, job: Automation Tester1754929362976
+2025-08-11 21:52:46.266 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 21:52:46.266 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 21:52:46.269 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 21:52:46.269 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 21:52:46.269 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user update test in APITests
+2025-08-11 21:52:46.269 [main] INFO  com.automation.demo.api.payloads.UserPayloads - Creating user update request payload
+2025-08-11 21:52:46.312 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending PUT request to endpoint: users/754
+2025-08-11 21:52:47.539 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 200). No retry needed.
+2025-08-11 21:52:47.583 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"name":"Test User1754929366269","job":"Automation Tester1754929366269","updatedAt":"2025-08-11T16:22:47.869Z"}
+2025-08-11 21:52:47.583 [main] INFO  com.automation.demo.api.tests.APITests - User update test completed successfully for user ID: 754
+2025-08-11 21:52:47.590 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 21:52:47.590 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 21:52:47.593 [main] INFO  com.automation.demo.api.base.ApiTestBase - Setting up API base for test method...
+2025-08-11 21:52:47.593 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification reset for test method.
+2025-08-11 21:52:47.605 [main] INFO  com.automation.demo.api.tests.APITests - Starting existing user fetch by ID test in APITests
+2025-08-11 21:52:47.605 [main] INFO  com.automation.demo.api.tests.APITests - Fetching user by ID: 2
+2025-08-11 21:52:47.606 [main] INFO  com.automation.demo.api.utils.RequestBuilderUtil - Sending GET request to endpoint: users/2
+2025-08-11 21:52:47.697 [main] DEBUG com.automation.demo.api.base.ApiTestBase - Request successful or client error (Status: 200). No retry needed.
+2025-08-11 21:52:47.792 [main] INFO  com.automation.demo.api.tests.APITests - Response received: {"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}
+2025-08-11 21:52:47.792 [main] INFO  com.automation.demo.api.tests.APITests - User fetch by ID test completed successfully for user ID: 2
+2025-08-11 21:52:47.795 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base for test method...
+2025-08-11 21:52:47.795 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base RequestSpecification cleared for test method.
+2025-08-11 21:52:47.799 [main] INFO  com.automation.demo.api.base.ApiTestBase - Tearing down API base suite...
+2025-08-11 21:52:47.799 [main] INFO  com.automation.demo.api.base.ApiTestBase - API base suite tear down complete.

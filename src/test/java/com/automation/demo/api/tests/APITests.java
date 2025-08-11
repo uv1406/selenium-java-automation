@@ -34,6 +34,9 @@ import static org.hamcrest.Matchers.*;
 @Epic("API Testing")
 public class APITests extends ApiTestBase {
     private static final Logger logger = LoggerUtil.getLogger(APITests.class);
+
+
+
     @Test(priority = 1, description = "Test user registration API endpoint via API")
     @Story("User Registration")
     @Severity(SeverityLevel.CRITICAL)
@@ -74,7 +77,7 @@ public class APITests extends ApiTestBase {
         String updatedJob = "Automation Tester" + System.currentTimeMillis();
 
         // Assuming a user "eve.holt@reqres.in" with password "cityslicka" exists on reqres.in
-        String updatedUserId = ApiTestBase.getUserUpdateId();
+        String updatedUserId = ApiTestBase.getUserId();
         if (updatedUserId == null || updatedUserId.isEmpty()) {
             logger.error("No user ID found for update. Please run the registration test first.");
             Assert.fail("No user ID found for update. Please run the registration test first.");
@@ -100,6 +103,44 @@ public class APITests extends ApiTestBase {
         logger.info("User update test completed successfully for user ID: {}", updatedUserId);
     }
 
-    // You can add more tests here, e.g., for GET, PUT, DELETE, PATCH requests
-    // All will use RequestBuilderUtil and pass ApiTestBase::sendRequestWithRetry
+     @Test(priority = 3, description = "Test user update API endpoint via API")
+    @Story("User Update")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Verify that an existing user can be fetched by ID via API.")
+    public void fetchUserById() {
+        logger.info("Starting existing user fetch by ID test in APITests");
+
+        // Assuming a user "eve.holt@reqres.in" with password "cityslicka" exists on reqres.in
+        String addedUserId = ApiTestBase.getUserId();
+        if (addedUserId == null || addedUserId.isEmpty()) {
+            logger.error("No user ID found for update. Please run the registration test first.");
+            Assert.fail("No user ID found for update. Please run the registration test first.");
+        }
+        //
+        addedUserId = "2"; // For demonstration, using a static ID. Replace with dynamic ID as needed.
+        logger.info("Fetching user by ID: {}", addedUserId);
+        String fetchedUserEndpoint = getApiEndpoint(ApiEndpoints.GET_USER_BY_ID) + "/" + addedUserId;
+       
+        Response response = RequestBuilderUtil.sendGetRequest(
+            ApiTestBase::sendRequestWithRetry, // Pass the REST sender
+            fetchedUserEndpoint // Get the environment-specific endpoint for fetching user
+        );
+
+        response.then()
+                .statusCode(200)
+                .contentType(containsString("application/json")) // reqres.in returns 200 for successful fetch
+                .body("data.id", equalTo(Integer.parseInt(addedUserId)))
+                .body("data.email", notNullValue())
+                .body("data.first_name", notNullValue())
+                .body("data.last_name", notNullValue())
+                .body("data.avatar", equalTo("https://reqres.in/img/faces/" + addedUserId + "-image.jpg"))
+                // --- Support Object Validations ---
+        .body("support.url", equalTo("https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral"))
+        .body("support.text", notNullValue());
+
+        // Log the response for debugging
+        logger.info("Response received: " + response.asString());
+        logger.info("User fetch by ID test completed successfully for user ID: {}", addedUserId);
+    }
+        
 }
