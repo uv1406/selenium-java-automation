@@ -4,8 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-
+        {
+            "type": "java",
+            "name": "ResourceChecker",
+            "request": "launch",
+            "mainClass": "com.automation.demo.ui.tests.ResourceChecker",
+            "projectName": "SeleniumDemo"
+        },
         {
             "type": "java",
             "name": "Current File",
@@ -18,12 +23,13 @@
             "request": "launch",
             "mainClass": "com.automation.demo.App",
             "projectName": "SeleniumDemo"
-        },{
+        },
+        {
             "type": "java",
-            "name": "Attach to Maven Tests (5005)", // You can name this whatever you like
+            "name": "Attach to Maven Tests (5005)",
             "request": "attach",
             "hostName": "localhost",
-            "port": 5005 // This port must match the port Maven Surefire is listening on (default is 5005)
+            "port": 5005
         }
     ]
 }

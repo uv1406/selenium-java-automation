@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Mobile Test Suite">
+    <test name="Android Calculator Tests">
+        <classes>
+            <class name="com.automation.demo.mobile.tests.RemoteAppiumTest"/>
+            <!-- Add other mobile test classes here -->
+        </classes>
+    </test>
+</suite>
