@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <!-- Dependency Versions (Centralized and Updated) -->
+        <!-- Dependency Versions -->
         <selenium.version>4.22.0</selenium.version>
         <testng.version>7.10.1</testng.version>
         <log4j.version>2.23.1</log4j.version>
@@ -25,21 +25,19 @@
         <aspectj.version>1.9.22</aspectj.version>
         <allure.maven.version>2.12.0</allure.maven.version>
         <lombok.version>1.18.32</lombok.version>
-
-        <!-- API Testing Dependencies -->
         <rest-assured.version>5.4.0</rest-assured.version>
         <json-path.version>5.4.0</json-path.version>
         <json-schema-validator.version>5.4.0</json-schema-validator.version>
         <hamcrest.version>2.2</hamcrest.version>
-
-        <!-- Database Testing Dependencies -->
         <mysql.connector.version>8.4.0</mysql.connector.version>
         <postgresql.connector.version>42.7.3</postgresql.connector.version>
         <hikaricp.version>5.1.0</hikaricp.version>
+        <appium.version>9.2.2</appium.version>
+        <webdrivermanager.version>5.8.0</webdrivermanager.version>
 
         <!-- Plugin Versions -->
         <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
-        <maven.surefire.plugin.version>3.3.1</maven.surefire.plugin.version> <!-- Corrected to use property -->
+        <maven.surefire.plugin.version>3.3.1</maven.surefire.plugin.version>
     </properties>
 
     <dependencies>
@@ -50,15 +48,15 @@
             <version>${selenium.version}</version>
         </dependency>
 
-        <!-- WebDriverManager (Automates driver downloads) -->
+        <!-- WebDriverManager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.8.0</version>
+            <version>${webdrivermanager.version}</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- TestNG Dependency -->
+        <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -66,15 +64,13 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Log4j2 API -->
+        <!-- Logging -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>${log4j.version}</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- Log4j2 Core -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -82,7 +78,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Apache Commons IO (for FileUtils in ScreenshotUtil) -->
+        <!-- Commons IO -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -90,15 +86,13 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Allure TestNG Adapter -->
+        <!-- Allure Reporting -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>${allure.testng.version}</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- AspectJ Weaver (Required by Allure for @Step and other annotations) -->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -106,25 +100,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Optional: SLF4J API and Log4j2 binding for SLF4J (Recommended for logging facade) -->
-        <!-- If you want to use SLF4J API in your code (e.g., org.slf4j.Logger) -->
-        <!-- Uncomment these if you decide to switch to SLF4J as your logging facade -->
-        <!--
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.13</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j2-impl</artifactId>
-            <version>${log4j.version}</version>
-            <scope>test</scope>
-        </dependency>
-        -->
-
-        <!-- API Testing - REST Assured -->
+        <!-- API Testing -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -143,7 +119,6 @@
             <version>${json-schema-validator.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- Hamcrest for fluent assertions with Rest Assured -->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest</artifactId>
@@ -151,43 +126,37 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Database Testing - JDBC Driver (Choose one based on your DB) -->
-        <!-- For MySQL -->
+        <!-- Database Testing -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>${mysql.connector.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- For PostgreSQL (uncomment if using PostgreSQL instead of MySQL) -->
-        <!--
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${postgresql.connector.version}</version>
-            <scope>test</scope>
-        </dependency>
-        -->
-
-        <!-- Database Testing - HikariCP for Connection Pooling -->
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>${hikaricp.version}</version>
             <scope>test</scope>
         </dependency>
-         <!-- Lombok for boilerplate reduction in POJOs -->
+
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version> <!-- Use the latest stable version -->
-            <scope>provided</scope> <!-- 'provided' scope means it's needed at compile time but not runtime -->
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
 
+        <!-- Appium Java Client -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${appium.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
-        <testSourceDirectory>src/test/java</testSourceDirectory>
         <plugins>
             <!-- Maven Compiler Plugin -->
             <plugin>
@@ -201,7 +170,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Allure Maven Plugin for report generation -->
+            <!-- Allure Maven Plugin -->
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
@@ -212,47 +181,77 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven Surefire Plugin to run tests -->
+            <!-- Maven Surefire Plugin (DEFAULT CONFIGURATION) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire.plugin.version}</version> <!-- Corrected to use property -->
+                <version>${maven.surefire.plugin.version}</version>
                 <configuration>
+                    <!-- This is the default suite that runs if no profile is specified -->
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng/suite_master.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <!-- IMPORTANT: argLine for AspectJ Weaver and Allure results directory -->
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                         -Dfile.encoding=UTF-8
                         -Dallure.results.directory=${project.build.directory}/allure-results
                     </argLine>
-                    <!-- Pass system properties from profiles or command line to the test JVM -->
                     <systemPropertyVariables>
-                        <!-- Properties defined in profiles (like 'run.headless', 'application.url')
-                             will be automatically picked up here if the profile is active. -->
                         <run.headless>${run.headless}</run.headless>
                         <application.url>${application.url}</application.url>
                         <default.browser>${default.browser}</default.browser>
-                        <!-- Add other properties here if you want them explicitly passed from profiles -->
                     </systemPropertyVariables>
                     <testFailureIgnore>false</testFailureIgnore>
-                    <clean.reports.directory>false</clean.reports.directory>
                 </configuration>
-                <dependencies>
-                    <!-- AspectJ Weaver needs to be a dependency of Surefire plugin itself -->
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjweaver</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
 
     <profiles>
-        <!-- Profile for running tests in headless mode -->
+        <!-- ======================================================= -->
+        <!-- 				TEST SUITE PROFILES 					 -->
+        <!-- ======================================================= -->
+        <profile>
+            <id>ui-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <!-- We must identify the plugin we want to configure -->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <!-- This overrides the default suiteXmlFiles -->
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng/suite_ui.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>mobile-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <!-- We must identify the plugin we want to configure -->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <!-- This overrides the default suiteXmlFiles -->
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng/suite_mobile.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <!-- ======================================================= -->
+        <!-- 				ENVIRONMENT PROFILES 					 -->
+        <!-- ======================================================= -->
         <profile>
             <id>headless</id>
             <properties>
@@ -260,23 +259,21 @@
             </properties>
         </profile>
 
-        <!-- Profile for running tests against a Staging environment -->
         <profile>
             <id>staging</id>
             <properties>
                 <application.url>https://staging.demoblaze.com/</application.url>
                 <default.browser>firefox</default.browser>
-                <run.headless>false</run.headless> <!-- Staging might still be UI-based for manual checks -->
+                <run.headless>false</run.headless>
             </properties>
         </profile>
 
-        <!-- Profile for running tests against a Production environment -->
         <profile>
             <id>production</id>
             <properties>
                 <application.url>https://www.demoblaze.com/</application.url>
                 <default.browser>chrome</default.browser>
-                <run.headless>true</run.headless> <!-- Production tests often run headless in CI -->
+                <run.headless>true</run.headless>
             </properties>
         </profile>
     </profiles>
