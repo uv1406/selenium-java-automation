@@ -2,8 +2,9 @@
 <suite name="Mobile Test Suite">
     <test name="Android Calculator Tests">
         <classes>
-            <class name="com.automation.demo.mobile.tests.RemoteAppiumTest"/>
+          <!-- <class name="com.automation.demo.mobile.tests.RemoteAppiumTest"/> -->
             <!-- Add other mobile test classes here -->
+            <class name="com.automation.demo.mobile.tests.SauceMobileLoginTest"/>
         </classes>
     </test>
 </suite>

@@ -9,10 +9,20 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Mobile Test Suite</th></tr>
-<tr><td><a href="#t0">Android Calculator Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">17,507</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Android Calculator Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">42,928</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Mobile Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Android Calculator Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.automation.demo.mobile.tests.RemoteAppiumTest</td><td><a href="#m0">verifyCreateContactButtonIsVisibleTest</a></td><td rowspan="1">1756048664076</td><td rowspan="1">5748</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Mobile Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Android Calculator Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.automation.demo.mobile.tests.SauceMobileLoginTest</td><td><a href="#m0">loginTest</a></td><td rowspan="1">1756659952649</td><td rowspan="1">34266</td></tr></tbody>
 </table>
-<h2>Android Calculator Tests</h2><h3 id="m0">com.automation.demo.mobile.tests.RemoteAppiumTest#verifyCreateContactButtonIsVisibleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Android Calculator Tests</h2><h3 id="m0">com.automation.demo.mobile.tests.SauceMobileLoginTest#loginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by AppiumBy.accessibilityId: Username input field (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.saucelabs.mydemoapp.rn...., appium:appPackage: com.saucelabs.mydemoapp.rn, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.saucelabs.mydemoapp.rn...., appPackage: com.saucelabs.mydemoapp.rn, automationName: UiAutomator2, deviceName: Android Emulator, forceAppLaunch: true, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:forceAppLaunch: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 15, appium:statBarHeight: 128, appium:takesScreenshot: true, appium:viewportRect: {height: 2272, left: 0, top: 128, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: acb660af-56d1-43e7-9d24-f953f4b7e44d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.automation.demo.mobile.tests.SauceMobileLoginTest.loginTest(SauceMobileLoginTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
