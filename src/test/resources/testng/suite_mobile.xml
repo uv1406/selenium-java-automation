@@ -4,7 +4,7 @@
         <classes>
           <!-- <class name="com.automation.demo.mobile.tests.RemoteAppiumTest"/> -->
             <!-- Add other mobile test classes here -->
-            <class name="com.automation.demo.mobile.tests.SauceMobileLoginTest"/>
+            <class name="com.automation.demo.mobile.tests.ApiDemoApkTest"/>
         </classes>
     </test>
 </suite>

@@ -1,8 +1,11 @@
-package com.automation.demo.mobile.tests;
+package com.automation.demo.utils;
 
-import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options; // <-- Import Options
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+import java.time.Duration;
+import java.util.Collections;
+import java.util.List;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
@@ -17,100 +20,28 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URL;
-import java.time.Duration;
-import java.util.Collections;
-import java.util.List;
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 
-public class ApiDemoApkTest {
-
+public class ApiDemosAdvancedGesturesTest {
     private AndroidDriver driver;
     private WebDriverWait wait;
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
-        // 1. Use UiAutomator2Options for modern, type-safe capabilities
         UiAutomator2Options options = new UiAutomator2Options();
         options.setPlatformName("Android");
         options.setDeviceName("Android Emulator");
         options.setAutomationName("UiAutomator2");
         options.setAppPackage("io.appium.android.apis");
-        options.setAppActivity("io.appium.android.apis.ApiDemos");
-        options.setNoReset(true);
-
-        // This URL can be externalized to a config file in a larger project
+        options.setAppActivity(".ApiDemos");
+        
         String appiumServerUrl = "http://192.168.0.134:4723/";
-
         driver = new AndroidDriver(URI.create(appiumServerUrl).toURL(), options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        // 2. Removed the implicit wait
     }
 
-    @Test
-    public void preferencesTest() {
-        // Use an explicit wait to find the element
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement preferenceButton = wait.until(ExpectedConditions.visibilityOfElementLocated(
-            AppiumBy.accessibilityId("Preference")
-        ));
-        
-        // 3. The wait above confirms visibility, so a separate assertion is not needed.
-        // We can proceed directly to the action.
-        System.out.println("Test Passed! The 'Preference' button is visible and will be clicked.");
-        
-        preferenceButton.click();
-        
-        // You could add further steps here, like waiting for the next screen and asserting something on it.
-    }
-    @Test
-    public void scrollAndTapTest(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement viewsButton = wait.until(ExpectedConditions.visibilityOfElementLocated(
-            AppiumBy.accessibilityId("Views")
-        ));
-        viewsButton.click();
-        driver.findElement(AppiumBy.accessibilityId("Expandable Lists")).click();
-        driver.findElement(AppiumBy.accessibilityId("1. Custom Adapter")).click();
-
-        // Scroll down to the "Dog Names" option and tap it
-        String targetText = "Dog Names";
-        WebElement targetElement = null;
-        for(int i=0; i<10;i++){
-            List<WebElement> elements = driver.findElements(AppiumBy.xpath("//android.widget.TextView[@text='" + targetText + "']"));
-            if(!elements.isEmpty()){
-                targetElement = elements.get(0);
-                break;
-            }
-            // Scroll down
-            else{
-                scrollDown();
-            }
-        }
-      Assert.assertNotNull(targetElement,"Dog Names option not found");
-      targetElement.click();
-      System.out.println("Test Passed! The 'Dog Names' option is visible and will be clicked.");
-    }
-
-    private void scrollDown() {
-        //Performing a scroll down gesture
-        Dimension size = driver.manage().window().getSize();
-        int startX= size.width/2;
-        int startY= (int) (size.height * 0.8);
-        int endY= (int) (size.height * 0.2);
-
-        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-        Sequence swipe = new Sequence(finger, 1);
-        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), startX, startY));
-        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-        swipe.addAction(finger.createPointerMove(Duration.ofMillis(700), PointerInput.Origin.viewport(), startX, endY));
-        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        driver.perform(Collections.singletonList(swipe));
-
-
-
-    }
     @Test
     public void dragAndDropTest() {
         // 1. Navigate to the Drag and Drop screen
@@ -139,13 +70,39 @@ public class ApiDemoApkTest {
         System.out.println("Verification successful! Text is 'Dropped!'");
     }
 
+    @Test
+    public void swipeLeftTest() {
+        System.out.println("Navigating to Gallery for swipe test...");
+        driver.findElement(AppiumBy.accessibilityId("Views")).click();
+
+        // Use Android's built-in UIAutomator to scroll to the "Gallery" item
+        WebElement galleryMenu = driver.findElement(AppiumBy.androidUIAutomator(
+            "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView("
+            + "new UiSelector().text(\"Gallery\"));"));
+        galleryMenu.click();
+        
+        driver.findElement(AppiumBy.accessibilityId("1. Photos")).click();
+        
+        // 1. Verify the first image is focused
+        List<WebElement> images = driver.findElements(AppiumBy.className("android.widget.ImageView"));
+        Assert.assertEquals(images.get(0).getAttribute("focusable"), "true", "First image should be focused initially.");
+        System.out.println("First image is correctly focused.");
+
+        // 2. Perform the swipe
+        swipeLeft();
+
+        // 3. Verify the second image is now focused
+        Assert.assertEquals(images.get(1).getAttribute("focusable"), "true", "Second image should be focused after swipe.");
+        System.out.println("Swipe successful! Second image is now focused.");
+    }
+
     /**
      * Reusable method to drag one element to another's location.
      * @param source The element to drag.
      * @param target The element to drop onto.
      */
     private void dragAndDrop(WebElement source, WebElement target) {
-       // Get the center of the source element
+        // Get the center of the source element
         Point sourceCenter = getCenterOfElement(source.getLocation(), source.getSize());
         // Get the center of the target element
         Point targetCenter = getCenterOfElement(target.getLocation(), target.getSize());
@@ -156,12 +113,30 @@ public class ApiDemoApkTest {
         dragAndDropSequence.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), sourceCenter.getX(), sourceCenter.getY()));
         dragAndDropSequence.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
         // Wait a small amount of time to simulate a "hold"
-        // CORRECTED: Use a Pause object for the wait action
         dragAndDropSequence.addAction(new Pause(finger, Duration.ofMillis(500)));
         dragAndDropSequence.addAction(finger.createPointerMove(Duration.ofMillis(700), PointerInput.Origin.viewport(), targetCenter.getX(), targetCenter.getY()));
         dragAndDropSequence.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         
         driver.perform(Collections.singletonList(dragAndDropSequence));
+    }
+
+    /**
+     * Reusable method to swipe left on the screen.
+     */
+    private void swipeLeft() {
+        System.out.println("Performing a swipe left gesture...");
+        Dimension size = driver.manage().window().getSize();
+        int startX = (int) (size.width * 0.8);
+        int endX = (int) (size.width * 0.2);
+        int startY = size.height / 2;
+
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence swipe = new Sequence(finger, 1);
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), startX, startY));
+        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(700), PointerInput.Origin.viewport(), endX, startY));
+        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(Collections.singletonList(swipe));
     }
     
     /**
@@ -174,7 +149,6 @@ public class ApiDemoApkTest {
         return new Point(location.getX() + size.getWidth() / 2, location.getY() + size.getHeight() / 2);
     }
 
-
     @AfterTest
     public void tearDown() {
         if (driver != null) {
@@ -182,3 +156,4 @@ public class ApiDemoApkTest {
         }
     }
 }
+
