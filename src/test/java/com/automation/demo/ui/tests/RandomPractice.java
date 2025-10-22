@@ -12,9 +12,11 @@ import org.openqa.selenium.WebElement;
 import com.automation.demo.ui.base.BaseTest;
 import com.automation.demo.ui.data.TestDataProviders;
 import com.automation.demo.ui.pageobjects.TextBoxPage;
+import com.automation.demo.ui.utils.ConfigReader;
 import com.automation.demo.ui.utils.DriverManager;
 import com.mysql.cj.x.protobuf.MysqlxCrud.Find;
 
+import java.io.ObjectInputFilter.Config;
 import java.time.Duration;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -29,10 +31,11 @@ public class RandomPractice {
        options.addArguments("start-maximized");
        driver = new ChromeDriver(options);
        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-       driver.get("https://www.saucedemo.com/");
+      
+       driver.get(ConfigReader.getProperty("WEB_URL"));
         System.out.println("This is a sample method in RandomPractice class.");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name"))).sendKeys("standard_user");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys("secret_sauce");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name"))).sendKeys(ConfigReader.getProperty("WEB_USER"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys(ConfigReader.getProperty("WEB_PASS"));
         wait.until(ExpectedConditions.elementToBeClickable(By.id("login-button"))).click();
         System.out.println("Login button clicked. Navigated to the inventory page.");
 

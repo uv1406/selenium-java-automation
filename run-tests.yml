@@ -1,0 +1,48 @@
+# .github/workflows/main.yml
+
+name: Run Java Selenium Tests on Windows
+
+# This controls when the action will run. 
+# This example triggers on every push to the "main" branch.
+on:
+  push:
+    branches:
+      - "main"
+      - "develop"
+      - "feature/*"
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # A job named "build-and-test"
+  build-and-test:
+    
+    # 1. SETTING THE VM:
+    # This tells GitHub to use the latest Windows Server VM
+    runs-on: windows-latest
+
+    steps:
+      # Step 1: Checks out your repository code onto the VM
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      # Step 2: SETTING UP JAVA:
+      # This uses the 'setup-java' action to install your specific Java version
+      - name: Set up JDK 21 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          # This matches your local "21.0.7"
+          java-version: '21'
+          # This matches your local "Temurin" build
+          distribution: 'temurin'
+          # This caches Maven dependencies to speed up future builds
+          cache: 'maven'
+
+      # Step 3: RUNNING THE TESTS:
+      # This runs your tests and injects your secrets as environment variables
+      - name: Run tests with Maven
+        run: mvn test
+        env:
+          WEB_USER: ${{ secrets.WEB_USER }}
+          WEB_PASS: ${{ secrets.WEB_PASS }}
+          WEB_URL: ${{ secrets.WEB_URL }}

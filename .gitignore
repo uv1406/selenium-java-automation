@@ -86,3 +86,6 @@ config.local.properties
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Add your file here
+project_structure.txt

@@ -38,9 +38,14 @@ public class ConfigReader {
      * @return The String value of the property, or null if the key is not found.
      */
     public static String getProperty(String key) {
-        String value = properties.getProperty(key);
-        if (value == null) {
-            logger.warn("Property '" + key + "' not found in config.properties.");
+        String value = System.getenv(key);
+        if (value == null || value.isEmpty()) {
+            value = properties.getProperty(key);
+            logger.info("Fetched property '" + key + "' from Git secrets with value: " + value);
+       
+        }
+        if(value == null || value.isEmpty()) {
+            logger.warn("Property '" + key + "' is not set in environment variables or config.properties.");
         }
         return value;
     }
