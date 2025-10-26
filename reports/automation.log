@@ -7915,3 +7915,7 @@ Permananet Address :789 B Ave
 2025-08-24 04:11:08.461 [TestNG-test-Text Box Tests-1] INFO  com.automation.demo.ui.base.BaseTest - Browser closed and driver unloaded
 2025-08-24 04:11:08.461 [main] INFO  com.automation.demo.ui.utils.TestListeners - ---------- Test Suite 'UI Tests (2)' Finished ----------
 2025-10-19 06:05:26.153 [main] INFO  com.automation.demo.ui.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-10-27 03:48:55.034 [main] INFO  com.automation.demo.ui.utils.ConfigReader - Successfully loaded configuration from: config.properties
+2025-10-27 03:48:55.038 [main] INFO  com.automation.demo.ui.utils.ConfigReader - Fetched property 'WEB_URL' from Git secrets with value: https://www.saucedemo.com/
+2025-10-27 03:48:56.965 [main] INFO  com.automation.demo.ui.utils.ConfigReader - Fetched property 'WEB_USER' from Git secrets with value: standard_user
+2025-10-27 03:48:57.100 [main] INFO  com.automation.demo.ui.utils.ConfigReader - Fetched property 'WEB_PASS' from Git secrets with value: secret_sauce

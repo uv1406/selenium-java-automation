@@ -9,14 +9,10 @@ import org.openqa.selenium.WebDriver;
 import java.util.*;
 import org.openqa.selenium.WebElement;
 
-import com.automation.demo.ui.base.BaseTest;
-import com.automation.demo.ui.data.TestDataProviders;
-import com.automation.demo.ui.pageobjects.TextBoxPage;
-import com.automation.demo.ui.utils.ConfigReader;
-import com.automation.demo.ui.utils.DriverManager;
-import com.mysql.cj.x.protobuf.MysqlxCrud.Find;
 
-import java.io.ObjectInputFilter.Config;
+import com.automation.demo.ui.utils.ConfigReader;
+
+
 import java.time.Duration;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -66,12 +62,29 @@ public class RandomPractice {
             // 4. Assert that we found the parent container
             Assert.assertNotNull(targetItem, "Parent container for the product not found.");
             System.out.println("Parent container for the product found.");
-            // 5. Now, find the button *within* that specific container
-//    We can use a simpler selector because we're already in the right scope.
-
+            //    We can use a simpler selector because we're already in the right scope.
+ // 5. Now, find the button *within* that specific container
             WebElement addToCartButton = targetItem.findElement(By.tagName("button"));
             wait.until(ExpectedConditions.elementToBeClickable(addToCartButton)).click();
             System.out.println("'Add to Cart' button clicked for " + targetProduct);
+           
+             //Find the product named "Sauce Labs Fleece Jacket" and click its "Add to Cart" button.
+   System.out.println("Attempting to add 'Sauce Labs Fleece Jacket' to the cart...");
+   wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("inventory_container")));
+   String targetProduct2 = "Sauce Labs Fleece Jacket";
+   List<WebElement> allProducts2 = driver.findElements(By.className("inventory_item"));
+   // Alternative approach to -Stream to filter the product and click its button
+   allProducts2.stream()
+            .filter(e -> e.findElement(By.className("inventory_item_name")).getText().contains(targetProduct2))            
+            .forEach(item -> item.findElement(By.tagName("button")).click());
+
+
+   System.out.println("'Add to Cart' button clicked for " + targetProduct2);
+
+           
+            System.out.println("Parent container for the product found.");
+
+            
 
             //Get a List<Double> of all product prices that are less than $20.
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("inventory_item")));
