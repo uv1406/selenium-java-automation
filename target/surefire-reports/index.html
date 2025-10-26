@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Mobile_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Mobile Test Suite</span>
+              <span class="suite-name border-failed">Mobile Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Mobile_Test_Suite" class="hide-methods passed suite-Mobile_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Mobile_Test_Suite -->
-                      <a href="#" panel-name="suite-Mobile_Test_Suite" class="show-methods passed suite-Mobile_Test_Suite"> (show)</a> <!-- show-methods passed suite-Mobile_Test_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Mobile_Test_Suite" class="hide-methods failed suite-Mobile_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Mobile_Test_Suite -->
+                      <a href="#" panel-name="suite-Mobile_Test_Suite" class="show-methods failed suite-Mobile_Test_Suite"> (show)</a> <!-- show-methods failed suite-Mobile_Test_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Mobile_Test_Suite">
+                    <div class="method-list-content failed suite-Mobile_Test_Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Mobile_Test_Suite" title="com.automation.demo.mobile.tests.RemoteAppiumTest" class="method navigator-link" hash-for-method="verifyCreateContactButtonIsVisibleTest">verifyCreateContactButtonIsVisibleTest</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mobile_Test_Suite" title="com.automation.demo.mobile.tests.SauceMobileLoginTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Mobile_Test_Suite -->
+                    </div> <!-- method-list-content failed suite-Mobile_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,21 +118,33 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Mobile_Test_Suite" class="panel Mobile_Test_Suite">
-          <div class="suite-Mobile_Test_Suite-class-passed">
+          <div class="suite-Mobile_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.automation.demo.mobile.tests.RemoteAppiumTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.automation.demo.mobile.tests.SauceMobileLoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyCreateContactButtonIsVisibleTest">
-                  </a> <!-- verifyCreateContactButtonIsVisibleTest -->
-                  <span class="method-name">verifyCreateContactButtonIsVisibleTest</span>
+                  <a name="loginTest">
+                  </a> <!-- loginTest -->
+                  <span class="method-name">loginTest</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by AppiumBy.accessibilityId: Username input field (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.saucelabs.mydemoapp.rn...., appium:appPackage: com.saucelabs.mydemoapp.rn, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.saucelabs.mydemoapp.rn...., appPackage: com.saucelabs.mydemoapp.rn, automationName: UiAutomator2, deviceName: Android Emulator, forceAppLaunch: true, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:forceAppLaunch: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 15, appium:statBarHeight: 128, appium:takesScreenshot: true, appium:viewportRect: {height: 2272, left: 0, top: 128, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: acb660af-56d1-43e7-9d24-f953f4b7e44d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.automation.demo.mobile.tests.SauceMobileLoginTest.loginTest(SauceMobileLoginTest.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Mobile_Test_Suite-class-passed -->
+          </div> <!-- suite-Mobile_Test_Suite-class-failed -->
         </div> <!-- panel Mobile_Test_Suite -->
         <div panel-name="test-xml-Mobile_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -145,7 +157,7 @@
 &lt;suite name=&quot;Mobile Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Android Calculator Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.automation.demo.mobile.tests.RemoteAppiumTest&quot;/&gt;
+      &lt;class name=&quot;com.automation.demo.mobile.tests.SauceMobileLoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Android Calculator Tests --&gt;
 &lt;/suite&gt; &lt;!-- Mobile Test Suite --&gt;
@@ -187,14 +199,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyCreateContactButtonIsVisibleTest')
-data.setCell(0, 2, 'com.automation.demo.mobile.tests.RemoteAppiumTest')
-data.setCell(0, 3, 5748);
+data.setCell(0, 1, 'loginTest')
+data.setCell(0, 2, 'com.automation.demo.mobile.tests.SauceMobileLoginTest')
+data.setCell(0, 3, 34266);
 window.suiteTableData['Mobile_Test_Suite']= { tableData: data, tableDiv: 'times-div-Mobile_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-Mobile_Test_Suite">
               </div> <!-- times-div-Mobile_Test_Suite -->
             </div> <!-- times-div -->
@@ -220,18 +232,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.automation.demo.mobile.tests.RemoteAppiumTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.automation.demo.mobile.tests.SauceMobileLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">verifyCreateContactButtonIsVisibleTest</span>
-                <span class="method-start">10028 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginTest</span>
+                <span class="method-start">7790 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15957 ms</span>
+                <span class="method-start">42271 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

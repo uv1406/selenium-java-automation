@@ -1,4 +1,5 @@
 com\automation\demo\api\payloads\UserUpdateRequest$UserUpdateRequestBuilder.class
+com\automation\demo\mobile\tests\SauceMobileLoginTest.class
 com\automation\demo\ui\utils\TestRetryAnalyzer.class
 com\automation\demo\api\tests\APITests.class
 com\automation\demo\ui\utils\AnnotationTransformer.class
@@ -20,6 +21,7 @@ com\automation\demo\ui\utils\ScreenshotUtil.class
 com\automation\demo\ui\utils\DriverManager.class
 com\automation\demo\api\endpoints\ApiEndpoints.class
 com\automation\demo\ui\pageobjects\TextBoxPage.class
+com\automation\demo\mobile\tests\ApiDemoApkTest.class
 com\automation\demo\ui\utils\ConfigReader.class
 com\automation\demo\ui\utils\TestListeners.class
 com\automation\demo\api\utils\RequestBuilderUtil.class

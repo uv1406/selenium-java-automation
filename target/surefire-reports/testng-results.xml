@@ -1,25 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-24T20:47:34 IST" name="Mobile Test Suite" finished-at="2025-08-24T20:47:51 IST" duration-ms="17507">
+  <suite started-at="2025-08-31T22:35:44 IST" name="Mobile Test Suite" finished-at="2025-08-31T22:36:27 IST" duration-ms="42928">
     <groups>
     </groups>
-    <test started-at="2025-08-24T20:47:34 IST" name="Android Calculator Tests" finished-at="2025-08-24T20:47:51 IST" duration-ms="17507">
-      <class name="com.automation.demo.mobile.tests.RemoteAppiumTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.demo.mobile.tests.RemoteAppiumTest@4d8126f]" started-at="2025-08-24T20:47:34 IST" name="setUp" finished-at="2025-08-24T20:47:44 IST" duration-ms="9979" status="PASS">
+    <test started-at="2025-08-31T22:35:44 IST" name="Android Calculator Tests" finished-at="2025-08-31T22:36:27 IST" duration-ms="42928">
+      <class name="com.automation.demo.mobile.tests.SauceMobileLoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.demo.mobile.tests.SauceMobileLoginTest@7b2a3ff8]" started-at="2025-08-31T22:35:44 IST" name="setUp" finished-at="2025-08-31T22:35:52 IST" duration-ms="7713" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCreateContactButtonIsVisibleTest()[pri:0, instance:com.automation.demo.mobile.tests.RemoteAppiumTest@4d8126f]" started-at="2025-08-24T20:47:44 IST" name="verifyCreateContactButtonIsVisibleTest" finished-at="2025-08-24T20:47:49 IST" duration-ms="5748" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:com.automation.demo.mobile.tests.SauceMobileLoginTest@7b2a3ff8]" started-at="2025-08-31T22:35:52 IST" name="loginTest" finished-at="2025-08-31T22:36:26 IST" duration-ms="34266" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by AppiumBy.accessibilityId: Username input field (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.saucelabs.mydemoapp.rn...., appium:appPackage: com.saucelabs.mydemoapp.rn, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.saucelabs.mydemoapp.rn...., appPackage: com.saucelabs.mydemoapp.rn, automationName: UiAutomator2, deviceName: Android Emulator, forceAppLaunch: true, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:forceAppLaunch: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 15, appium:statBarHeight: 128, appium:takesScreenshot: true, appium:viewportRect: {height: 2272, left: 0, top: 128, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: acb660af-56d1-43e7-9d24-f953f4b7e44d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by AppiumBy.accessibilityId: Username input field (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.saucelabs.mydemoapp.rn...., appium:appPackage: com.saucelabs.mydemoapp.rn, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.saucelabs.mydemoapp.rn...., appPackage: com.saucelabs.mydemoapp.rn, automationName: UiAutomator2, deviceName: Android Emulator, forceAppLaunch: true, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 35, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:forceAppLaunch: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 15, appium:statBarHeight: 128, appium:takesScreenshot: true, appium:viewportRect: {height: 2272, left: 0, top: 128, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: acb660af-56d1-43e7-9d24-f953f4b7e44d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.automation.demo.mobile.tests.SauceMobileLoginTest.loginTest(SauceMobileLoginTest.java:68)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCreateContactButtonIsVisibleTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.demo.mobile.tests.RemoteAppiumTest@4d8126f]" started-at="2025-08-24T20:47:50 IST" name="tearDown" finished-at="2025-08-24T20:47:51 IST" duration-ms="1536" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.demo.mobile.tests.SauceMobileLoginTest@7b2a3ff8]" started-at="2025-08-31T22:36:27 IST" name="tearDown" finished-at="2025-08-31T22:36:27 IST" duration-ms="637" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.automation.demo.mobile.tests.RemoteAppiumTest -->
+      </class> <!-- com.automation.demo.mobile.tests.SauceMobileLoginTest -->
     </test> <!-- Android Calculator Tests -->
   </suite> <!-- Mobile Test Suite -->
 </testng-results>
