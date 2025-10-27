@@ -12,14 +12,22 @@ on:
       - "feature/*"
   pull_request:
     branches: [ "main" ]
+  #This adds the schedule trigger to run the workflow every day at midnight
+  schedule:
+    - cron: '0 0 * * *'
+
 
 jobs:
   # A job named "build-and-test"
   build-and-test:
     
-    # 1. SETTING THE VM:
-    # This tells GitHub to use the latest Windows Server VM
-    runs-on: windows-latest
+    # 1. SETTING THE VM with Matrix STRATEGY:
+    # This job will run on the multiple OS specified in the matrix
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+   
 
     steps:
       # Step 1: Checks out your repository code onto the VM
@@ -46,3 +54,71 @@ jobs:
           WEB_USER: ${{ secrets.WEB_USER }}
           WEB_PASS: ${{ secrets.WEB_PASS }}
           WEB_URL: ${{ secrets.WEB_URL }}
+
+      # Step 4: ARCHIVING TEST REPORTS:
+      # This step saves the test reports as build artifacts    
+      - name: Archive test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: target/allure-reports/*.xml
+
+          # Step 5: SEND SLACK NOTIFICATION:
+      # This new step sends a notification to Slack
+      - name: Send Slack Notification
+        if: always() # This ensures the step runs even if 'Run tests' fails
+        run: |
+          # Set a color based on the job's status
+          status="${{ job.status }}"
+          if [ "$status" == "success" ]; then
+            color="#36a64f" # Green
+          else
+            color="#d00000" # Red
+          fi
+
+          # Get a link back to the GitHub Actions run
+          run_url="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          # Create the JSON payload for Slack
+          # This uses Slack's "attachments" for rich formatting and color
+          json_payload=$(cat <<EOF
+          {
+            "attachments": [
+              {
+                "color": "$color",
+                "title": "Selenium Test Run: ${status} on ${{ matrix.os }}",
+                "title_link": "$run_url",
+                "fields": [
+                  {
+                    "title": "Repository",
+                    "value": "${{ github.repository }}",
+                    "short": true
+                  },
+                  {
+                    "title": "Triggered by",
+                    "value": "${{ github.actor }}",
+                    "short": true
+                  },
+                  {
+                    "title": "Workflow",
+                    "value": "${{ github.workflow }}",
+                    "short": true
+                  },
+                  {
+                    "title": "Event",
+                    "value": "${{ github.event_name }}",
+                    "short": true
+                  }
+                ],
+                "fallback": "Test run on ${{ matrix.os }} ${status}: $run_url"
+              }
+            ]
+          }
+          EOF
+          )
+
+          # Send the POST request to your Slack webhook URL
+          curl -X POST -H "Content-Type: application/json" \
+          -d "$json_payload" \
+          "${{ secrets.SLACK_WEBHOOK_URL }}"
