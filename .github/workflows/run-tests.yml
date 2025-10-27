@@ -64,10 +64,15 @@ jobs:
           name: test-reports
           path: target/allure-reports/*.xml
 
-          # Step 5: SEND SLACK NOTIFICATION:
+         # Step 5: SEND SLACK NOTIFICATION:
       # This new step sends a notification to Slack
       - name: Send Slack Notification
         if: always() # This ensures the step runs even if 'Run tests' fails
+        
+        # ADD THIS ENV BLOCK
+        env:
+          SLACK_WEBHOOK_SECRET: ${{ secrets.SLACK_WEBHOOK_URL }}
+        
         run: |
           # Set a color based on the job's status
           status="${{ job.status }}"
@@ -81,7 +86,7 @@ jobs:
           run_url="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
           # Create the JSON payload for Slack
-          # This uses Slack's "attachments" for rich formatting and color
+          # (This JSON is all correct, no changes needed here)
           json_payload=$(cat <<EOF
           {
             "attachments": [
@@ -119,6 +124,7 @@ jobs:
           )
 
           # Send the POST request to your Slack webhook URL
+          # USE THE ENV VARIABLE $SLACK_WEBHOOK_SECRET
           curl -X POST -H "Content-Type: application/json" \
           -d "$json_payload" \
-          "${{ secrets.SLACK_WEBHOOK_URL }}"
+          "$SLACK_WEBHOOK_SECRET"
