@@ -33,7 +33,7 @@
         <postgresql.connector.version>42.7.3</postgresql.connector.version>
         <hikaricp.version>5.1.0</hikaricp.version>
         <appium.version>9.2.2</appium.version>
-        <webdrivermanager.version>5.8.0</webdrivermanager.version>
+        <webdrivermanager.version>6.1.0</webdrivermanager.version>
 
         <!-- Plugin Versions -->
         <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
