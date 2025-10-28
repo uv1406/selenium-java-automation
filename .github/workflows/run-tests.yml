@@ -59,68 +59,48 @@ jobs:
           name: test-reports-${{ matrix.os }}
           path: target/allure-reports/*.xml
 
-      # Step 5: SEND SLACK NOTIFICATION:
-      # This step is now correctly un-indented
+      # Step 5: SEND SLACK NOTIFICATION (THE RELIABLE WAY)
+      # This replaces the 'run:' and 'curl' script with an official action
       - name: Send Slack Notification
         if: always() # This ensures the step runs even if 'Run tests' fails
+        uses: slackapi/slack-github-action@v1.26.0
+        with:
+          # This is your JSON payload, written in YAML format
+          # It uses GitHub's expression context to set the color
+          payload: |
+            {
+              "attachments": [
+                {
+                  "color": "${{ job.status == 'success' && '#36a64f' || '#d00000' }}",
+                  "title": "Selenium Test Run: ${{ job.status }} on ${{ matrix.os }}",
+                  "title_link": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+                  "fields": [
+                    {
+                      "title": "Repository",
+                      "value": "${{ github.repository }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Triggered by",
+                      "value": "${{ github.actor }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Workflow",
+                      "value": "${{ github.workflow }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Event",
+                      "value": "${{ github.event_name }}",
+      
+                      "short": true
+                    }
+                  ],
+                  "fallback": "Test run on ${{ matrix.os }} ${{ job.status }}: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                }
+              ]
+            }
         env:
-          SLACK_WEBHOOK_SECRET: ${{ secrets.SLACK_WEBHOOK_URL }}
-        
-        # This line fixes the error on Windows and is safe for Ubuntu/Mac
-        shell: bash 
-        
-        run: |
-          # Set a color based on the job's status
-          status="${{ job.status }}"
-          if [ "$status" == "success" ]; then
-            color="#36a64f" # Green
-          else
-            color="#d00000" # Red
-          fi
-
-          # Get a link back to the GitHub Actions run
-          run_url="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-
-          # Create the JSON payload for Slack
-          json_payload=$(cat <<EOF
-          {
-            "attachments": [
-              {
-                "color": "$color",
-                "title": "Selenium Test Run: ${status} on ${{ matrix.os }}",
-                "title_link": "$run_url",
-                "fields": [
-                  {
-                    "title": "Repository",
-                    "value": "${{ github.repository }}",
-                    "short": true
-                  },
-                  {
-                    "title": "Triggered by",
-                    "value": "${{ github.actor }}",
-                    "short": true
-                  },
-                  {
-                    "title": "Workflow",
-                    "value": "${{ github.workflow }}",
-                    "short": true
-                  },
-                  {
-                    "title": "Event",
-                    "value": "${{ github.event_name }}",
-                    "short": true
-                  }
-                ],
-                "fallback": "Test run on ${{ matrix.os }} ${status}: $run_url"
-              }
-            ]
-          }
-          EOF
-          )
-
-          # Send the POST request to your Slack webhook URL
-          # We pipe the JSON to curl's standard input to avoid issues
-          # with special characters and newlines on different shells.
-          echo "$json_payload" | curl -X POST -H "Content-Type: application/json" \
-          -d @- \
-          "$SLACK_WEBHOOK_SECRET"
+          # The action will automatically find and use this secret
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
