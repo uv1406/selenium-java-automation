@@ -1,9 +1,8 @@
 # .github/workflows/main.yml
 
-name: Run Java Selenium Tests on Windows
+name: Run Java Selenium Tests and Notify
 
 # This controls when the action will run. 
-# This example triggers on every push to the "main" branch.
 on:
   push:
     branches:
@@ -24,10 +23,11 @@ jobs:
     # 1. SETTING THE VM with Matrix STRATEGY:
     # This job will run on the multiple OS specified in the matrix
     strategy:
+      fail-fast: false # Don't cancel other jobs if one fails
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
-   
+    
 
     steps:
       # Step 1: Checks out your repository code onto the VM
@@ -35,19 +35,14 @@ jobs:
         uses: actions/checkout@v4
 
       # Step 2: SETTING UP JAVA:
-      # This uses the 'setup-java' action to install your specific Java version
       - name: Set up JDK 21 (Temurin)
         uses: actions/setup-java@v4
         with:
-          # This matches your local "21.0.7"
           java-version: '21'
-          # This matches your local "Temurin" build
           distribution: 'temurin'
-          # This caches Maven dependencies to speed up future builds
           cache: 'maven'
 
       # Step 3: RUNNING THE TESTS:
-      # This runs your tests and injects your secrets as environment variables
       - name: Run tests with Maven
         run: mvn test
         env:
@@ -56,22 +51,23 @@ jobs:
           WEB_URL: ${{ secrets.WEB_URL }}
 
       # Step 4: ARCHIVING TEST REPORTS:
-      # This step saves the test reports as build artifacts    
       - name: Archive test reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-reports
+          # This name is now unique for each OS
+          name: test-reports-${{ matrix.os }}
           path: target/allure-reports/*.xml
 
-         # Step 5: SEND SLACK NOTIFICATION:
-      # This new step sends a notification to Slack
+      # Step 5: SEND SLACK NOTIFICATION:
+      # This step is now correctly un-indented
       - name: Send Slack Notification
         if: always() # This ensures the step runs even if 'Run tests' fails
-        
-        # ADD THIS ENV BLOCK
         env:
           SLACK_WEBHOOK_SECRET: ${{ secrets.SLACK_WEBHOOK_URL }}
+        
+        # This line fixes the error on Windows and is safe for Ubuntu/Mac
+        shell: bash 
         
         run: |
           # Set a color based on the job's status
@@ -86,7 +82,6 @@ jobs:
           run_url="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
           # Create the JSON payload for Slack
-          # (This JSON is all correct, no changes needed here)
           json_payload=$(cat <<EOF
           {
             "attachments": [
@@ -124,7 +119,6 @@ jobs:
           )
 
           # Send the POST request to your Slack webhook URL
-          # USE THE ENV VARIABLE $SLACK_WEBHOOK_SECRET
           curl -X POST -H "Content-Type: application/json" \
           -d "$json_payload" \
           "$SLACK_WEBHOOK_SECRET"
