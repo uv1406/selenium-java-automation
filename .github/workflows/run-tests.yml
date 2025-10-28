@@ -2,7 +2,6 @@
 
 name: Run Java Selenium Tests and Notify
 
-# This controls when the action will run. 
 on:
   push:
     branches:
@@ -15,32 +14,19 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
-
 jobs:
-  # A job named "build-and-test"
+  # JOB 1: RUN ALL THE TESTS
   build-and-test:
-    
-    # 1. SETTING THE VM with Matrix STRATEGY:
-    # This job will run on the multiple OS specified in the matrix
     strategy:
       fail-fast: false # Don't cancel other jobs if one fails
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     
-    # THIS BLOCK IS THE FIX:
-    # It forces the job to use GitHub's cloud runners,
-    # bypassing your local machine and its proxy.
-    runs-on:
-      group: github-hosted
-      labels: ${{ matrix.os }}
-    
-
     steps:
-      # Step 1: Checks out your repository code onto the VM
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      # Step 2: SETTING UP JAVA:
       - name: Set up JDK 21 (Temurin)
         uses: actions/setup-java@v4
         with:
@@ -48,7 +34,6 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
-      # Step 3: RUNNING THE TESTS:
       - name: Run tests with Maven
         run: mvn test
         env:
@@ -56,27 +41,36 @@ jobs:
           WEB_PASS: ${{ secrets.WEB_PASS }}
           WEB_URL: ${{ secrets.WEB_URL }}
 
-      # Step 4: ARCHIVING TEST REPORTS:
       - name: Archive test reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          # This name is now unique for each OS
           name: test-reports-${{ matrix.os }}
           path: target/allure-reports/*.xml
 
-      # Step 5: SEND SLACK NOTIFICATION (THE RELIABLE WAY)
+  # JOB 2: SEND THE NOTIFICATION (RUNS ONCE, ON UBUNTU)
+  send-notification:
+    # This job needs the first one to finish
+    needs: build-and-test 
+    
+    # This ensures it runs even if tests fail
+    if: always() 
+    
+    # We run this on Ubuntu because it's stable
+    runs-on: ubuntu-latest 
+    
+    steps:
       - name: Send Slack Notification
-        if: always() # This ensures the step runs even if 'Run tests' fails
         uses: slackapi/slack-github-action@v1.26.0
         with:
-          # This is your JSON payload, written in YAML format
+          # This payload uses the 'needs' context to check the
+          # overall result of the 'build-and-test' job matrix.
           payload: |
             {
               "attachments": [
                 {
-                  "color": "${{ job.status == 'success' && '#36a64f' || '#d00000' }}",
-                  "title": "Selenium Test Run: ${{ job.status }} on ${{ matrix.os }}",
+                  "color": "${{ needs.build-and-test.result == 'success' && '#36a64f' || '#d00000' }}",
+                  "title": "Selenium Test Run: ${{ needs.build-and-test.result }}",
                   "title_link": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
                   "fields": [
                     {
@@ -91,7 +85,6 @@ jobs:
                     },
                     {
                       "title": "Workflow",
-      
                       "value": "${{ github.workflow }}",
                       "short": true
                     },
@@ -101,11 +94,9 @@ jobs:
                       "short": true
                     }
                   ],
-                  "fallback": "Test run on ${{ matrix.os }} ${{ job.status }}: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                  "fallback": "Test run ${{ needs.build-and-test.result }}: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
                 }
               ]
             }
         env:
-          # The action will automatically find and use this secret
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-
