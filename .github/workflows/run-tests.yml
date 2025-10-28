@@ -119,6 +119,8 @@ jobs:
           )
 
           # Send the POST request to your Slack webhook URL
-          curl -X POST -H "Content-Type: application/json" \
-          -d "$json_payload" \
+          # We pipe the JSON to curl's standard input to avoid issues
+          # with special characters and newlines on different shells.
+          echo "$json_payload" | curl -X POST -H "Content-Type: application/json" \
+          -d @- \
           "$SLACK_WEBHOOK_SECRET"
