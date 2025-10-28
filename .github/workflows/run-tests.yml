@@ -26,7 +26,13 @@ jobs:
       fail-fast: false # Don't cancel other jobs if one fails
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+    
+    # THIS BLOCK IS THE FIX:
+    # It forces the job to use GitHub's cloud runners,
+    # bypassing your local machine and its proxy.
+    runs-on:
+      group: github-hosted
+      labels: ${{ matrix.os }}
     
 
     steps:
@@ -60,13 +66,11 @@ jobs:
           path: target/allure-reports/*.xml
 
       # Step 5: SEND SLACK NOTIFICATION (THE RELIABLE WAY)
-      # This replaces the 'run:' and 'curl' script with an official action
       - name: Send Slack Notification
         if: always() # This ensures the step runs even if 'Run tests' fails
         uses: slackapi/slack-github-action@v1.26.0
         with:
           # This is your JSON payload, written in YAML format
-          # It uses GitHub's expression context to set the color
           payload: |
             {
               "attachments": [
@@ -87,13 +91,13 @@ jobs:
                     },
                     {
                       "title": "Workflow",
+      
                       "value": "${{ github.workflow }}",
                       "short": true
                     },
                     {
                       "title": "Event",
                       "value": "${{ github.event_name }}",
-      
                       "short": true
                     }
                   ],
@@ -104,3 +108,4 @@ jobs:
         env:
           # The action will automatically find and use this secret
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
