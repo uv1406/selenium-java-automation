@@ -63,10 +63,9 @@ jobs:
       - name: Send Slack Notification
         uses: slackapi/slack-github-action@v1.26.0
         with:
-          # This payload uses the 'needs' context to check the
-          # overall result of the 'build-and-test' job matrix.
           payload: |
             {
+              "text": "Selenium Test Run: ${{ needs.build-and-test.result }}",
               "attachments": [
                 {
                   "color": "${{ needs.build-and-test.result == 'success' && '#36a64f' || '#d00000' }}",
@@ -100,3 +99,4 @@ jobs:
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
