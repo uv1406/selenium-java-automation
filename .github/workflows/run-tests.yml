@@ -63,37 +63,57 @@ jobs:
       - name: Send Slack Notification
         uses: slackapi/slack-github-action@v1.26.0
         with:
+          # THIS PAYLOAD IS NOW REFORMATTED USING SLACK "BLOCKS"
           payload: |
             {
               "text": "Selenium Test Run: ${{ needs.build-and-test.result }}",
-              "attachments": [
+              "blocks": [
                 {
-                  "color": "${{ needs.build-and-test.result == 'success' && '#36a64f' || '#d00000' }}",
-                  "title": "Selenium Test Run: ${{ needs.build-and-test.result }}",
-                  "title_link": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "Selenium Test Run: ${{ needs.build-and-test.result == 'success' && '✅ Success' || '❌ Failure' }}"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "A test run was triggered by *${{ github.actor }}* on the `${{ github.ref_name }}` branch."
+                  },
+                  "accessory": {
+                    "type": "button",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "View Run Details"
+                    },
+                    "url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+                    "style": "${{ needs.build-and-test.result == 'success' && 'primary' || 'danger' }}"
+                  }
+                },
+                {
+                  "type": "divider"
+                },
+                {
+                  "type": "section",
                   "fields": [
                     {
-                      "title": "Repository",
-                      "value": "${{ github.repository }}",
-                      "short": true
+                      "type": "mrkdwn",
+                      "text": "*Repository:*\n${{ github.repository }}"
                     },
                     {
-                      "title": "Triggered by",
-                      "value": "${{ github.actor }}",
-                      "short": true
+                      "type": "mrkdwn",
+                      "text": "*Workflow:*\n${{ github.workflow }}"
                     },
                     {
-                      "title": "Workflow",
-                      "value": "${{ github.workflow }}",
-                      "short": true
+                      "type": "mrkdwn",
+                      "text": "*Event:*\n${{ github.event_name }}"
                     },
                     {
-                      "title": "Event",
-                      "value": "${{ github.event_name }}",
-                      "short": true
+                      "type": "mrkdwn",
+                      "text": "*Status:*\n${{ needs.build-and-test.result }}"
                     }
-                  ],
-                  "fallback": "Test run ${{ needs.build-and-test.result }}: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                  ]
                 }
               ]
             }
