@@ -9,6 +9,7 @@
         <classes>
           <class name="com.automation.demo.ui.tests.TextBoxFormTest"/>
             <class name="com.automation.demo.ui.tests.CheckBoxTest"/>
+            <class name="com.automation.demo.ui.tests.RandomPractice"/>
         </classes>
     </test>
 </suite>
