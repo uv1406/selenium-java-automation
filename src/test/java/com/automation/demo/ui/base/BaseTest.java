@@ -1,69 +1,67 @@
-
 package com.automation.demo.ui.base;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-import com.automation.demo.ui.utils.ConfigReader;
-import com.automation.demo.ui.utils.DriverFactory;
 import com.automation.demo.ui.utils.DriverManager;
 import com.automation.demo.ui.utils.LoggerUtil;
-import org.apache.logging.log4j.Logger; // Import Log4j2 Logger
+import org.apache.logging.log4j.Logger;
 import com.automation.demo.ui.utils.ScreenshotUtil;
 
 public class BaseTest {
 
     private static final Logger logger = LoggerUtil.getLogger(BaseTest.class);
 
-    @BeforeMethod
-    @Parameters("browserName")
-    public void setUp(@Optional("") String browserName) {
-        String browserToUse;
+    @BeforeMethod(alwaysRun = true) // Use alwaysRun for reliability
+    public void setUp() {
+        // This ONE line triggers the entire driver initialization:
+        // 1. Checks ThreadLocal (it's null)
+        // 2. Calls DriverFactory.createDriver()
+        // 3. DriverFactory reads ConfigReader (which checks mvn -D or config.properties)
+        // 4. Creates local or remote driver
+        // 5. Configures it
+        // 6. Stores it in ThreadLocal
+        try {
+            DriverManager.getDriver(); // This is the only setup call you need.
+            logger.info("WebDriver initialized by DriverManager for thread: {}", Thread.currentThread().threadId());
+        
+            // Optional: You can still navigate to a base URL here
+            // String baseUrl = ConfigReader.getProperty("app.url");
+            // if (baseUrl != null) {
+            //     DriverManager.getDriver().get(baseUrl);
+            // }
 
-        // 1. Prioritize browser name from TestNG XML / Maven command line parameter
-        if (browserName != null && !browserName.trim().isEmpty()) {
-            browserToUse = browserName;
-            logger.debug("Browser selected from TestNG XML/Maven parameter: " + browserToUse);
-        } else {
-            // 2. Fallback to default browser from config.properties
-            String browserFromConfig = ConfigReader.getProperty("default.browser");
-            if (browserFromConfig != null && !browserFromConfig.trim().isEmpty()) {
-                browserToUse = browserFromConfig;
-                logger.debug("Browser selected from config.properties: " + browserToUse);
-            } else {
-                // 3. Ultimate hardcoded fallback
-                browserToUse = "chrome";
-                logger.warn("No browser specified via parameter or config.properties. Defaulting to Chrome.");
-            }
+        } catch (Exception e) {
+            logger.fatal("FATAL: Driver setup failed! Test will be skipped.", e);
+            // Re-throw or use TestNG's SkipException to stop this test
+            throw new RuntimeException("Driver setup failed, see logs for details.", e);
         }
-
-        WebDriver webDriver = DriverFactory.createDriver(browserToUse);
-        DriverManager.setDriver(webDriver);
-        DriverManager.getDriver();
-        logger.info("Webdriver initialized for browser: " + browserName);
-        System.out.println("Browser opened in thread: " + Thread.currentThread().threadId());
     }
 
-    @AfterMethod
-    public void tearDown(ITestResult result) { // Added ITestResult parameter
-        WebDriver driver = DriverManager.getDriver();
-        if (driver != null) {
-            //Take screenshot on failure
-            if (result.getStatus() == ITestResult.FAILURE) {
-                logger.error("Test failed: " + result.getName() + ".FAILED! Taking screenshot.");
-                ScreenshotUtil.takeScreenshot(driver, result.getName());
-            } else {
-                logger.info("Test passed: " + result.getName());
-            }
-            logger.info("Closing the browser");
-            driver.quit();
-            DriverManager.unload();
-            logger.info("Browser closed and driver unloaded");
+    @AfterMethod(alwaysRun = true) // Use alwaysRun to ensure cleanup
+    public void tearDown(ITestResult result) {
+        WebDriver driver = null;
+        try {
+            // Get the driver instance *before* trying to quit, for screenshot logic
+            driver = DriverManager.getDriver(); // Get the driver for this thread
+        } catch (IllegalStateException e) {
+            // This can happen if setup failed so badly that getDriver() throws an error
+            logger.warn("Driver was not initialized, cannot take screenshot or quit. {}", e.getMessage());
+            // We still want to call quitDriver() to ensure ThreadLocal is cleaned up
         }
-        System.out.println("Teardown finished in thread: " + Thread.currentThread().threadId());
+
+        // Screenshot logic
+        if (driver != null && result.getStatus() == ITestResult.FAILURE) {
+            logger.error("Test failed: {}. Taking screenshot.", result.getName());
+            ScreenshotUtil.takeScreenshot(driver, result.getName());
+        } else if (driver != null) {
+            logger.info("Test passed: {}", result.getName());
+        }
+
+        // Centralized cleanup
+        // This single method handles both driver.quit() AND driver.remove()
+        logger.info("Closing browser and cleaning up driver for thread: {}", Thread.currentThread().threadId());
+        DriverManager.quitDriver();
     }
 }
-

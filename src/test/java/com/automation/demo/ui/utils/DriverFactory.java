@@ -1,71 +1,156 @@
-
-
-
-
 package com.automation.demo.ui.utils;
 
-import org.apache.logging.log4j.Logger; // Import Log4j2 Logger
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.chrome.ChromeOptions; // For browser options
+import org.openqa.selenium.remote.AbstractDriverOptions; // Import base class for options
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+// Optional: Use WebDriverManager dependency for local driver setup
+// import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 
     private static final Logger logger = LoggerUtil.getLogger(DriverFactory.class);
 
-    public static WebDriver createDriver(String browserName) {
-        WebDriver driver = null;
-        logger.info(browserName + " browser is selected for execution");
-         // Read headless preference from config.properties
-         boolean isHeadless = Boolean.parseBoolean(ConfigReader.getProperty("run.headless"));
-         logger.info("Running in headless mode: " + isHeadless);
-        switch (browserName.toLowerCase()) {
-            case "chrome":
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--start-maximized"); // Example option to start maximized
-                if (isHeadless) {
-                    chromeOptions.addArguments("--headless=new"); // Use --headless=new for newer Chrome versions
-                    chromeOptions.addArguments("--disable-gpu"); // Recommended for headless
-                    chromeOptions.addArguments("--window-size=1920,1080"); // Set a default window size for headless
-                    logger.info("Chrome will run in headless mode.");
-                }
-                driver = new ChromeDriver(chromeOptions);
-                break;
-            case "firefox":
-            FirefoxOptions firefoxOptions = new FirefoxOptions();
-            if (isHeadless) {
-                logger.info("Firefox will run in headless mode.");
-                
-                firefoxOptions.addArguments("--headless"); // Enable headless mode for Firefox
-                firefoxOptions.addArguments("--start-maximized"); // Example option to start maximized
-                } else {
-                logger.info("Firefox will run in normal mode.");
-                }
-                driver = new FirefoxDriver(firefoxOptions);
-                break;
-            case "edge":
-                
-                EdgeOptions edgeOptions = new EdgeOptions();
-                if (isHeadless) {
-                    edgeOptions.addArguments("--headless=new"); // Edge headless argument
-                    edgeOptions.addArguments("--disable-gpu");
-                    edgeOptions.addArguments("--window-size=1920,1080");
-                    logger.info("Edge will run in headless mode.");
-                }
-                edgeOptions.addArguments("--no-sandbox"); // Recommended for CI environments
-                edgeOptions.addArguments("--disable-dev-shm-usage"); // Recommended for CI environments
-                driver = new EdgeDriver(edgeOptions);
-                logger.debug("EdgeDriver instance created.");
-                break;
-            default:
-                logger.error("Unsupported browser: " + browserName);
-                throw new IllegalArgumentException("Browser not supported: " + browserName);
+    /**
+     * Creates a WebDriver instance based on configuration properties.
+     * Handles both local and remote execution modes.
+     *
+     * @return WebDriver instance.
+     * @throws MalformedURLException If the selenium.grid.url is invalid in remote mode.
+     * @throws IllegalArgumentException If the browser is unsupported or grid URL is missing.
+     */
+    public static WebDriver createDriver() throws MalformedURLException, URISyntaxException {
+        String runMode = ConfigReader.getProperty("run.mode", "local"); // Default to local
+        String browserName = ConfigReader.getProperty("browser", "chrome").toLowerCase(); // Default to chrome
+        boolean isHeadless = Boolean.parseBoolean(ConfigReader.getProperty("run.headless", "false")); // Default to false
+
+        logger.info("Selected Run Mode: {}", runMode);
+        logger.info("Selected Browser: {}", browserName);
+        logger.info("Headless Mode: {}", isHeadless);
+
+        WebDriver driver;
+
+        if ("remote".equalsIgnoreCase(runMode)) {
+            driver = createRemoteDriver(browserName, isHeadless);
+        } else {
+            driver = createLocalDriver(browserName, isHeadless);
         }
         return driver;
     }
 
+    /**
+     * Creates a local WebDriver instance.
+     */
+    private static WebDriver createLocalDriver(String browserName, boolean isHeadless) {
+        WebDriver driver;
+        logger.info("Creating local driver for: {}", browserName);
+        switch (browserName) {
+            case "chrome":
+                // Optional: WebDriverManager.chromedriver().setup();
+                ChromeOptions chromeOptions = getChromeOptions(isHeadless);
+                driver = new ChromeDriver(chromeOptions);
+                break;
+            case "firefox":
+                // Optional: WebDriverManager.firefoxdriver().setup();
+                FirefoxOptions firefoxOptions = getFirefoxOptions(isHeadless);
+                driver = new FirefoxDriver(firefoxOptions);
+                break;
+            case "edge":
+                // Optional: WebDriverManager.edgedriver().setup();
+                EdgeOptions edgeOptions = getEdgeOptions(isHeadless);
+                driver = new EdgeDriver(edgeOptions);
+                break;
+            default:
+                logger.error("Unsupported browser for local execution: {}", browserName);
+                throw new IllegalArgumentException("Local browser not supported: " + browserName);
+        }
+        return driver;
+    }
+
+    /**
+     * Creates a RemoteWebDriver instance connecting to the Selenium Grid.
+     */
+    private static WebDriver createRemoteDriver(String browserName, boolean isHeadless) throws MalformedURLException ,URISyntaxException {
+        String gridUrl = ConfigReader.getProperty("selenium.grid.url");
+        if (gridUrl == null || gridUrl.trim().isEmpty()) {
+            logger.error("selenium.grid.url is not configured for remote execution.");
+            throw new IllegalArgumentException("Selenium Grid URL is required for remote mode.");
+        }
+        URL hubUrl = new URI(gridUrl).toURL();
+        AbstractDriverOptions<?> options; // Use the base options class
+
+        logger.info("Creating remote driver for: {} on Grid: {}", browserName, gridUrl);
+        switch (browserName) {
+            case "chrome":
+                options = getChromeOptions(isHeadless);
+                break;
+            case "firefox":
+                options = getFirefoxOptions(isHeadless);
+                break;
+            case "edge":
+                options = getEdgeOptions(isHeadless);
+                break;
+            default:
+                logger.error("Unsupported browser for remote execution: {}", browserName);
+                throw new IllegalArgumentException("Remote browser not supported: " + browserName);
+        }
+        // Create RemoteWebDriver with the Hub URL and appropriate browser options
+        return new RemoteWebDriver(hubUrl, options);
+    }
+
+    // --- Browser Options Helper Methods ---
+
+    private static ChromeOptions getChromeOptions(boolean isHeadless) {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-maximized"); // Start maximized locally
+        // options.addArguments("--disable-infobars");
+        // options.addArguments("--disable-extensions");
+        // options.addArguments("--no-sandbox"); // Often needed in Docker/CI
+        // options.addArguments("--disable-dev-shm-usage"); // Often needed in Docker/CI
+        if (isHeadless) {
+            logger.info("Configuring Chrome for headless mode.");
+            options.addArguments("--headless=new");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080"); // Important for headless consistency
+        }
+        return options;
+    }
+
+    private static FirefoxOptions getFirefoxOptions(boolean isHeadless) {
+        FirefoxOptions options = new FirefoxOptions();
+        // Firefox doesn't have a direct start-maximized argument like Chrome
+        // Maximizing is usually done via driver.manage().window().maximize() later
+        if (isHeadless) {
+            logger.info("Configuring Firefox for headless mode.");
+            options.addArguments("-headless");
+             options.addArguments("--window-size=1920,1080");
+        }
+        return options;
+    }
+
+    private static EdgeOptions getEdgeOptions(boolean isHeadless) {
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("--start-maximized");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        if (isHeadless) {
+            logger.info("Configuring Edge for headless mode.");
+            options.addArguments("--headless=new");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080");
+        }
+        return options;
+    }
 }
